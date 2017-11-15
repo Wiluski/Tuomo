@@ -148,34 +148,68 @@ for(;;)
         for(;;)
         {
             
-            //reflectance_read(&ref);
-            //printf("%d %d %d %d \r\n", ref.l3, ref.l1, ref.r1, ref.r3);       //print out each period of reflectance sensors
             reflectance_digital(&dig);      //print out 0 or 1 according to results of reflectance period
             printf("%d %d %d %d \r\n", dig.l3, dig.l1, dig.r1, dig.r3);        //print out 0 or 1 according to results of reflectance period
             
-            if((dig.r3==1 && dig.l3==0) || (dig.r3==1 && dig.l3==0 && dig.l1==0 && dig.r1==0))
+            if(dig.l3==0&&dig.r3==0)
             {
-                printf("left\n");
-                motor_turn(0,100,50);
+                motor_backward(0,100);  //seis
             }
             
-            else if((dig.r3==0 && dig.l3==1) || (dig.r3==0 && dig.l3==1 && dig.l1==0 && dig.r1==0))
+            else if(dig.l3==0&&dig.r3==1) 
             {
-                printf("right\n");
-                motor_turn(100,0,50);
+                motor_turn(5,50,10);    // tiukka vasen
             }
             
-            
-            else if(dig.l3==1 && dig.r3==1)
+            else if(dig.l3==1&&dig.r3==0)
             {
-                printf("forward\n");
-                motor_forward(100,50);
+                motor_turn(50,5,10);    //tiukka oikea
             }
+            
+            else if(dig.l1==1&&dig.r1==0)
+            {
+                motor_turn(100,80,10);  //oikea
+            }
+            
+            else if(dig.l1==0&&dig.r1==1)
+            {
+                motor_turn(80,100,10);  //vasen
+            }
+            
+            else if (dig.l1==0&&dig.r1==0)
+            {
+                motor_forward(100,10);  //eteen
+            }
+            
             else
             {
-                printf("?!\n");
-                motor_backward(0,50);
+                motor_backward(0,100);
             }
+            
+            
+//            if((dig.r3==1 && dig.l3==0) || (dig.r3==1 && dig.l3==0 && dig.l1==0 && dig.r1==0))
+//            {
+//                printf("left\n");
+//                motor_turn(0,100,50);
+//            }
+//            
+//            else if((dig.r3==0 && dig.l3==1) || (dig.r3==0 && dig.l3==1 && dig.l1==0 && dig.r1==0))
+//            {
+//                printf("right\n");
+//                motor_turn(100,0,50);
+//            }
+//            
+//            
+//            else if(dig.l3==1 && dig.r3==1)
+//            {
+//                printf("forward\n");
+//                motor_forward(100,50);
+//            }
+//            else
+//            {
+//                printf("?!\n");
+//                motor_backward(0,50);
+//            }
             //CyDelay(500);
         }       
     }
@@ -183,46 +217,23 @@ for(;;)
 }
     
     
-//    for(;;)
-//    {
-//        if(SW1_Read()==0)
+       
+//if(delay==5)
+//{
+//    while(checkBat()<4)
 //        {
-//            CyDelay(1000);
+//            //motor_stop();
+//            BatteryLed_Write(1);
+//            CyDelay(250);
+//            BatteryLed_Write(0);
+//            CyDelay(250); 
 //            
-//            motor_start();              // motor start
-//            
-//            
-//            
-//            motor_turn(102,98,4500);     // moving forward
-//            motor_turn(200,10,500);     // turn
-//            motor_turn(102,98,3200);
-//            motor_turn(200,10,500);
-//            motor_turn(102,98,3000);
-//            motor_turn(200,10,600);
-//            motor_turn(100,60,3400);
-//            motor_forward(200,200);
-//            //motor_turn(10,200,500);     // turn
-//               
-//            motor_stop();               // motor stop
-//        
 //        }
-//        
-//        if(delay==5)
-//        {
-//            while(checkBat()<4)
-//                {
-//                    //motor_stop();
-//                    BatteryLed_Write(1);
-//                    CyDelay(250);
-//                    BatteryLed_Write(0);
-//                    CyDelay(250); 
-//                    
-//                }
-//            delay=0;
-//        } 
-//        delay++;
-//        CyDelay(100);
-//        }
+//    delay=0;
+//} 
+//delay++;
+//CyDelay(100);
+
     
       for(;;)
     {}

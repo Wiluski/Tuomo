@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccuefcoo.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
   37 0002 FFF7FEFF 		bl	atan2
   38              	.LVL1:
   19:ZumoLibrary/Magnet.c ****     
-ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 2
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccuefcoo.s 			page 2
 
 
   20:ZumoLibrary/Magnet.c ****     if(heading < 0)
@@ -77,11 +77,11 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
   46              		.size	heading, .-heading
   47 000e 00BF     		.text
   48              	.Letext0:
-  49              		.file 2 "d:\\koulu\\laitteet\\psoc\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.3\\arm-
-  50              		.file 3 "d:\\koulu\\laitteet\\psoc\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.3\\arm-
+  49              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
+  50              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
   51              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
   52              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
-  53              		.file 6 "d:\\koulu\\laitteet\\psoc\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.3\\arm-
+  53              		.file 6 "c:\\program files (x86)\\cypress\\psoc creator\\4.0\\psoc creator\\import\\gnu\\arm\\4.9.
   54              		.file 7 "Generated_Source\\PSoC5/CyLib.h"
   55              		.section	.debug_info,"",%progbits
   56              	.Ldebug_info0:
@@ -92,19 +92,19 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
   61 000b 01       		.uleb128 0x1
   62 000c 66000000 		.4byte	.LASF19
   63 0010 01       		.byte	0x1
-  64 0011 89010000 		.4byte	.LASF20
-  65 0015 07010000 		.4byte	.LASF21
+  64 0011 4E010000 		.4byte	.LASF20
+  65 0015 98010000 		.4byte	.LASF21
   66 0019 00000000 		.4byte	.Ldebug_ranges0+0
   67 001d 00000000 		.4byte	0
   68 0021 00000000 		.4byte	.Ldebug_line0
   69 0025 02       		.uleb128 0x2
   70 0026 08       		.byte	0x8
   71 0027 04       		.byte	0x4
-  72 0028 4B010000 		.4byte	.LASF0
+  72 0028 10010000 		.4byte	.LASF0
   73 002c 02       		.uleb128 0x2
   74 002d 01       		.byte	0x1
   75 002e 06       		.byte	0x6
-  76 002f 5F010000 		.4byte	.LASF1
+  76 002f 24010000 		.4byte	.LASF1
   77 0033 02       		.uleb128 0x2
   78 0034 01       		.byte	0x1
   79 0035 08       		.byte	0x8
@@ -112,23 +112,23 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
   81 003a 02       		.uleb128 0x2
   82 003b 02       		.byte	0x2
   83 003c 05       		.byte	0x5
-  84 003d B1010000 		.4byte	.LASF3
+  84 003d 76010000 		.4byte	.LASF3
   85 0041 02       		.uleb128 0x2
   86 0042 02       		.byte	0x2
   87 0043 07       		.byte	0x7
   88 0044 53000000 		.4byte	.LASF4
   89 0048 03       		.uleb128 0x3
-ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 3
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccuefcoo.s 			page 3
 
 
-  90 0049 7F010000 		.4byte	.LASF10
+  90 0049 44010000 		.4byte	.LASF10
   91 004d 02       		.byte	0x2
   92 004e 3F       		.byte	0x3f
   93 004f 53000000 		.4byte	0x53
   94 0053 02       		.uleb128 0x2
   95 0054 04       		.byte	0x4
   96 0055 05       		.byte	0x5
-  97 0056 42010000 		.4byte	.LASF5
+  97 0056 07010000 		.4byte	.LASF5
   98 005a 02       		.uleb128 0x2
   99 005b 04       		.byte	0x4
  100 005c 07       		.byte	0x7
@@ -150,7 +150,7 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
  116 0078 07       		.byte	0x7
  117 0079 15000000 		.4byte	.LASF9
  118 007d 03       		.uleb128 0x3
- 119 007e C2010000 		.4byte	.LASF11
+ 119 007e 87010000 		.4byte	.LASF11
  120 0082 03       		.byte	0x3
  121 0083 2C       		.byte	0x2c
  122 0084 48000000 		.4byte	0x48
@@ -162,7 +162,7 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
  128 0094 02       		.uleb128 0x2
  129 0095 04       		.byte	0x4
  130 0096 04       		.byte	0x4
- 131 0097 9E010000 		.4byte	.LASF13
+ 131 0097 63010000 		.4byte	.LASF13
  132 009b 02       		.uleb128 0x2
  133 009c 01       		.byte	0x1
  134 009d 08       		.byte	0x8
@@ -170,15 +170,15 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
  136 00a2 02       		.uleb128 0x2
  137 00a3 04       		.byte	0x4
  138 00a4 07       		.byte	0x7
- 139 00a5 CA010000 		.4byte	.LASF15
+ 139 00a5 8F010000 		.4byte	.LASF15
  140 00a9 02       		.uleb128 0x2
  141 00aa 08       		.byte	0x8
  142 00ab 04       		.byte	0x4
- 143 00ac 6B010000 		.4byte	.LASF16
+ 143 00ac 30010000 		.4byte	.LASF16
  144 00b0 06       		.uleb128 0x6
- 145 00b1 77010000 		.4byte	.LASF22
+ 145 00b1 3C010000 		.4byte	.LASF22
  146 00b5 01       		.byte	0x1
-ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 4
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccuefcoo.s 			page 4
 
 
  147 00b6 0F       		.byte	0xf
@@ -188,19 +188,19 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
  151 00c0 9C       		.byte	0x9c
  152 00c1 29010000 		.4byte	0x129
  153 00c5 07       		.uleb128 0x7
- 154 00c6 BB010000 		.4byte	.LASF17
+ 154 00c6 80010000 		.4byte	.LASF17
  155 00ca 01       		.byte	0x1
  156 00cb 0F       		.byte	0xf
  157 00cc 25000000 		.4byte	0x25
  158 00d0 00000000 		.4byte	.LLST0
  159 00d4 07       		.uleb128 0x7
- 160 00d5 A4010000 		.4byte	.LASF18
+ 160 00d5 69010000 		.4byte	.LASF18
  161 00d9 01       		.byte	0x1
  162 00da 0F       		.byte	0xf
  163 00db 25000000 		.4byte	0x25
  164 00df 28000000 		.4byte	.LLST1
  165 00e3 08       		.uleb128 0x8
- 166 00e4 77010000 		.4byte	.LASF22
+ 166 00e4 3C010000 		.4byte	.LASF22
  167 00e8 01       		.byte	0x1
  168 00e9 11       		.byte	0x11
  169 00ea 25000000 		.4byte	0x25
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
  201 0116 25       		.uleb128 0x25
  202 0117 00       		.byte	0
  203 0118 0B       		.uleb128 0xb
-ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 5
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccuefcoo.s 			page 5
 
 
  204 0119 0C000000 		.4byte	.LVL2
@@ -252,14 +252,14 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
  212 0127 00       		.byte	0
  213 0128 00       		.byte	0
  214 0129 0C       		.uleb128 0xc
- 215 012a 52010000 		.4byte	.LASF23
+ 215 012a 17010000 		.4byte	.LASF23
  216 012e 05       		.byte	0x5
  217 012f 9606     		.2byte	0x696
  218 0131 35010000 		.4byte	0x135
  219 0135 0D       		.uleb128 0xd
  220 0136 7D000000 		.4byte	0x7d
  221 013a 0E       		.uleb128 0xe
- 222 013b AB010000 		.4byte	.LASF24
+ 222 013b 70010000 		.4byte	.LASF24
  223 013f 06       		.byte	0x6
  224 0140 7E       		.byte	0x7e
  225 0141 25000000 		.4byte	0x25
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
  258 0010 17       		.uleb128 0x17
  259 0011 00       		.byte	0
  260 0012 00       		.byte	0
-ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 6
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccuefcoo.s 			page 6
 
 
  261 0013 02       		.uleb128 0x2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
  315 0049 0E       		.uleb128 0xe
  316 004a 3A       		.uleb128 0x3a
  317 004b 0B       		.uleb128 0xb
-ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 7
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccuefcoo.s 			page 7
 
 
  318 004c 3B       		.uleb128 0x3b
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
  372 0085 00       		.byte	0
  373 0086 0A       		.uleb128 0xa
  374 0087 8A8201   		.uleb128 0x410a
-ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 8
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccuefcoo.s 			page 8
 
 
  375 008a 00       		.byte	0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
  429 00c3 13       		.uleb128 0x13
  430 00c4 3C       		.uleb128 0x3c
  431 00c5 19       		.uleb128 0x19
-ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 9
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccuefcoo.s 			page 9
 
 
  432 00c6 01       		.uleb128 0x1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
  486 002c 05000000 		.4byte	.LVL1-1
  487 0030 0600     		.2byte	0x6
  488 0032 52       		.byte	0x52
-ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 10
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccuefcoo.s 			page 10
 
 
  489 0033 93       		.byte	0x93
@@ -577,8 +577,8 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
  522 000c 00000000 		.4byte	0
  523              		.section	.debug_line,"",%progbits
  524              	.Ldebug_line0:
- 525 0000 71010000 		.section	.debug_str,"MS",%progbits,1
- 525      02005A01 
+ 525 0000 81010000 		.section	.debug_str,"MS",%progbits,1
+ 525      02006A01 
  525      00000201 
  525      FB0E0D00 
  525      01010101 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
  532              	.LASF25:
  533 0022 43794465 		.ascii	"CyDelay\000"
  533      6C617900 
-ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 11
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccuefcoo.s 			page 11
 
 
  534              	.LASF6:
@@ -643,73 +643,69 @@ ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 1
  546              	.LASF14:
  547 0102 63686172 		.ascii	"char\000"
  547      00
- 548              	.LASF21:
- 549 0107 433A5C55 		.ascii	"C:\\Users\\wille\\Desktop\\Tuomo\\Tuomo\\ZumoTUOMO\\"
- 549      73657273 
- 549      5C77696C 
- 549      6C655C44 
- 549      65736B74 
- 550 0134 5A756D6F 		.ascii	"ZumoBot.cydsn\000"
- 550      426F742E 
- 550      63796473 
- 550      6E00
- 551              	.LASF5:
- 552 0142 6C6F6E67 		.ascii	"long int\000"
- 552      20696E74 
- 552      00
- 553              	.LASF0:
-ARM GAS  C:\Users\wille\AppData\Local\Temp\ccQhosm3.s 			page 12
+ 548              	.LASF5:
+ 549 0107 6C6F6E67 		.ascii	"long int\000"
+ 549      20696E74 
+ 549      00
+ 550              	.LASF0:
+ 551 0110 646F7562 		.ascii	"double\000"
+ 551      6C6500
+ 552              	.LASF23:
+ 553 0117 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 553      52784275 
+ 553      66666572 
+ 553      00
+ 554              	.LASF1:
+ 555 0124 7369676E 		.ascii	"signed char\000"
+ 555      65642063 
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccuefcoo.s 			page 12
 
 
- 554 014b 646F7562 		.ascii	"double\000"
- 554      6C6500
- 555              	.LASF23:
- 556 0152 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 556      52784275 
- 556      66666572 
- 556      00
- 557              	.LASF1:
- 558 015f 7369676E 		.ascii	"signed char\000"
- 558      65642063 
- 558      68617200 
- 559              	.LASF16:
- 560 016b 6C6F6E67 		.ascii	"long double\000"
- 560      20646F75 
- 560      626C6500 
- 561              	.LASF22:
- 562 0177 68656164 		.ascii	"heading\000"
- 562      696E6700 
- 563              	.LASF10:
- 564 017f 5F5F696E 		.ascii	"__int32_t\000"
- 564      7433325F 
- 564      7400
- 565              	.LASF20:
- 566 0189 5A756D6F 		.ascii	"ZumoLibrary\\Magnet.c\000"
- 566      4C696272 
- 566      6172795C 
- 566      4D61676E 
- 566      65742E63 
- 567              	.LASF13:
- 568 019e 666C6F61 		.ascii	"float\000"
- 568      7400
- 569              	.LASF18:
- 570 01a4 595F4158 		.ascii	"Y_AXIS\000"
- 570      495300
- 571              	.LASF24:
- 572 01ab 6174616E 		.ascii	"atan2\000"
- 572      3200
- 573              	.LASF3:
- 574 01b1 73686F72 		.ascii	"short int\000"
- 574      7420696E 
- 574      7400
- 575              	.LASF17:
- 576 01bb 585F4158 		.ascii	"X_AXIS\000"
- 576      495300
- 577              	.LASF11:
- 578 01c2 696E7433 		.ascii	"int32_t\000"
- 578      325F7400 
- 579              	.LASF15:
- 580 01ca 73697A65 		.ascii	"sizetype\000"
- 580      74797065 
- 580      00
- 581              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 555      68617200 
+ 556              	.LASF16:
+ 557 0130 6C6F6E67 		.ascii	"long double\000"
+ 557      20646F75 
+ 557      626C6500 
+ 558              	.LASF22:
+ 559 013c 68656164 		.ascii	"heading\000"
+ 559      696E6700 
+ 560              	.LASF10:
+ 561 0144 5F5F696E 		.ascii	"__int32_t\000"
+ 561      7433325F 
+ 561      7400
+ 562              	.LASF20:
+ 563 014e 5A756D6F 		.ascii	"ZumoLibrary\\Magnet.c\000"
+ 563      4C696272 
+ 563      6172795C 
+ 563      4D61676E 
+ 563      65742E63 
+ 564              	.LASF13:
+ 565 0163 666C6F61 		.ascii	"float\000"
+ 565      7400
+ 566              	.LASF18:
+ 567 0169 595F4158 		.ascii	"Y_AXIS\000"
+ 567      495300
+ 568              	.LASF24:
+ 569 0170 6174616E 		.ascii	"atan2\000"
+ 569      3200
+ 570              	.LASF3:
+ 571 0176 73686F72 		.ascii	"short int\000"
+ 571      7420696E 
+ 571      7400
+ 572              	.LASF17:
+ 573 0180 585F4158 		.ascii	"X_AXIS\000"
+ 573      495300
+ 574              	.LASF11:
+ 575 0187 696E7433 		.ascii	"int32_t\000"
+ 575      325F7400 
+ 576              	.LASF15:
+ 577 018f 73697A65 		.ascii	"sizetype\000"
+ 577      74797065 
+ 577      00
+ 578              	.LASF21:
+ 579 0198 433A5C55 		.ascii	"C:\\Users\\allu9\\Tuomo\\ZumoTUOMO\\ZumoBot.cydsn\000"
+ 579      73657273 
+ 579      5C616C6C 
+ 579      75395C54 
+ 579      756F6D6F 
+ 580              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
