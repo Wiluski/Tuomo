@@ -37,7 +37,9 @@
       <Folder BuildType="STRICT" Path="C:\Users\allu9\Tuomo\ZumoTUOMO\ZumoBot.cydsn">
         <Files Root="C:\Users\allu9\Tuomo\ZumoTUOMO\ZumoBot.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
+          <File BuildType="BUILD" Toolchain="">Drive.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
+          <File BuildType="BUILD" Toolchain="">Drive.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\allu9\Tuomo\ZumoTUOMO\ZumoBot.cydsn\ZumoLibrary">

@@ -47,6 +47,7 @@
 #include "IR.h"
 #include "Ambient.h"
 #include "Beep.h"
+#include "Drive.h"
 
 int rread(void);
 
@@ -65,7 +66,7 @@ int main()
     struct sensors_ ref;
     struct sensors_ dig;
     
-    int i;
+    int i,delay = 0;
     int wCalib = 1, bCalib = 1;
     
     int rajaArvo[4],b[4],w[4];
@@ -84,7 +85,17 @@ int main()
 
     
         sensor_isr_StartEx(sensor_isr_handler);
-    
+        
+    while(checkBat()<4)
+        {
+            //motor_stop();
+            BatteryLed_Write(1);
+            CyDelay(250);
+            BatteryLed_Write(0);
+            CyDelay(250); 
+            
+        }    
+        
     IR_led_Write(1);
     reflectance_start();
     
@@ -130,16 +141,31 @@ int main()
     
 
     reflectance_set_threshold(rajaArvo[0], rajaArvo[1], rajaArvo[2], rajaArvo[3]);
-
+    Beep(100,50);
     while(SW1_Read()){
         
     }
-    
+
 for(;;)
 {
     
     if(SW1_Read()==0)
     {
+        Beep(100,20);
+        CyDelay(50);
+        Beep(100,20);
+          
+        while(checkBat()<4)
+            {
+                //motor_stop();
+                BatteryLed_Write(1);
+                CyDelay(250);
+                BatteryLed_Write(0);
+                CyDelay(250); 
+                
+            }
+
+        
         CyDelay(1000);
         motor_start();
         
@@ -147,70 +173,29 @@ for(;;)
         
         for(;;)
         {
-            
+            reflectance_read(&ref);
             reflectance_digital(&dig);      //print out 0 or 1 according to results of reflectance period
-            printf("%d %d %d %d \r\n", dig.l3, dig.l1, dig.r1, dig.r3);        //print out 0 or 1 according to results of reflectance period
+            printf("%d %d %d %d \r\n", ref.l3, ref.l1, ref.r1, ref.r3);        //print out 0 or 1 according to results of reflectance period
             
-            if(dig.l3==0&&dig.r3==0)
+            Drive(ref.l3, ref.l1,ref.r1,ref.r3);
+            
+            if(delay==1000)
             {
-                motor_backward(0,100);  //seis
-            }
-            
-            else if(dig.l3==0&&dig.r3==1) 
-            {
-                motor_turn(5,50,10);    // tiukka vasen
-            }
-            
-            else if(dig.l3==1&&dig.r3==0)
-            {
-                motor_turn(50,5,10);    //tiukka oikea
-            }
-            
-            else if(dig.l1==1&&dig.r1==0)
-            {
-                motor_turn(100,80,10);  //oikea
-            }
-            
-            else if(dig.l1==0&&dig.r1==1)
-            {
-                motor_turn(80,100,10);  //vasen
-            }
-            
-            else if (dig.l1==0&&dig.r1==0)
-            {
-                motor_forward(100,10);  //eteen
-            }
-            
-            else
-            {
-                motor_backward(0,100);
-            }
-            
-            
-//            if((dig.r3==1 && dig.l3==0) || (dig.r3==1 && dig.l3==0 && dig.l1==0 && dig.r1==0))
-//            {
-//                printf("left\n");
-//                motor_turn(0,100,50);
-//            }
-//            
-//            else if((dig.r3==0 && dig.l3==1) || (dig.r3==0 && dig.l3==1 && dig.l1==0 && dig.r1==0))
-//            {
-//                printf("right\n");
-//                motor_turn(100,0,50);
-//            }
-//            
-//            
-//            else if(dig.l3==1 && dig.r3==1)
-//            {
-//                printf("forward\n");
-//                motor_forward(100,50);
-//            }
-//            else
-//            {
-//                printf("?!\n");
-//                motor_backward(0,50);
-//            }
+                while(checkBat()<4)
+                    {
+                        //motor_stop();
+                        BatteryLed_Write(1);
+                        CyDelay(250);
+                        BatteryLed_Write(0);
+                        CyDelay(250); 
+                        
+                    }
+                delay=0;
+            } 
+            delay++;
             //CyDelay(500);
+        
+        
         }       
     }
         //CyDelay(1000);
@@ -218,21 +203,8 @@ for(;;)
     
     
        
-//if(delay==5)
-//{
-//    while(checkBat()<4)
-//        {
-//            //motor_stop();
-//            BatteryLed_Write(1);
-//            CyDelay(250);
-//            BatteryLed_Write(0);
-//            CyDelay(250); 
-//            
-//        }
-//    delay=0;
-//} 
-//delay++;
-//CyDelay(100);
+
+CyDelay(100);
 
     
       for(;;)

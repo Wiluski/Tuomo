@@ -134,7 +134,5 @@ void reflectance_set_threshold(uint16_t l3, uint16_t l1, uint16_t r1, uint16_t r
     threshold.r3 = r3;
     threshold.r1 = r1;
     
-    printf("%d %d %d %d\n", threshold.l3, threshold.l1, threshold.r1, threshold.r3);
+    //printf("%d %d %d %d\n", threshold.l3, threshold.l1, threshold.r1, threshold.r3);
 }
-
-

@@ -81,3 +81,11 @@ void motor_backward(uint8 speed,uint32 delay)
     PWM_WriteCompare2(speed); 
     CyDelay(delay);
 }
+void motor_sharp_turn(int l_dir, int r_dir, uint8 l_speed, uint8 r_speed, uint32 delay)
+{
+    MotorDirLeft_Write(l_dir);
+    MotorDirRight_Write(r_dir);
+    PWM_WriteCompare1(l_speed);
+    PWM_WriteCompare2(r_speed);
+    CyDelay(delay);
+}
