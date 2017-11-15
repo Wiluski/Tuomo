@@ -1,10 +1,10 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2017-11-15T10:06:59Z")
+ (DATE "2017-11-15T10:43:58Z")
  (DESIGN "ZumoBot")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
- (VERSION " 4.0 Update 1")
+ (VERSION " 4.0")
  (DIVIDER .)
  (TIMESCALE 1 ns)
  (CELL

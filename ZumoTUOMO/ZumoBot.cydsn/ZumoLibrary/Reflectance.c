@@ -8,9 +8,11 @@
 
 #include "Reflectance.h"
 
+
+
 static volatile struct sensors_ sensors;
 static volatile struct sensors_  digital_sensor_value;
-static struct sensors_ threshold = { 14387, 13816, 13643, 15803};
+static struct sensors_ threshold = { 10000, 10000, 10000, 10000};
 
 /**
 * @brief    Reflectance Sensor Interrupt Handler
@@ -131,6 +133,8 @@ void reflectance_set_threshold(uint16_t l3, uint16_t l1, uint16_t r1, uint16_t r
     threshold.l1 = l1;
     threshold.r3 = r3;
     threshold.r1 = r1;
+    
+    printf("%d %d %d %d\n", threshold.l3, threshold.l1, threshold.r1, threshold.r3);
 }
 
 

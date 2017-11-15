@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
   29:Generated_Source\PSoC5/I2C_PM.c **** #endif /* (I2C_FF_IMPLEMENTED) */
   30:Generated_Source\PSoC5/I2C_PM.c **** 
   31:Generated_Source\PSoC5/I2C_PM.c **** #if (I2C_TIMEOUT_ENABLED)
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 2
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 2
 
 
   32:Generated_Source\PSoC5/I2C_PM.c ****     I2C_DEFAULT_TMOUT_PERIOD,
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
   32              		.loc 1 80 0
   33 0000 084B     		ldr	r3, .L2
   34 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 3
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 3
 
 
   35 0004 084B     		ldr	r3, .L2+4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
   96:Generated_Source\PSoC5/I2C_PM.c ****     *  2) Wait unti I2C is ready go to Sleep; !!
   97:Generated_Source\PSoC5/I2C_PM.c ****     *  3) These bits are cleared on wake up.
   98:Generated_Source\PSoC5/I2C_PM.c ****     */
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 4
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 4
 
 
   99:Generated_Source\PSoC5/I2C_PM.c ****     /* Wait when block is ready for sleep */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
   74              		.loc 1 152 0
   75              		.cfi_startproc
   76              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 5
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 5
 
 
   77              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  112              	I2C_RestoreConfig:
  113              	.LFB2:
  172:Generated_Source\PSoC5/I2C_PM.c **** }
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 6
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 6
 
 
  173:Generated_Source\PSoC5/I2C_PM.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  126 000a 0DD0     		beq	.L10
  215:Generated_Source\PSoC5/I2C_PM.c ****     /* Low power mode was Sleep - backup regulator is enabled */
  216:Generated_Source\PSoC5/I2C_PM.c ****     {
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 7
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 7
 
 
  217:Generated_Source\PSoC5/I2C_PM.c ****         /* Enable backup regulator in active mode */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  155 0036 D978     		ldrb	r1, [r3, #3]	@ zero_extendqisi2
  156 0038 0C3A     		subs	r2, r2, #12
  157 003a 1170     		strb	r1, [r2]
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 8
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 8
 
 
  243:Generated_Source\PSoC5/I2C_PM.c ****         I2C_CLKDIV1_REG = I2C_backup.clkDiv1;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  269:Generated_Source\PSoC5/I2C_PM.c **** * Function Name: I2C_Wakeup
  270:Generated_Source\PSoC5/I2C_PM.c **** ********************************************************************************
  271:Generated_Source\PSoC5/I2C_PM.c **** *
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 9
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 9
 
 
  272:Generated_Source\PSoC5/I2C_PM.c **** * Summary:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  308:Generated_Source\PSoC5/I2C_PM.c ****         I2C_EnableInt();
  204              		.loc 1 308 0
  205 0010 4FF40042 		mov	r2, #32768
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 10
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 10
 
 
  206 0014 024B     		ldr	r3, .L18+4
@@ -580,15 +580,15 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  242 000b 01       		.uleb128 0x1
  243 000c A4000000 		.4byte	.LASF29
  244 0010 01       		.byte	0x1
- 245 0011 5A020000 		.4byte	.LASF30
- 246 0015 B8010000 		.4byte	.LASF31
+ 245 0011 4A020000 		.4byte	.LASF30
+ 246 0015 A6010000 		.4byte	.LASF31
  247 0019 00000000 		.4byte	.Ldebug_ranges0+0
  248 001d 00000000 		.4byte	0
  249 0021 00000000 		.4byte	.Ldebug_line0
  250 0025 02       		.uleb128 0x2
  251 0026 01       		.byte	0x1
  252 0027 06       		.byte	0x6
- 253 0028 3C020000 		.4byte	.LASF0
+ 253 0028 2C020000 		.4byte	.LASF0
  254 002c 02       		.uleb128 0x2
  255 002d 01       		.byte	0x1
  256 002e 08       		.byte	0x8
@@ -596,9 +596,9 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  258 0033 02       		.uleb128 0x2
  259 0034 02       		.byte	0x2
  260 0035 05       		.byte	0x5
- 261 0036 03020000 		.4byte	.LASF2
+ 261 0036 F3010000 		.4byte	.LASF2
  262 003a 02       		.uleb128 0x2
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 11
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 11
 
 
  263 003b 02       		.byte	0x2
@@ -607,7 +607,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  266 0041 02       		.uleb128 0x2
  267 0042 04       		.byte	0x4
  268 0043 05       		.byte	0x5
- 269 0044 13020000 		.4byte	.LASF4
+ 269 0044 03020000 		.4byte	.LASF4
  270 0048 02       		.uleb128 0x2
  271 0049 04       		.byte	0x4
  272 004a 07       		.byte	0x7
@@ -629,7 +629,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  288 0066 07       		.byte	0x7
  289 0067 3B010000 		.4byte	.LASF8
  290 006b 04       		.uleb128 0x4
- 291 006c 0D020000 		.4byte	.LASF9
+ 291 006c FD010000 		.4byte	.LASF9
  292 0070 02       		.byte	0x2
  293 0071 9201     		.2byte	0x192
  294 0073 2C000000 		.4byte	0x2c
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  317 00a4 04       		.uleb128 0x4
  318 00a5 68000000 		.4byte	.LASF15
  319 00a9 02       		.byte	0x2
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 12
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 12
 
 
  320 00aa 3C02     		.2byte	0x23c
@@ -682,7 +682,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  338 00d0 76       		.byte	0x76
  339 00d1 1E010000 		.4byte	0x11e
  340 00d5 07       		.uleb128 0x7
- 341 00d6 1C020000 		.4byte	.LASF18
+ 341 00d6 0C020000 		.4byte	.LASF18
  342 00da 03       		.byte	0x3
  343 00db 78       		.byte	0x78
  344 00dc 6B000000 		.4byte	0x6b
@@ -718,11 +718,11 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  374 0118 6B000000 		.4byte	0x6b
  375 011c 05       		.byte	0x5
  376 011d 00       		.byte	0
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 13
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 13
 
 
  377 011e 09       		.uleb128 0x9
- 378 011f A6010000 		.4byte	.LASF23
+ 378 011f E1010000 		.4byte	.LASF23
  379 0123 03       		.byte	0x3
  380 0124 89       		.byte	0x89
  381 0125 CD000000 		.4byte	0xcd
@@ -751,7 +751,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  404 015d 29010000 		.4byte	0x129
  405 0161 00       		.byte	0
  406 0162 0B       		.uleb128 0xb
- 407 0163 48020000 		.4byte	.LASF25
+ 407 0163 38020000 		.4byte	.LASF25
  408 0167 01       		.byte	0x1
  409 0168 D1       		.byte	0xd1
  410 0169 00000000 		.4byte	.LFB2
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  431 019f 2C01     		.2byte	0x12c
  432 01a1 00000000 		.4byte	.LFB3
  433 01a5 24000000 		.4byte	.LFE3-.LFB3
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 14
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 14
 
 
  434 01a9 01       		.uleb128 0x1
@@ -792,7 +792,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  442 01bd F6010000 		.4byte	0x1f6
  443 01c1 00       		.byte	0
  444 01c2 0F       		.uleb128 0xf
- 445 01c3 28020000 		.4byte	.LASF34
+ 445 01c3 18020000 		.4byte	.LASF34
  446 01c7 01       		.byte	0x1
  447 01c8 11       		.byte	0x11
  448 01c9 1E010000 		.4byte	0x11e
@@ -800,7 +800,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  450 01ce 03       		.byte	0x3
  451 01cf 00000000 		.4byte	I2C_backup
  452 01d3 10       		.uleb128 0x10
- 453 01d4 33020000 		.4byte	.LASF27
+ 453 01d4 23020000 		.4byte	.LASF27
  454 01d8 03       		.byte	0x3
  455 01d9 94       		.byte	0x94
  456 01da 11       		.uleb128 0x11
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  488 000c 17       		.uleb128 0x17
  489 000d 11       		.uleb128 0x11
  490 000e 01       		.uleb128 0x1
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 15
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 15
 
 
  491 000f 10       		.uleb128 0x10
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  545 0045 0B       		.uleb128 0xb
  546 0046 01       		.uleb128 0x1
  547 0047 13       		.uleb128 0x13
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 16
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 16
 
 
  548 0048 00       		.byte	0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  602 007e 3B       		.uleb128 0x3b
  603 007f 0B       		.uleb128 0xb
  604 0080 27       		.uleb128 0x27
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 17
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 17
 
 
  605 0081 19       		.uleb128 0x19
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  659 00bb 49       		.uleb128 0x49
  660 00bc 13       		.uleb128 0x13
  661 00bd 02       		.uleb128 0x2
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 18
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 18
 
 
  662 00be 17       		.uleb128 0x17
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  716 00f5 3B       		.uleb128 0x3b
  717 00f6 0B       		.uleb128 0xb
  718 00f7 27       		.uleb128 0x27
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 19
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 19
 
 
  719 00f8 19       		.uleb128 0x19
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  773 0000 10000000 		.4byte	.LVL2
  774 0004 1D000000 		.4byte	.LVL3-1
  775 0008 0100     		.2byte	0x1
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 20
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 20
 
 
  776 000a 50       		.byte	0x50
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  819      7369676E 
  819      65642069 
  819      6E7400
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 21
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 21
 
 
  820              	.LASF32:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  844      31323230 
  845 010a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  845      66756E63 
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 22
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 22
 
 
  845      74696F6E 
@@ -1306,61 +1306,60 @@ ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 1
  864              	.LASF19:
  865 01a1 78636667 		.ascii	"xcfg\000"
  865      00
- 866              	.LASF23:
- 867 01a6 4932435F 		.ascii	"I2C_BACKUP_STRUCT\000"
- 867      4241434B 
- 867      55505F53 
- 867      54525543 
- 867      5400
- 868              	.LASF31:
- 869 01b8 433A5C55 		.ascii	"C:\\Users\\Joonas\\Desktop\\Programming\\Laitteet\\"
- 869      73657273 
- 869      5C4A6F6F 
- 869      6E61735C 
- 869      4465736B 
-ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclTsMpx.s 			page 23
+ 866              	.LASF31:
+ 867 01a6 433A5C55 		.ascii	"C:\\Users\\wille\\Desktop\\Tuomo\\Tuomo\\ZumoTUOMO\\"
+ 867      73657273 
+ 867      5C77696C 
+ 867      6C655C44 
+ 867      65736B74 
+ 868 01d3 5A756D6F 		.ascii	"ZumoBot.cydsn\000"
+ 868      426F742E 
+ 868      63796473 
+ 868      6E00
+ 869              	.LASF23:
+ 870 01e1 4932435F 		.ascii	"I2C_BACKUP_STRUCT\000"
+ARM GAS  C:\Users\wille\AppData\Local\Temp\ccDFtC0k.s 			page 23
 
 
- 870 01e5 54756F6D 		.ascii	"Tuomo\\ZumoTUOMO\\ZumoBot.cydsn\000"
- 870      6F5C5A75 
- 870      6D6F5455 
- 870      4F4D4F5C 
- 870      5A756D6F 
+ 870      4241434B 
+ 870      55505F53 
+ 870      54525543 
+ 870      5400
  871              	.LASF2:
- 872 0203 73686F72 		.ascii	"short int\000"
+ 872 01f3 73686F72 		.ascii	"short int\000"
  872      7420696E 
  872      7400
  873              	.LASF9:
- 874 020d 75696E74 		.ascii	"uint8\000"
+ 874 01fd 75696E74 		.ascii	"uint8\000"
  874      3800
  875              	.LASF4:
- 876 0213 6C6F6E67 		.ascii	"long int\000"
+ 876 0203 6C6F6E67 		.ascii	"long int\000"
  876      20696E74 
  876      00
  877              	.LASF18:
- 878 021c 656E6162 		.ascii	"enableState\000"
+ 878 020c 656E6162 		.ascii	"enableState\000"
  878      6C655374 
  878      61746500 
  879              	.LASF34:
- 880 0228 4932435F 		.ascii	"I2C_backup\000"
+ 880 0218 4932435F 		.ascii	"I2C_backup\000"
  880      6261636B 
  880      757000
  881              	.LASF27:
- 882 0233 4932435F 		.ascii	"I2C_Stop\000"
+ 882 0223 4932435F 		.ascii	"I2C_Stop\000"
  882      53746F70 
  882      00
  883              	.LASF0:
- 884 023c 7369676E 		.ascii	"signed char\000"
+ 884 022c 7369676E 		.ascii	"signed char\000"
  884      65642063 
  884      68617200 
  885              	.LASF25:
- 886 0248 4932435F 		.ascii	"I2C_RestoreConfig\000"
+ 886 0238 4932435F 		.ascii	"I2C_RestoreConfig\000"
  886      52657374 
  886      6F726543 
  886      6F6E6669 
  886      6700
  887              	.LASF30:
- 888 025a 47656E65 		.ascii	"Generated_Source\\PSoC5\\I2C_PM.c\000"
+ 888 024a 47656E65 		.ascii	"Generated_Source\\PSoC5\\I2C_PM.c\000"
  888      72617465 
  888      645F536F 
  888      75726365 

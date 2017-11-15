@@ -40,6 +40,7 @@
 #include "Ultra.h"
 #include "Nunchuk.h"
 #include "Reflectance.h"
+//#include "Reflectance.c"
 #include "I2C_made.h"
 #include "Gyro.h"
 #include "Accel_magnet.h"
@@ -127,6 +128,9 @@ int main()
     }
     printf("\n");
     
+
+    reflectance_set_threshold(rajaArvo[0], rajaArvo[1], rajaArvo[2], rajaArvo[3]);
+
     while(SW1_Read()){
         
     }
