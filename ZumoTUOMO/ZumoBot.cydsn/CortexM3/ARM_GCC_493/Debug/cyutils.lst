@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 1
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclIqkuE.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 1
   29:Generated_Source\PSoC5/cyutils.c ****     *  No
   30:Generated_Source\PSoC5/cyutils.c ****     *
   31:Generated_Source\PSoC5/cyutils.c ****     ***************************************************************************/
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 2
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclIqkuE.s 			page 2
 
 
   32:Generated_Source\PSoC5/cyutils.c ****     void CySetReg24(uint32 volatile * addr, uint32 value)
@@ -110,7 +110,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 1
   64 0025 02       		.uleb128 0x2
   65 0026 01       		.byte	0x1
   66 0027 06       		.byte	0x6
-  67 0028 9B010000 		.4byte	.LASF0
+  67 0028 AF010000 		.4byte	.LASF0
   68 002c 02       		.uleb128 0x2
   69 002d 01       		.byte	0x1
   70 002e 08       		.byte	0x8
@@ -118,10 +118,10 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 1
   72 0033 02       		.uleb128 0x2
   73 0034 02       		.byte	0x2
   74 0035 05       		.byte	0x5
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 3
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclIqkuE.s 			page 3
 
 
-  75 0036 82010000 		.4byte	.LASF2
+  75 0036 96010000 		.4byte	.LASF2
   76 003a 02       		.uleb128 0x2
   77 003b 02       		.byte	0x2
   78 003c 07       		.byte	0x7
@@ -129,7 +129,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 1
   80 0041 02       		.uleb128 0x2
   81 0042 04       		.byte	0x4
   82 0043 05       		.byte	0x5
-  83 0044 92010000 		.4byte	.LASF4
+  83 0044 A6010000 		.4byte	.LASF4
   84 0048 02       		.uleb128 0x2
   85 0049 04       		.byte	0x4
   86 004a 07       		.byte	0x7
@@ -151,7 +151,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 1
  102 0066 07       		.byte	0x7
  103 0067 14010000 		.4byte	.LASF8
  104 006b 04       		.uleb128 0x4
- 105 006c 8C010000 		.4byte	.LASF9
+ 105 006c A0010000 		.4byte	.LASF9
  106 0070 02       		.byte	0x2
  107 0071 9201     		.2byte	0x192
  108 0073 2C000000 		.4byte	0x2c
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 1
  129 009e 77000000 		.4byte	0x77
  130 00a2 06       		.uleb128 0x6
  131 00a3 06000000 		.4byte	.LASF19
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 4
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclIqkuE.s 			page 4
 
 
  132 00a7 01       		.byte	0x1
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 1
  186 0011 00       		.byte	0
  187 0012 00       		.byte	0
  188 0013 02       		.uleb128 0x2
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 5
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclIqkuE.s 			page 5
 
 
  189 0014 24       		.uleb128 0x24
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 1
  243 004a 11       		.uleb128 0x11
  244 004b 01       		.uleb128 0x1
  245 004c 12       		.uleb128 0x12
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 6
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclIqkuE.s 			page 6
 
 
  246 004d 06       		.uleb128 0x6
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 1
  300 0084 0A       		.uleb128 0xa
  301 0085 0F       		.uleb128 0xf
  302 0086 00       		.byte	0
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 7
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclIqkuE.s 			page 7
 
 
  303 0087 0B       		.uleb128 0xb
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 1
  350      323400
  351              	.LASF14:
  352 0011 61646472 		.ascii	"addr\000"
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 8
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclIqkuE.s 			page 8
 
 
  352      00
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 1
  374      676E6564 
  374      20696E74 
  374      00
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 9
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cclIqkuE.s 			page 9
 
 
  375              	.LASF7:
@@ -496,27 +496,29 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccXZ1S2Z.s 			page 1
  380 0146 63686172 		.ascii	"char\000"
  380      00
  381              	.LASF18:
- 382 014b 433A5C55 		.ascii	"C:\\Users\\allu9\\Documents\\Projects\\Zumo01\\Zumo"
+ 382 014b 433A5C55 		.ascii	"C:\\Users\\Joonas\\Desktop\\Programming\\Laitteet\\"
  382      73657273 
- 382      5C616C6C 
- 382      75395C44 
- 382      6F63756D 
- 383 0178 426F742E 		.ascii	"Bot.cydsn\000"
- 383      63796473 
- 383      6E00
+ 382      5C4A6F6F 
+ 382      6E61735C 
+ 382      4465736B 
+ 383 0178 54756F6D 		.ascii	"Tuomo\\ZumoTUOMO\\ZumoBot.cydsn\000"
+ 383      6F5C5A75 
+ 383      6D6F5455 
+ 383      4F4D4F5C 
+ 383      5A756D6F 
  384              	.LASF2:
- 385 0182 73686F72 		.ascii	"short int\000"
+ 385 0196 73686F72 		.ascii	"short int\000"
  385      7420696E 
  385      7400
  386              	.LASF9:
- 387 018c 75696E74 		.ascii	"uint8\000"
+ 387 01a0 75696E74 		.ascii	"uint8\000"
  387      3800
  388              	.LASF4:
- 389 0192 6C6F6E67 		.ascii	"long int\000"
+ 389 01a6 6C6F6E67 		.ascii	"long int\000"
  389      20696E74 
  389      00
  390              	.LASF0:
- 391 019b 7369676E 		.ascii	"signed char\000"
+ 391 01af 7369676E 		.ascii	"signed char\000"
  391      65642063 
  391      68617200 
  392              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

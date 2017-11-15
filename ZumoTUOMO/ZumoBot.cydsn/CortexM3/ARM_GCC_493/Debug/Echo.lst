@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cckG8yEE.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
   29:Generated_Source\PSoC5/Echo.c **** * \brief Writes the value to the physical port (data output register), masking
   30:Generated_Source\PSoC5/Echo.c **** *  and shifting the bits appropriately. 
   31:Generated_Source\PSoC5/Echo.c **** *
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 2
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cckG8yEE.s 			page 2
 
 
   32:Generated_Source\PSoC5/Echo.c **** * The data output register controls the signal applied to the physical pin in 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
   52              		.align	2
   53              		.global	Echo_SetDriveMode
   54              		.thumb
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 3
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cckG8yEE.s 			page 3
 
 
   55              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
   77 0014 10500040 		.word	1073762320
   78              		.cfi_endproc
   79              	.LFE1:
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 4
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cckG8yEE.s 			page 4
 
 
   80              		.size	Echo_SetDriveMode, .-Echo_SetDriveMode
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
  110              		.thumb
  111              		.thumb_func
  112              		.type	Echo_ReadDataReg, %function
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 5
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cckG8yEE.s 			page 5
 
 
  113              	Echo_ReadDataReg:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
  139 0004 0400     		.2byte	0x4
  140 0006 00000000 		.4byte	.Ldebug_abbrev0
  141 000a 04       		.byte	0x4
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 6
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cckG8yEE.s 			page 6
 
 
  142 000b 01       		.uleb128 0x1
@@ -312,7 +312,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
  150 0025 02       		.uleb128 0x2
  151 0026 01       		.byte	0x1
  152 0027 06       		.byte	0x6
- 153 0028 C6010000 		.4byte	.LASF0
+ 153 0028 DA010000 		.4byte	.LASF0
  154 002c 02       		.uleb128 0x2
  155 002d 01       		.byte	0x1
  156 002e 08       		.byte	0x8
@@ -320,7 +320,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
  158 0033 02       		.uleb128 0x2
  159 0034 02       		.byte	0x2
  160 0035 05       		.byte	0x5
- 161 0036 AD010000 		.4byte	.LASF2
+ 161 0036 C1010000 		.4byte	.LASF2
  162 003a 02       		.uleb128 0x2
  163 003b 02       		.byte	0x2
  164 003c 07       		.byte	0x7
@@ -328,7 +328,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
  166 0041 02       		.uleb128 0x2
  167 0042 04       		.byte	0x4
  168 0043 05       		.byte	0x5
- 169 0044 BD010000 		.4byte	.LASF4
+ 169 0044 D1010000 		.4byte	.LASF4
  170 0048 02       		.uleb128 0x2
  171 0049 04       		.byte	0x4
  172 004a 07       		.byte	0x7
@@ -350,7 +350,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
  188 0066 07       		.byte	0x7
  189 0067 12010000 		.4byte	.LASF8
  190 006b 04       		.uleb128 0x4
- 191 006c B7010000 		.4byte	.LASF12
+ 191 006c CB010000 		.4byte	.LASF12
  192 0070 02       		.byte	0x2
  193 0071 9201     		.2byte	0x192
  194 0073 2C000000 		.4byte	0x2c
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
  196 0078 04       		.byte	0x4
  197 0079 04       		.byte	0x4
  198 007a 3F000000 		.4byte	.LASF9
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 7
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cckG8yEE.s 			page 7
 
 
  199 007e 02       		.uleb128 0x2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
  253 00f4 09       		.uleb128 0x9
  254 00f5 1F010000 		.4byte	.LASF18
  255 00f9 01       		.byte	0x1
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 8
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cckG8yEE.s 			page 8
 
 
  256 00fa 71       		.byte	0x71
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
  310 0024 0B       		.uleb128 0xb
  311 0025 03       		.uleb128 0x3
  312 0026 08       		.uleb128 0x8
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 9
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cckG8yEE.s 			page 9
 
 
  313 0027 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
  367 005e 3B       		.uleb128 0x3b
  368 005f 0B       		.uleb128 0xb
  369 0060 49       		.uleb128 0x49
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 10
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cckG8yEE.s 			page 10
 
 
  370 0061 13       		.uleb128 0x13
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
  424 000f 18000000 		.4byte	.LFE0
  425 0013 0400     		.2byte	0x4
  426 0015 F3       		.byte	0xf3
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 11
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cckG8yEE.s 			page 11
 
 
  427 0016 01       		.uleb128 0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
  478      FB0E0D00 
  478      01010101 
  479              	.LASF15:
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 12
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cckG8yEE.s 			page 12
 
 
  480 0000 4563686F 		.ascii	"Echo_SetDriveMode\000"
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
  503 00b7 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
  503      20726576 
  503      6973696F 
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 13
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cckG8yEE.s 			page 13
 
 
  503      6E203232 
@@ -761,30 +761,32 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 1
  518 0171 63686172 		.ascii	"char\000"
  518      00
  519              	.LASF22:
- 520 0176 433A5C55 		.ascii	"C:\\Users\\allu9\\Documents\\Projects\\Zumo01\\Zumo"
+ 520 0176 433A5C55 		.ascii	"C:\\Users\\Joonas\\Desktop\\Programming\\Laitteet\\"
  520      73657273 
- 520      5C616C6C 
- 520      75395C44 
- 520      6F63756D 
- 521 01a3 426F742E 		.ascii	"Bot.cydsn\000"
- 521      63796473 
- 521      6E00
+ 520      5C4A6F6F 
+ 520      6E61735C 
+ 520      4465736B 
+ 521 01a3 54756F6D 		.ascii	"Tuomo\\ZumoTUOMO\\ZumoBot.cydsn\000"
+ 521      6F5C5A75 
+ 521      6D6F5455 
+ 521      4F4D4F5C 
+ 521      5A756D6F 
  522              	.LASF2:
- 523 01ad 73686F72 		.ascii	"short int\000"
+ 523 01c1 73686F72 		.ascii	"short int\000"
  523      7420696E 
  523      7400
  524              	.LASF12:
- 525 01b7 75696E74 		.ascii	"uint8\000"
+ 525 01cb 75696E74 		.ascii	"uint8\000"
  525      3800
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\cckG8yEE.s 			page 14
+
+
  526              	.LASF4:
- 527 01bd 6C6F6E67 		.ascii	"long int\000"
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccnVsmAf.s 			page 14
-
-
+ 527 01d1 6C6F6E67 		.ascii	"long int\000"
  527      20696E74 
  527      00
  528              	.LASF0:
- 529 01c6 7369676E 		.ascii	"signed char\000"
+ 529 01da 7369676E 		.ascii	"signed char\000"
  529      65642063 
  529      68617200 
  530              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -58,6 +58,12 @@ int main()
 {
     struct sensors_ ref;
     struct sensors_ dig;
+    
+    int i;
+    int wCalib = 1, bCalib = 1;
+    
+    int rajaArvo[4],b[4],w[4];
+    
     CyGlobalIntEnable; 
     UART_1_Start();
     ADC_Battery_Start();        
@@ -73,49 +79,99 @@ int main()
     
         sensor_isr_StartEx(sensor_isr_handler);
     
+    IR_led_Write(1);
     reflectance_start();
+    
+    while(wCalib){
+        if(SW1_Read()==0){
+            
+            reflectance_read(&ref);
+            w[0] = ref.l3;
+            w[1] = ref.l1;
+            w[2] = ref.r1;
+            w[3] = ref.r3;
+            
+            wCalib = 0;
+        }
+    }
+    BatteryLed_Write(1);
+    CyDelay(1000);
+    BatteryLed_Write(0);
+    
+    while(bCalib){
+        if(SW1_Read()==0){
+            
+            reflectance_read(&ref);
+            b[0] = ref.l3;
+            b[1] = ref.l1;
+            b[2] = ref.r1;
+            b[3] = ref.r3;
+            
+            bCalib = 0;
+        }
+        
+    }
+    
+    BatteryLed_Write(1);
+    CyDelay(1000);
+    BatteryLed_Write(0);
+    
+    for(i=0; i<4; i++){
+        rajaArvo[i] = (b[i] + w[i]) / 2;
+        printf("%d ", rajaArvo[i]);
+    }
+    printf("\n");
+    
+    while(SW1_Read()){
+        
+    }
+    
 for(;;)
 {
-    IR_led_Write(1);
+    
     if(SW1_Read()==0)
     {
         CyDelay(1000);
+        motor_start();
+        
+        
+        
         for(;;)
         {
-        motor_start();
-        reflectance_read(&ref);
-        printf("%d %d %d %d \r\n", ref.l3, ref.l1, ref.r1, ref.r3);       //print out each period of reflectance sensors
-        reflectance_digital(&dig);      //print out 0 or 1 according to results of reflectance period
-        printf("%d %d %d %d \r\n", dig.l3, dig.l1, dig.r1, dig.r3);        //print out 0 or 1 according to results of reflectance period
-        
-        if((dig.r3==1&&dig.l3==0)||(dig.r3==1&&dig.l3==0&&dig.l1==0&&dig.r1==0))
-        {
-            printf("left\n");
-            motor_turn(0,100,50);
-        }
-        
-        else if((dig.r3==0&&dig.l3==1)||(dig.r3==0&&dig.l3==1&&dig.l1==0&&dig.r1==0))
-        {
-            printf("right\n");
-            motor_turn(100,0,50);
-        }
-        
-        
-        else if(dig.l3==1&&dig.r3==1)
-        {
-            printf("forward\n");
-            motor_forward(100,50);
-        }
-        else
-        {
-            printf("?!\n");
-            motor_backward(0,50);
-        }
-        //CyDelay(500);
+            
+            //reflectance_read(&ref);
+            //printf("%d %d %d %d \r\n", ref.l3, ref.l1, ref.r1, ref.r3);       //print out each period of reflectance sensors
+            reflectance_digital(&dig);      //print out 0 or 1 according to results of reflectance period
+            printf("%d %d %d %d \r\n", dig.l3, dig.l1, dig.r1, dig.r3);        //print out 0 or 1 according to results of reflectance period
+            
+            if((dig.r3==1 && dig.l3==0) || (dig.r3==1 && dig.l3==0 && dig.l1==0 && dig.r1==0))
+            {
+                printf("left\n");
+                motor_turn(0,100,50);
+            }
+            
+            else if((dig.r3==0 && dig.l3==1) || (dig.r3==0 && dig.l3==1 && dig.l1==0 && dig.r1==0))
+            {
+                printf("right\n");
+                motor_turn(100,0,50);
+            }
+            
+            
+            else if(dig.l3==1 && dig.r3==1)
+            {
+                printf("forward\n");
+                motor_forward(100,50);
+            }
+            else
+            {
+                printf("?!\n");
+                motor_backward(0,50);
+            }
+            //CyDelay(500);
         }       
-        }
-        //CyDelay(1000);
     }
+        //CyDelay(1000);
+}
     
     
 //    for(;;)

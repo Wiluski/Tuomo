@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\ccpr14jd.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
   29:Generated_Source\PSoC5/Trig.c **** * \brief Writes the value to the physical port (data output register), masking
   30:Generated_Source\PSoC5/Trig.c **** *  and shifting the bits appropriately. 
   31:Generated_Source\PSoC5/Trig.c **** *
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 2
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\ccpr14jd.s 			page 2
 
 
   32:Generated_Source\PSoC5/Trig.c **** * The data output register controls the signal applied to the physical pin in 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
   52              		.size	Trig_Write, .-Trig_Write
   53              		.section	.text.Trig_SetDriveMode,"ax",%progbits
   54              		.align	2
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 3
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\ccpr14jd.s 			page 3
 
 
   55              		.global	Trig_SetDriveMode
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
   77 0012 00BF     		.align	2
   78              	.L5:
   79 0014 07500040 		.word	1073762311
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 4
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\ccpr14jd.s 			page 4
 
 
   80              		.cfi_endproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
  110              		.align	2
  111              		.global	Trig_ReadDataReg
  112              		.thumb
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 5
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\ccpr14jd.s 			page 5
 
 
  113              		.thumb_func
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
  139              	.Ldebug_info0:
  140 0000 1D010000 		.4byte	0x11d
  141 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 6
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\ccpr14jd.s 			page 6
 
 
  142 0006 00000000 		.4byte	.Ldebug_abbrev0
@@ -314,7 +314,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
  152 0025 02       		.uleb128 0x2
  153 0026 01       		.byte	0x1
  154 0027 06       		.byte	0x6
- 155 0028 B5010000 		.4byte	.LASF0
+ 155 0028 C9010000 		.4byte	.LASF0
  156 002c 02       		.uleb128 0x2
  157 002d 01       		.byte	0x1
  158 002e 08       		.byte	0x8
@@ -322,7 +322,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
  160 0033 02       		.uleb128 0x2
  161 0034 02       		.byte	0x2
  162 0035 05       		.byte	0x5
- 163 0036 9C010000 		.4byte	.LASF2
+ 163 0036 B0010000 		.4byte	.LASF2
  164 003a 02       		.uleb128 0x2
  165 003b 02       		.byte	0x2
  166 003c 07       		.byte	0x7
@@ -330,7 +330,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
  168 0041 02       		.uleb128 0x2
  169 0042 04       		.byte	0x4
  170 0043 05       		.byte	0x5
- 171 0044 AC010000 		.4byte	.LASF4
+ 171 0044 C0010000 		.4byte	.LASF4
  172 0048 02       		.uleb128 0x2
  173 0049 04       		.byte	0x4
  174 004a 07       		.byte	0x7
@@ -352,13 +352,13 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
  190 0066 07       		.byte	0x7
  191 0067 29010000 		.4byte	.LASF8
  192 006b 04       		.uleb128 0x4
- 193 006c A6010000 		.4byte	.LASF12
+ 193 006c BA010000 		.4byte	.LASF12
  194 0070 02       		.byte	0x2
  195 0071 9201     		.2byte	0x192
  196 0073 2C000000 		.4byte	0x2c
  197 0077 02       		.uleb128 0x2
  198 0078 04       		.byte	0x4
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 7
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\ccpr14jd.s 			page 7
 
 
  199 0079 04       		.byte	0x4
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
  253 00f5 00       		.byte	0
  254 00f6 09       		.uleb128 0x9
  255 00f7 1C000000 		.4byte	.LASF18
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 8
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\ccpr14jd.s 			page 8
 
 
  256 00fb 01       		.byte	0x1
@@ -429,7 +429,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
  261 0109 01       		.uleb128 0x1
  262 010a 9C       		.byte	0x9c
  263 010b 09       		.uleb128 0x9
- 264 010c C1010000 		.4byte	.LASF19
+ 264 010c D5010000 		.4byte	.LASF19
  265 0110 01       		.byte	0x1
  266 0111 8D       		.byte	0x8d
  267 0112 6B000000 		.4byte	0x6b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
  310 0023 3E       		.uleb128 0x3e
  311 0024 0B       		.uleb128 0xb
  312 0025 03       		.uleb128 0x3
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 9
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\ccpr14jd.s 			page 9
 
 
  313 0026 08       		.uleb128 0x8
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
  367 005d 0B       		.uleb128 0xb
  368 005e 3B       		.uleb128 0x3b
  369 005f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 10
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\ccpr14jd.s 			page 10
 
 
  370 0060 49       		.uleb128 0x49
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
  424 000b 0A000000 		.4byte	.LVL2
  425 000f 18000000 		.4byte	.LFE0
  426 0013 0400     		.2byte	0x4
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 11
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\ccpr14jd.s 			page 11
 
 
  427 0015 F3       		.byte	0xf3
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
  481 001c 0C000000 		.4byte	.LFE3
  482 0020 00000000 		.4byte	0
  483 0024 00000000 		.4byte	0
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 12
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\ccpr14jd.s 			page 12
 
 
  484              		.section	.debug_line,"",%progbits
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
  509              	.LASF15:
  510 0089 54726967 		.ascii	"Trig_SetDriveMode\000"
  510      5F536574 
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 13
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\ccpr14jd.s 			page 13
 
 
  510      44726976 
@@ -763,34 +763,36 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 1
  524 0160 63686172 		.ascii	"char\000"
  524      00
  525              	.LASF22:
- 526 0165 433A5C55 		.ascii	"C:\\Users\\allu9\\Documents\\Projects\\Zumo01\\Zumo"
+ 526 0165 433A5C55 		.ascii	"C:\\Users\\Joonas\\Desktop\\Programming\\Laitteet\\"
  526      73657273 
- 526      5C616C6C 
- 526      75395C44 
- 526      6F63756D 
- 527 0192 426F742E 		.ascii	"Bot.cydsn\000"
- 527      63796473 
- 527      6E00
+ 526      5C4A6F6F 
+ 526      6E61735C 
+ 526      4465736B 
+ 527 0192 54756F6D 		.ascii	"Tuomo\\ZumoTUOMO\\ZumoBot.cydsn\000"
+ 527      6F5C5A75 
+ 527      6D6F5455 
+ 527      4F4D4F5C 
+ 527      5A756D6F 
  528              	.LASF2:
- 529 019c 73686F72 		.ascii	"short int\000"
+ 529 01b0 73686F72 		.ascii	"short int\000"
  529      7420696E 
  529      7400
  530              	.LASF12:
- 531 01a6 75696E74 		.ascii	"uint8\000"
+ARM GAS  C:\Users\Joonas\AppData\Local\Temp\ccpr14jd.s 			page 14
+
+
+ 531 01ba 75696E74 		.ascii	"uint8\000"
  531      3800
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cceHCdPI.s 			page 14
-
-
  532              	.LASF4:
- 533 01ac 6C6F6E67 		.ascii	"long int\000"
+ 533 01c0 6C6F6E67 		.ascii	"long int\000"
  533      20696E74 
  533      00
  534              	.LASF0:
- 535 01b5 7369676E 		.ascii	"signed char\000"
+ 535 01c9 7369676E 		.ascii	"signed char\000"
  535      65642063 
  535      68617200 
  536              	.LASF19:
- 537 01c1 54726967 		.ascii	"Trig_ReadDataReg\000"
+ 537 01d5 54726967 		.ascii	"Trig_ReadDataReg\000"
  537      5F526561 
  537      64446174 
  537      61526567 

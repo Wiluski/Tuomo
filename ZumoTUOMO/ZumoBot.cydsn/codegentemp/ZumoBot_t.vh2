@@ -1,6 +1,6 @@
--- Project:   C:\Users\allu9\Documents\Projects\Zumo01\ZumoBot.cydsn\ZumoBot.cyprj
--- Generated: 11/06/2017 13:44:54
--- PSoC Creator  4.0
+-- Project:   C:\Users\Joonas\Desktop\Programming\Laitteet\Tuomo\ZumoTUOMO\ZumoBot.cydsn\ZumoBot.cyprj
+-- Generated: 11/15/2017 12:06:59
+-- PSoC Creator  4.0 Update 1
 
 ENTITY ZumoBot IS
     PORT(
