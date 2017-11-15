@@ -1,3 +1,3 @@
 # Tuomo
 
-Task: Remove autisim from Tuomo
+Task: Remove autsim from Tuomo
