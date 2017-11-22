@@ -141,6 +141,8 @@ int main()
     
 
     reflectance_set_threshold(rajaArvo[0], rajaArvo[1], rajaArvo[2], rajaArvo[3]);
+    int ral1=threshold.l1;
+    printf("%d\n",ral1);
     Beep(100,50);
     while(SW1_Read()){
         
@@ -169,17 +171,25 @@ for(;;)
         CyDelay(1000);
         motor_start();
         
+        motor_forward(255,150);
+        int finish=0;
+        int timer=0;
         
-        
-        for(;;)
+        while(finish<1)
         {
             reflectance_read(&ref);
             reflectance_digital(&dig);      //print out 0 or 1 according to results of reflectance period
             printf("%d %d %d %d \r\n", ref.l3, ref.l1, ref.r1, ref.r3);        //print out 0 or 1 according to results of reflectance period
             
+            if(dig.l3==0&&dig.l1==0&&dig.r1==0&&dig.r3==0)
+            {
+                finish++;
+                
+            }
+            
             Drive(ref.l3, ref.l1,ref.r1,ref.r3);
             
-            if(delay==1000)
+            if(delay==5000)
             {
                 while(checkBat()<4)
                     {
@@ -192,11 +202,18 @@ for(;;)
                     }
                 delay=0;
             } 
+            timer++;
             delay++;
             //CyDelay(500);
         
         
-        }       
+        }   
+        motor_forward(200,170);
+        motor_stop();
+        for(;;)
+        {
+            printf("%d\n",timer);
+        }
     }
         //CyDelay(1000);
 }

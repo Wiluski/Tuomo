@@ -26,6 +26,8 @@ struct sensors_ {
 void reflectance_start(void);
 void reflectance_read(struct sensors_ *values);
 void reflectance_digital(struct sensors_ *digital);
+struct sensors_ threshold;
 void reflectance_set_threshold(uint16_t l3, uint16_t l1, uint16_t r1, uint16_t r3);
+
 
 #endif
