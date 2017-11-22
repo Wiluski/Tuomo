@@ -28,7 +28,7 @@ void Drive (int l3, int l1, int r1, int r3)
     else if (( l1<threshold.l1-8000 &&r1>threshold.r1)) //oikealle
     {
         dir = 1;
-        motor_turn(max,0,1);
+        motor_turn(max,max*0.10,1);
         
         
     }
@@ -36,41 +36,55 @@ void Drive (int l3, int l1, int r1, int r3)
     else if (( r1<threshold.r1-8000 && l1>threshold.l1)) //vasempaan
     {
         dir = 0;
-        motor_turn(0,max,1);
+        motor_turn(max*0.10,max,1);
     }    
     
-    else if (( l1<threshold.l1-6500&&r1>threshold.r1)) //oikealle
+    else if (( l1<threshold.l1-7000&&r1>threshold.r1)) //oikealle
     {
         dir = 1;
-        motor_turn(max,50,1);
+        motor_turn(max,max*0.30,1);
         
         
     }
 
-    else if (( r1<threshold.r1-6500 && l1>threshold.l1)) //vasempaan
+    else if (( r1<threshold.r1-7000 && l1>threshold.l1)) //vasempaan
     {
         dir = 0;
-        motor_turn(50,max,1);
+        motor_turn(max*0.30,max,1);
     }        
-//    
-//    else if (( l1<threshold.l1-5000&&r1>threshold.r1)) //oikealle
-//    {
-//        dir = 1;
-//        motor_turn(max,75,1);
-//        
-//        
-//    }
-//
-//    else if (( r1<threshold.r1-5000 && l1>threshold.l1)) //vasempaan
-//    {
-//        dir = 0;
-//        motor_turn(75,max,1);
-//    }   
+    
+    else if (( l1<threshold.l1-6000&&r1>threshold.r1)) //oikealle
+    {
+        dir = 1;
+        motor_turn(max,max*0.40,1);
+        
+        
+    }
+
+    else if (( r1<threshold.r1-6000 && l1>threshold.l1)) //vasempaan
+    {
+        dir = 0;
+        motor_turn(max*0.40,max,1);
+    }   
+    
+    else if (( l1<threshold.l1-5000&&r1>threshold.r1)) //oikealle
+    {
+        dir = 1;
+        motor_turn(max,max*0.50,1);
+        
+        
+    }
+
+    else if (( r1<threshold.r1-5000 && l1>threshold.l1)) //vasempaan
+    {
+        dir = 0;
+        motor_turn(max*0.50,max,1);
+    }        
 //    
     else if (( l1<threshold.l1-4000&&r1>threshold.r1)) //oikealle
     {
         dir = 1;
-        motor_turn(max,100,1);
+        motor_turn(max,max*0.60,1);
         
         
     }
@@ -78,21 +92,7 @@ void Drive (int l3, int l1, int r1, int r3)
     else if (( r1<threshold.r1-4000 && l1>threshold.l1)) //vasempaan
     {
         dir = 0;
-        motor_turn(100,max,1);
-    }        
-//    
-    else if (( l1<threshold.l1-2000&&r1>threshold.r1)) //oikealle
-    {
-        dir = 1;
-        motor_turn(max,150,1);
-        
-        
-    }
-
-    else if (( r1<threshold.r1-2000 && l1>threshold.l1)) //vasempaan
-    {
-        dir = 0;
-        motor_turn(150,max,1);
+        motor_turn(max*0.60,max,1);
         }     
 //
 //    else if (( l1<threshold.l1-1000&&r1>threshold.r1)) //oikealle
@@ -110,32 +110,32 @@ void Drive (int l3, int l1, int r1, int r3)
 //    }        
     
     
-    else if (( l1<threshold.l1-1000&&r1>threshold.r1)) //oikealle
+    else if (( l1<threshold.l1-3000&&r1>threshold.r1)) //oikealle
     {
         dir = 1;
-        motor_turn(max,180,1);
+        motor_turn(max,max*0.70,1);
         
         
     }
 
-    else if (( r1<threshold.r1-1000 && l1>threshold.l1)) //vasempaan
+    else if (( r1<threshold.r1-3000 && l1>threshold.l1)) //vasempaan
     {
         dir = 0;
-        motor_turn(180,max,1);
+        motor_turn(max*0.70,max,1);
     }        
   
-    else if (( l1<threshold.l1-200&&r1>threshold.r1)) //oikealle
+    else if (( l1<threshold.l1-2000&&r1>threshold.r1)) //oikealle
     {
         dir = 1;
-        motor_turn(max,200,1);
+        motor_turn(max,max*0.80,1);
         
         
     }
 
-    else if (( r1<threshold.r1-200 && l1>threshold.l1)) //vasempaan
+    else if (( r1<threshold.r1-2000 && l1>threshold.l1)) //vasempaan
     {
         dir = 0;
-        motor_turn(200,max,1);
+        motor_turn(max*0.80,max,1);
     }        
  
     
@@ -143,7 +143,7 @@ void Drive (int l3, int l1, int r1, int r3)
     else if (( l1<threshold.l1&&r1>threshold.r1)) //oikealle
     {
         dir = 1;
-        motor_turn(max,225,1);
+        motor_turn(max,max*0.90,1);
         
         
     }
@@ -151,7 +151,7 @@ void Drive (int l3, int l1, int r1, int r3)
     else if (( r1<threshold.r1 && l1>threshold.l1)) //vasempaan
     {
         dir = 0;
-        motor_turn(225,max,1);
+        motor_turn(max*0.90,max,1);
     }    
     
    

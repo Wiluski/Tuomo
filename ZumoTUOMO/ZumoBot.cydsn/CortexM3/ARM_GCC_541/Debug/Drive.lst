@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 1
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 1
 
 
    1              		.syntax unified
@@ -19,15 +19,18 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 1
   16              		.text
   17              	.Ltext0:
   18              		.cfi_sections	.debug_frame
-  19              		.section	.text.Drive,"ax",%progbits
-  20              		.align	2
-  21              		.global	Drive
-  22              		.thumb
-  23              		.thumb_func
-  24              		.type	Drive, %function
-  25              	Drive:
-  26              	.LFB63:
-  27              		.file 1 "Drive.c"
+  19              		.global	__aeabi_i2d
+  20              		.global	__aeabi_dmul
+  21              		.global	__aeabi_d2uiz
+  22              		.section	.text.Drive,"ax",%progbits
+  23              		.align	2
+  24              		.global	Drive
+  25              		.thumb
+  26              		.thumb_func
+  27              		.type	Drive, %function
+  28              	Drive:
+  29              	.LFB63:
+  30              		.file 1 "Drive.c"
    1:Drive.c       **** /**
    2:Drive.c       ****  * @file    Drive.c
    3:Drive.c       ****  * @brief   ASDF Written by me AKA VE's
@@ -42,325 +45,477 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 1
   12:Drive.c       **** 
   13:Drive.c       **** void Drive (int l3, int l1, int r1, int r3)
   14:Drive.c       **** {
-  28              		.loc 1 14 0
-  29              		.cfi_startproc
-  30              		@ args = 0, pretend = 0, frame = 0
-  31              		@ frame_needed = 0, uses_anonymous_args = 0
-  32              	.LVL0:
-  33 0000 10B5     		push	{r4, lr}
-  34              		.cfi_def_cfa_offset 8
-  35              		.cfi_offset 4, -8
-  36              		.cfi_offset 14, -4
-  37 0002 82B0     		sub	sp, sp, #8
-  38              		.cfi_def_cfa_offset 16
+  31              		.loc 1 14 0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 0
+  34              		@ frame_needed = 0, uses_anonymous_args = 0
+  35              	.LVL0:
+  36 0000 30B5     		push	{r4, r5, lr}
+  37              		.cfi_def_cfa_offset 12
+  38              		.cfi_offset 4, -12
+  39              		.cfi_offset 5, -8
+  40              		.cfi_offset 14, -4
+  41 0002 83B0     		sub	sp, sp, #12
+  42              		.cfi_def_cfa_offset 24
   15:Drive.c       **** 
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 2
+
+
   16:Drive.c       ****     
   17:Drive.c       **** //    if (l3>threshold.l3&&r3>threshold.r3)
   18:Drive.c       **** //    {
   19:Drive.c       **** //        motor_backward(0,1);
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 2
-
-
   20:Drive.c       **** //    }
   21:Drive.c       ****     
   22:Drive.c       ****     if (r1>threshold.r1 && l1>threshold.l1)
-  39              		.loc 1 22 0
-  40 0004 7F4B     		ldr	r3, .L20
-  41              	.LVL1:
-  42 0006 9B88     		ldrh	r3, [r3, #4]
-  43 0008 9342     		cmp	r3, r2
-  44 000a 0CDA     		bge	.L2
-  45              		.loc 1 22 0 is_stmt 0 discriminator 1
-  46 000c 7D48     		ldr	r0, .L20
-  47              	.LVL2:
-  48 000e 4088     		ldrh	r0, [r0, #2]
-  49 0010 8842     		cmp	r0, r1
-  50 0012 08DA     		bge	.L2
+  43              		.loc 1 22 0
+  44 0004 BA4B     		ldr	r3, .L22+40
+  45              	.LVL1:
+  46 0006 9B88     		ldrh	r3, [r3, #4]
+  47 0008 9342     		cmp	r3, r2
+  48 000a 0CDA     		bge	.L2
+  49              		.loc 1 22 0 is_stmt 0 discriminator 1
+  50 000c B848     		ldr	r0, .L22+40
+  51              	.LVL2:
+  52 000e 4088     		ldrh	r0, [r0, #2]
+  53 0010 8842     		cmp	r0, r1
+  54 0012 08DA     		bge	.L2
   23:Drive.c       ****     {
   24:Drive.c       ****         motor_forward(max,1);
-  51              		.loc 1 24 0 is_stmt 1
-  52 0014 0121     		movs	r1, #1
-  53              	.LVL3:
-  54 0016 7C4B     		ldr	r3, .L20+4
-  55 0018 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
-  56 001a FFF7FEFF 		bl	motor_forward
-  57              	.LVL4:
+  55              		.loc 1 24 0 is_stmt 1
+  56 0014 0121     		movs	r1, #1
+  57              	.LVL3:
+  58 0016 B74B     		ldr	r3, .L22+44
+  59 0018 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+  60 001a FFF7FEFF 		bl	motor_forward
+  61              	.LVL4:
   25:Drive.c       ****         dir= 2;
-  58              		.loc 1 25 0
-  59 001e 0222     		movs	r2, #2
-  60 0020 7A4B     		ldr	r3, .L20+8
-  61 0022 1A60     		str	r2, [r3]
-  62 0024 ECE0     		b	.L1
-  63              	.LVL5:
-  64              	.L2:
+  62              		.loc 1 25 0
+  63 001e 0222     		movs	r2, #2
+  64 0020 B54B     		ldr	r3, .L22+48
+  65 0022 1A60     		str	r2, [r3]
+  66 0024 EBE1     		b	.L1
+  67              	.LVL5:
+  68              	.L2:
   26:Drive.c       ****     }
   27:Drive.c       **** 
   28:Drive.c       ****     else if (( l1<threshold.l1-8000 &&r1>threshold.r1)) //oikealle
-  65              		.loc 1 28 0
-  66 0026 7748     		ldr	r0, .L20
-  67 0028 4088     		ldrh	r0, [r0, #2]
-  68 002a A0F5FA54 		sub	r4, r0, #8000
-  69 002e A142     		cmp	r1, r4
-  70 0030 0ADA     		bge	.L4
-  71              		.loc 1 28 0 is_stmt 0 discriminator 1
-  72 0032 9342     		cmp	r3, r2
-  73 0034 08DA     		bge	.L4
+  69              		.loc 1 28 0
+  70 0026 B248     		ldr	r0, .L22+40
+  71 0028 4088     		ldrh	r0, [r0, #2]
+  72 002a A0F5FA54 		sub	r4, r0, #8000
+  73 002e A142     		cmp	r1, r4
+  74 0030 16DA     		bge	.L4
+  75              		.loc 1 28 0 is_stmt 0 discriminator 1
+  76 0032 9342     		cmp	r3, r2
+  77 0034 14DA     		bge	.L4
   29:Drive.c       ****     {
   30:Drive.c       ****         dir = 1;
-  74              		.loc 1 30 0 is_stmt 1
-  75 0036 0122     		movs	r2, #1
-  76              	.LVL6:
-  77 0038 744B     		ldr	r3, .L20+8
-  78 003a 1A60     		str	r2, [r3]
-  31:Drive.c       ****         motor_turn(max,0,1);
-  79              		.loc 1 31 0
-  80 003c 0021     		movs	r1, #0
-  81              	.LVL7:
-  82 003e 724B     		ldr	r3, .L20+4
-  83 0040 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 3
+  78              		.loc 1 30 0 is_stmt 1
+  79 0036 0125     		movs	r5, #1
+  80 0038 AF4B     		ldr	r3, .L22+48
+  81 003a 1D60     		str	r5, [r3]
+  31:Drive.c       ****         motor_turn(max,max*0.10,1);
+  82              		.loc 1 31 0
+  83 003c AD4B     		ldr	r3, .L22+44
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 3
 
 
-  84 0042 FFF7FEFF 		bl	motor_turn
-  85              	.LVL8:
-  86 0046 DBE0     		b	.L1
-  87              	.LVL9:
-  88              	.L4:
+  84 003e 1C68     		ldr	r4, [r3]
+  85 0040 2046     		mov	r0, r4
+  86 0042 FFF7FEFF 		bl	__aeabi_i2d
+  87              	.LVL6:
+  88 0046 A0A3     		adr	r3, .L22
+  89 0048 D3E90023 		ldrd	r2, [r3]
+  90 004c FFF7FEFF 		bl	__aeabi_dmul
+  91              	.LVL7:
+  92 0050 FFF7FEFF 		bl	__aeabi_d2uiz
+  93              	.LVL8:
+  94 0054 2A46     		mov	r2, r5
+  95 0056 C1B2     		uxtb	r1, r0
+  96 0058 E0B2     		uxtb	r0, r4
+  97 005a FFF7FEFF 		bl	motor_turn
+  98              	.LVL9:
+  99 005e CEE1     		b	.L1
+ 100              	.LVL10:
+ 101              	.L4:
   32:Drive.c       ****         
   33:Drive.c       ****         
   34:Drive.c       ****     }
   35:Drive.c       **** 
   36:Drive.c       ****     else if (( r1<threshold.r1-8000 && l1>threshold.l1)) //vasempaan
-  89              		.loc 1 36 0
-  90 0048 A3F5FA54 		sub	r4, r3, #8000
-  91 004c A242     		cmp	r2, r4
-  92 004e 0ADA     		bge	.L5
-  93              		.loc 1 36 0 is_stmt 0 discriminator 1
-  94 0050 8142     		cmp	r1, r0
-  95 0052 08DD     		ble	.L5
+ 102              		.loc 1 36 0
+ 103 0060 A3F5FA54 		sub	r4, r3, #8000
+ 104 0064 A242     		cmp	r2, r4
+ 105 0066 17DA     		bge	.L5
+ 106              		.loc 1 36 0 is_stmt 0 discriminator 1
+ 107 0068 8142     		cmp	r1, r0
+ 108 006a 15DD     		ble	.L5
   37:Drive.c       ****     {
   38:Drive.c       ****         dir = 0;
-  96              		.loc 1 38 0 is_stmt 1
-  97 0054 0020     		movs	r0, #0
-  98 0056 6D4B     		ldr	r3, .L20+8
-  99 0058 1860     		str	r0, [r3]
-  39:Drive.c       ****         motor_turn(0,max,1);
- 100              		.loc 1 39 0
- 101 005a 0122     		movs	r2, #1
- 102              	.LVL10:
- 103 005c 6A4B     		ldr	r3, .L20+4
- 104 005e 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
- 105              	.LVL11:
- 106 0060 FFF7FEFF 		bl	motor_turn
- 107              	.LVL12:
- 108 0064 CCE0     		b	.L1
- 109              	.LVL13:
- 110              	.L5:
+ 109              		.loc 1 38 0 is_stmt 1
+ 110 006c 0022     		movs	r2, #0
+ 111              	.LVL11:
+ 112 006e A24B     		ldr	r3, .L22+48
+ 113 0070 1A60     		str	r2, [r3]
+  39:Drive.c       ****         motor_turn(max*0.10,max,1);
+ 114              		.loc 1 39 0
+ 115 0072 A04B     		ldr	r3, .L22+44
+ 116 0074 1C68     		ldr	r4, [r3]
+ 117 0076 2046     		mov	r0, r4
+ 118 0078 FFF7FEFF 		bl	__aeabi_i2d
+ 119              	.LVL12:
+ 120 007c 92A3     		adr	r3, .L22
+ 121 007e D3E90023 		ldrd	r2, [r3]
+ 122 0082 FFF7FEFF 		bl	__aeabi_dmul
+ 123              	.LVL13:
+ 124 0086 E4B2     		uxtb	r4, r4
+ 125 0088 FFF7FEFF 		bl	__aeabi_d2uiz
+ 126              	.LVL14:
+ 127 008c 0122     		movs	r2, #1
+ 128 008e 2146     		mov	r1, r4
+ 129 0090 C0B2     		uxtb	r0, r0
+ 130 0092 FFF7FEFF 		bl	motor_turn
+ 131              	.LVL15:
+ 132 0096 B2E1     		b	.L1
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 4
+
+
+ 133              	.LVL16:
+ 134              	.L5:
   40:Drive.c       ****     }    
   41:Drive.c       ****     
-  42:Drive.c       ****     else if (( l1<threshold.l1-6500&&r1>threshold.r1)) //oikealle
- 111              		.loc 1 42 0
- 112 0066 A0F5CB54 		sub	r4, r0, #6496
- 113 006a 043C     		subs	r4, r4, #4
- 114 006c A142     		cmp	r1, r4
- 115 006e 0ADA     		bge	.L6
- 116              		.loc 1 42 0 is_stmt 0 discriminator 1
- 117 0070 9342     		cmp	r3, r2
- 118 0072 08DA     		bge	.L6
+  42:Drive.c       ****     else if (( l1<threshold.l1-7000&&r1>threshold.r1)) //oikealle
+ 135              		.loc 1 42 0
+ 136 0098 A0F5DA54 		sub	r4, r0, #6976
+ 137 009c 183C     		subs	r4, r4, #24
+ 138 009e A142     		cmp	r1, r4
+ 139 00a0 16DA     		bge	.L6
+ 140              		.loc 1 42 0 is_stmt 0 discriminator 1
+ 141 00a2 9342     		cmp	r3, r2
+ 142 00a4 14DA     		bge	.L6
   43:Drive.c       ****     {
   44:Drive.c       ****         dir = 1;
- 119              		.loc 1 44 0 is_stmt 1
- 120 0074 0122     		movs	r2, #1
- 121              	.LVL14:
- 122 0076 654B     		ldr	r3, .L20+8
- 123 0078 1A60     		str	r2, [r3]
-  45:Drive.c       ****         motor_turn(max,50,1);
- 124              		.loc 1 45 0
- 125 007a 3221     		movs	r1, #50
- 126              	.LVL15:
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 4
-
-
- 127 007c 624B     		ldr	r3, .L20+4
- 128 007e 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 129 0080 FFF7FEFF 		bl	motor_turn
- 130              	.LVL16:
- 131 0084 BCE0     		b	.L1
- 132              	.LVL17:
- 133              	.L6:
+ 143              		.loc 1 44 0 is_stmt 1
+ 144 00a6 0125     		movs	r5, #1
+ 145 00a8 934B     		ldr	r3, .L22+48
+ 146 00aa 1D60     		str	r5, [r3]
+  45:Drive.c       ****         motor_turn(max,max*0.30,1);
+ 147              		.loc 1 45 0
+ 148 00ac 914B     		ldr	r3, .L22+44
+ 149 00ae 1C68     		ldr	r4, [r3]
+ 150 00b0 2046     		mov	r0, r4
+ 151 00b2 FFF7FEFF 		bl	__aeabi_i2d
+ 152              	.LVL17:
+ 153 00b6 86A3     		adr	r3, .L22+8
+ 154 00b8 D3E90023 		ldrd	r2, [r3]
+ 155 00bc FFF7FEFF 		bl	__aeabi_dmul
+ 156              	.LVL18:
+ 157 00c0 FFF7FEFF 		bl	__aeabi_d2uiz
+ 158              	.LVL19:
+ 159 00c4 2A46     		mov	r2, r5
+ 160 00c6 C1B2     		uxtb	r1, r0
+ 161 00c8 E0B2     		uxtb	r0, r4
+ 162 00ca FFF7FEFF 		bl	motor_turn
+ 163              	.LVL20:
+ 164 00ce 96E1     		b	.L1
+ 165              	.LVL21:
+ 166              	.L6:
   46:Drive.c       ****         
   47:Drive.c       ****         
   48:Drive.c       ****     }
   49:Drive.c       **** 
-  50:Drive.c       ****     else if (( r1<threshold.r1-6500 && l1>threshold.l1)) //vasempaan
- 134              		.loc 1 50 0
- 135 0086 A3F5CB54 		sub	r4, r3, #6496
- 136 008a 043C     		subs	r4, r4, #4
- 137 008c A242     		cmp	r2, r4
- 138 008e 0BDA     		bge	.L7
- 139              		.loc 1 50 0 is_stmt 0 discriminator 1
- 140 0090 8142     		cmp	r1, r0
- 141 0092 09DD     		ble	.L7
+  50:Drive.c       ****     else if (( r1<threshold.r1-7000 && l1>threshold.l1)) //vasempaan
+ 167              		.loc 1 50 0
+ 168 00d0 A3F5DA54 		sub	r4, r3, #6976
+ 169 00d4 183C     		subs	r4, r4, #24
+ 170 00d6 A242     		cmp	r2, r4
+ 171 00d8 17DA     		bge	.L7
+ 172              		.loc 1 50 0 is_stmt 0 discriminator 1
+ 173 00da 8142     		cmp	r1, r0
+ 174 00dc 15DD     		ble	.L7
   51:Drive.c       ****     {
   52:Drive.c       ****         dir = 0;
- 142              		.loc 1 52 0 is_stmt 1
- 143 0094 0022     		movs	r2, #0
- 144              	.LVL18:
- 145 0096 5D4B     		ldr	r3, .L20+8
- 146 0098 1A60     		str	r2, [r3]
-  53:Drive.c       ****         motor_turn(50,max,1);
- 147              		.loc 1 53 0
- 148 009a 0122     		movs	r2, #1
- 149 009c 5A4B     		ldr	r3, .L20+4
- 150 009e 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
- 151              	.LVL19:
- 152 00a0 3220     		movs	r0, #50
- 153 00a2 FFF7FEFF 		bl	motor_turn
- 154              	.LVL20:
- 155 00a6 ABE0     		b	.L1
- 156              	.LVL21:
- 157              	.L7:
+ 175              		.loc 1 52 0 is_stmt 1
+ 176 00de 0022     		movs	r2, #0
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 5
+
+
+ 177              	.LVL22:
+ 178 00e0 854B     		ldr	r3, .L22+48
+ 179 00e2 1A60     		str	r2, [r3]
+  53:Drive.c       ****         motor_turn(max*0.30,max,1);
+ 180              		.loc 1 53 0
+ 181 00e4 834B     		ldr	r3, .L22+44
+ 182 00e6 1C68     		ldr	r4, [r3]
+ 183 00e8 2046     		mov	r0, r4
+ 184 00ea FFF7FEFF 		bl	__aeabi_i2d
+ 185              	.LVL23:
+ 186 00ee 78A3     		adr	r3, .L22+8
+ 187 00f0 D3E90023 		ldrd	r2, [r3]
+ 188 00f4 FFF7FEFF 		bl	__aeabi_dmul
+ 189              	.LVL24:
+ 190 00f8 E4B2     		uxtb	r4, r4
+ 191 00fa FFF7FEFF 		bl	__aeabi_d2uiz
+ 192              	.LVL25:
+ 193 00fe 0122     		movs	r2, #1
+ 194 0100 2146     		mov	r1, r4
+ 195 0102 C0B2     		uxtb	r0, r0
+ 196 0104 FFF7FEFF 		bl	motor_turn
+ 197              	.LVL26:
+ 198 0108 79E1     		b	.L1
+ 199              	.LVL27:
+ 200              	.L7:
   54:Drive.c       ****     }        
-  55:Drive.c       **** //    
-  56:Drive.c       **** //    else if (( l1<threshold.l1-5000&&r1>threshold.r1)) //oikealle
-  57:Drive.c       **** //    {
-  58:Drive.c       **** //        dir = 1;
-  59:Drive.c       **** //        motor_turn(max,75,1);
-  60:Drive.c       **** //        
-  61:Drive.c       **** //        
-  62:Drive.c       **** //    }
-  63:Drive.c       **** //
-  64:Drive.c       **** //    else if (( r1<threshold.r1-5000 && l1>threshold.l1)) //vasempaan
-  65:Drive.c       **** //    {
-  66:Drive.c       **** //        dir = 0;
-  67:Drive.c       **** //        motor_turn(75,max,1);
-  68:Drive.c       **** //    }   
-  69:Drive.c       **** //    
-  70:Drive.c       ****     else if (( l1<threshold.l1-4000&&r1>threshold.r1)) //oikealle
- 158              		.loc 1 70 0
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 5
+  55:Drive.c       ****     
+  56:Drive.c       ****     else if (( l1<threshold.l1-6000&&r1>threshold.r1)) //oikealle
+ 201              		.loc 1 56 0
+ 202 010a A0F5BB54 		sub	r4, r0, #5984
+ 203 010e 103C     		subs	r4, r4, #16
+ 204 0110 A142     		cmp	r1, r4
+ 205 0112 16DA     		bge	.L8
+ 206              		.loc 1 56 0 is_stmt 0 discriminator 1
+ 207 0114 9342     		cmp	r3, r2
+ 208 0116 14DA     		bge	.L8
+  57:Drive.c       ****     {
+  58:Drive.c       ****         dir = 1;
+ 209              		.loc 1 58 0 is_stmt 1
+ 210 0118 0125     		movs	r5, #1
+ 211 011a 774B     		ldr	r3, .L22+48
+ 212 011c 1D60     		str	r5, [r3]
+  59:Drive.c       ****         motor_turn(max,max*0.40,1);
+ 213              		.loc 1 59 0
+ 214 011e 754B     		ldr	r3, .L22+44
+ 215 0120 1C68     		ldr	r4, [r3]
+ 216 0122 2046     		mov	r0, r4
+ 217 0124 FFF7FEFF 		bl	__aeabi_i2d
+ 218              	.LVL28:
+ 219 0128 6BA3     		adr	r3, .L22+16
+ 220 012a D3E90023 		ldrd	r2, [r3]
+ 221 012e FFF7FEFF 		bl	__aeabi_dmul
+ 222              	.LVL29:
+ 223 0132 FFF7FEFF 		bl	__aeabi_d2uiz
+ 224              	.LVL30:
+ 225 0136 2A46     		mov	r2, r5
+ 226 0138 C1B2     		uxtb	r1, r0
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 6
 
 
- 159 00a8 A0F57A64 		sub	r4, r0, #4000
- 160 00ac A142     		cmp	r1, r4
- 161 00ae 0ADA     		bge	.L8
- 162              		.loc 1 70 0 is_stmt 0 discriminator 1
- 163 00b0 9342     		cmp	r3, r2
- 164 00b2 08DA     		bge	.L8
+ 227 013a E0B2     		uxtb	r0, r4
+ 228 013c FFF7FEFF 		bl	motor_turn
+ 229              	.LVL31:
+ 230 0140 5DE1     		b	.L1
+ 231              	.LVL32:
+ 232              	.L8:
+  60:Drive.c       ****         
+  61:Drive.c       ****         
+  62:Drive.c       ****     }
+  63:Drive.c       **** 
+  64:Drive.c       ****     else if (( r1<threshold.r1-6000 && l1>threshold.l1)) //vasempaan
+ 233              		.loc 1 64 0
+ 234 0142 A3F5BB54 		sub	r4, r3, #5984
+ 235 0146 103C     		subs	r4, r4, #16
+ 236 0148 A242     		cmp	r2, r4
+ 237 014a 17DA     		bge	.L9
+ 238              		.loc 1 64 0 is_stmt 0 discriminator 1
+ 239 014c 8142     		cmp	r1, r0
+ 240 014e 15DD     		ble	.L9
+  65:Drive.c       ****     {
+  66:Drive.c       ****         dir = 0;
+ 241              		.loc 1 66 0 is_stmt 1
+ 242 0150 0022     		movs	r2, #0
+ 243              	.LVL33:
+ 244 0152 694B     		ldr	r3, .L22+48
+ 245 0154 1A60     		str	r2, [r3]
+  67:Drive.c       ****         motor_turn(max*0.40,max,1);
+ 246              		.loc 1 67 0
+ 247 0156 674B     		ldr	r3, .L22+44
+ 248 0158 1C68     		ldr	r4, [r3]
+ 249 015a 2046     		mov	r0, r4
+ 250 015c FFF7FEFF 		bl	__aeabi_i2d
+ 251              	.LVL34:
+ 252 0160 5DA3     		adr	r3, .L22+16
+ 253 0162 D3E90023 		ldrd	r2, [r3]
+ 254 0166 FFF7FEFF 		bl	__aeabi_dmul
+ 255              	.LVL35:
+ 256 016a E4B2     		uxtb	r4, r4
+ 257 016c FFF7FEFF 		bl	__aeabi_d2uiz
+ 258              	.LVL36:
+ 259 0170 0122     		movs	r2, #1
+ 260 0172 2146     		mov	r1, r4
+ 261 0174 C0B2     		uxtb	r0, r0
+ 262 0176 FFF7FEFF 		bl	motor_turn
+ 263              	.LVL37:
+ 264 017a 40E1     		b	.L1
+ 265              	.LVL38:
+ 266              	.L9:
+  68:Drive.c       ****     }   
+  69:Drive.c       ****     
+  70:Drive.c       ****     else if (( l1<threshold.l1-5000&&r1>threshold.r1)) //oikealle
+ 267              		.loc 1 70 0
+ 268 017c A0F59C54 		sub	r4, r0, #4992
+ 269 0180 083C     		subs	r4, r4, #8
+ 270 0182 A142     		cmp	r1, r4
+ 271 0184 15DA     		bge	.L10
+ 272              		.loc 1 70 0 is_stmt 0 discriminator 1
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 7
+
+
+ 273 0186 9342     		cmp	r3, r2
+ 274 0188 13DA     		bge	.L10
   71:Drive.c       ****     {
   72:Drive.c       ****         dir = 1;
- 165              		.loc 1 72 0 is_stmt 1
- 166 00b4 0122     		movs	r2, #1
- 167              	.LVL22:
- 168 00b6 554B     		ldr	r3, .L20+8
- 169 00b8 1A60     		str	r2, [r3]
-  73:Drive.c       ****         motor_turn(max,100,1);
- 170              		.loc 1 73 0
- 171 00ba 6421     		movs	r1, #100
- 172              	.LVL23:
- 173 00bc 524B     		ldr	r3, .L20+4
- 174 00be 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 175 00c0 FFF7FEFF 		bl	motor_turn
- 176              	.LVL24:
- 177 00c4 9CE0     		b	.L1
- 178              	.LVL25:
- 179              	.L8:
+ 275              		.loc 1 72 0 is_stmt 1
+ 276 018a 0125     		movs	r5, #1
+ 277 018c 5A4B     		ldr	r3, .L22+48
+ 278 018e 1D60     		str	r5, [r3]
+  73:Drive.c       ****         motor_turn(max,max*0.50,1);
+ 279              		.loc 1 73 0
+ 280 0190 584B     		ldr	r3, .L22+44
+ 281 0192 1C68     		ldr	r4, [r3]
+ 282 0194 2046     		mov	r0, r4
+ 283 0196 FFF7FEFF 		bl	__aeabi_i2d
+ 284              	.LVL39:
+ 285 019a 0022     		movs	r2, #0
+ 286 019c 574B     		ldr	r3, .L22+52
+ 287 019e FFF7FEFF 		bl	__aeabi_dmul
+ 288              	.LVL40:
+ 289 01a2 FFF7FEFF 		bl	__aeabi_d2uiz
+ 290              	.LVL41:
+ 291 01a6 2A46     		mov	r2, r5
+ 292 01a8 C1B2     		uxtb	r1, r0
+ 293 01aa E0B2     		uxtb	r0, r4
+ 294 01ac FFF7FEFF 		bl	motor_turn
+ 295              	.LVL42:
+ 296 01b0 25E1     		b	.L1
+ 297              	.LVL43:
+ 298              	.L10:
   74:Drive.c       ****         
   75:Drive.c       ****         
   76:Drive.c       ****     }
   77:Drive.c       **** 
-  78:Drive.c       ****     else if (( r1<threshold.r1-4000 && l1>threshold.l1)) //vasempaan
- 180              		.loc 1 78 0
- 181 00c6 A3F57A64 		sub	r4, r3, #4000
- 182 00ca A242     		cmp	r2, r4
- 183 00cc 0BDA     		bge	.L9
- 184              		.loc 1 78 0 is_stmt 0 discriminator 1
- 185 00ce 8142     		cmp	r1, r0
- 186 00d0 09DD     		ble	.L9
+  78:Drive.c       ****     else if (( r1<threshold.r1-5000 && l1>threshold.l1)) //vasempaan
+ 299              		.loc 1 78 0
+ 300 01b2 A3F59C54 		sub	r4, r3, #4992
+ 301 01b6 083C     		subs	r4, r4, #8
+ 302 01b8 A242     		cmp	r2, r4
+ 303 01ba 16DA     		bge	.L11
+ 304              		.loc 1 78 0 is_stmt 0 discriminator 1
+ 305 01bc 8142     		cmp	r1, r0
+ 306 01be 14DD     		ble	.L11
   79:Drive.c       ****     {
   80:Drive.c       ****         dir = 0;
- 187              		.loc 1 80 0 is_stmt 1
- 188 00d2 0022     		movs	r2, #0
- 189              	.LVL26:
- 190 00d4 4D4B     		ldr	r3, .L20+8
- 191 00d6 1A60     		str	r2, [r3]
-  81:Drive.c       ****         motor_turn(100,max,1);
- 192              		.loc 1 81 0
- 193 00d8 0122     		movs	r2, #1
- 194 00da 4B4B     		ldr	r3, .L20+4
- 195 00dc 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
- 196              	.LVL27:
- 197 00de 6420     		movs	r0, #100
- 198 00e0 FFF7FEFF 		bl	motor_turn
- 199              	.LVL28:
- 200 00e4 8CE0     		b	.L1
- 201              	.LVL29:
- 202              	.L9:
+ 307              		.loc 1 80 0 is_stmt 1
+ 308 01c0 0022     		movs	r2, #0
+ 309              	.LVL44:
+ 310 01c2 4D4B     		ldr	r3, .L22+48
+ 311 01c4 1A60     		str	r2, [r3]
+  81:Drive.c       ****         motor_turn(max*0.50,max,1);
+ 312              		.loc 1 81 0
+ 313 01c6 4B4B     		ldr	r3, .L22+44
+ 314 01c8 1C68     		ldr	r4, [r3]
+ 315 01ca 2046     		mov	r0, r4
+ 316 01cc FFF7FEFF 		bl	__aeabi_i2d
+ 317              	.LVL45:
+ 318 01d0 0022     		movs	r2, #0
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 8
+
+
+ 319 01d2 4A4B     		ldr	r3, .L22+52
+ 320 01d4 FFF7FEFF 		bl	__aeabi_dmul
+ 321              	.LVL46:
+ 322 01d8 E4B2     		uxtb	r4, r4
+ 323 01da FFF7FEFF 		bl	__aeabi_d2uiz
+ 324              	.LVL47:
+ 325 01de 0122     		movs	r2, #1
+ 326 01e0 2146     		mov	r1, r4
+ 327 01e2 C0B2     		uxtb	r0, r0
+ 328 01e4 FFF7FEFF 		bl	motor_turn
+ 329              	.LVL48:
+ 330 01e8 09E1     		b	.L1
+ 331              	.LVL49:
+ 332              	.L11:
   82:Drive.c       ****     }        
   83:Drive.c       **** //    
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 6
-
-
-  84:Drive.c       ****     else if (( l1<threshold.l1-2000&&r1>threshold.r1)) //oikealle
- 203              		.loc 1 84 0
- 204 00e6 A0F5FA64 		sub	r4, r0, #2000
- 205 00ea A142     		cmp	r1, r4
- 206 00ec 0ADA     		bge	.L10
- 207              		.loc 1 84 0 is_stmt 0 discriminator 1
- 208 00ee 9342     		cmp	r3, r2
- 209 00f0 08DA     		bge	.L10
+  84:Drive.c       ****     else if (( l1<threshold.l1-4000&&r1>threshold.r1)) //oikealle
+ 333              		.loc 1 84 0
+ 334 01ea A0F57A64 		sub	r4, r0, #4000
+ 335 01ee A142     		cmp	r1, r4
+ 336 01f0 16DA     		bge	.L12
+ 337              		.loc 1 84 0 is_stmt 0 discriminator 1
+ 338 01f2 9342     		cmp	r3, r2
+ 339 01f4 14DA     		bge	.L12
   85:Drive.c       ****     {
   86:Drive.c       ****         dir = 1;
- 210              		.loc 1 86 0 is_stmt 1
- 211 00f2 0122     		movs	r2, #1
- 212              	.LVL30:
- 213 00f4 454B     		ldr	r3, .L20+8
- 214 00f6 1A60     		str	r2, [r3]
-  87:Drive.c       ****         motor_turn(max,150,1);
- 215              		.loc 1 87 0
- 216 00f8 9621     		movs	r1, #150
- 217              	.LVL31:
- 218 00fa 434B     		ldr	r3, .L20+4
- 219 00fc 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 220 00fe FFF7FEFF 		bl	motor_turn
- 221              	.LVL32:
- 222 0102 7DE0     		b	.L1
- 223              	.LVL33:
- 224              	.L10:
+ 340              		.loc 1 86 0 is_stmt 1
+ 341 01f6 0125     		movs	r5, #1
+ 342 01f8 3F4B     		ldr	r3, .L22+48
+ 343 01fa 1D60     		str	r5, [r3]
+  87:Drive.c       ****         motor_turn(max,max*0.60,1);
+ 344              		.loc 1 87 0
+ 345 01fc 3D4B     		ldr	r3, .L22+44
+ 346 01fe 1C68     		ldr	r4, [r3]
+ 347 0200 2046     		mov	r0, r4
+ 348 0202 FFF7FEFF 		bl	__aeabi_i2d
+ 349              	.LVL50:
+ 350 0206 36A3     		adr	r3, .L22+24
+ 351 0208 D3E90023 		ldrd	r2, [r3]
+ 352 020c FFF7FEFF 		bl	__aeabi_dmul
+ 353              	.LVL51:
+ 354 0210 FFF7FEFF 		bl	__aeabi_d2uiz
+ 355              	.LVL52:
+ 356 0214 2A46     		mov	r2, r5
+ 357 0216 C1B2     		uxtb	r1, r0
+ 358 0218 E0B2     		uxtb	r0, r4
+ 359 021a FFF7FEFF 		bl	motor_turn
+ 360              	.LVL53:
+ 361 021e EEE0     		b	.L1
+ 362              	.LVL54:
+ 363              	.L12:
   88:Drive.c       ****         
   89:Drive.c       ****         
   90:Drive.c       ****     }
   91:Drive.c       **** 
-  92:Drive.c       ****     else if (( r1<threshold.r1-2000 && l1>threshold.l1)) //vasempaan
- 225              		.loc 1 92 0
- 226 0104 A3F5FA64 		sub	r4, r3, #2000
- 227 0108 A242     		cmp	r2, r4
- 228 010a 0BDA     		bge	.L11
- 229              		.loc 1 92 0 is_stmt 0 discriminator 1
- 230 010c 8142     		cmp	r1, r0
- 231 010e 09DD     		ble	.L11
+  92:Drive.c       ****     else if (( r1<threshold.r1-4000 && l1>threshold.l1)) //vasempaan
+ 364              		.loc 1 92 0
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 9
+
+
+ 365 0220 A3F57A64 		sub	r4, r3, #4000
+ 366 0224 A242     		cmp	r2, r4
+ 367 0226 17DA     		bge	.L13
+ 368              		.loc 1 92 0 is_stmt 0 discriminator 1
+ 369 0228 8142     		cmp	r1, r0
+ 370 022a 15DD     		ble	.L13
   93:Drive.c       ****     {
   94:Drive.c       ****         dir = 0;
- 232              		.loc 1 94 0 is_stmt 1
- 233 0110 0022     		movs	r2, #0
- 234              	.LVL34:
- 235 0112 3E4B     		ldr	r3, .L20+8
- 236 0114 1A60     		str	r2, [r3]
-  95:Drive.c       ****         motor_turn(150,max,1);
- 237              		.loc 1 95 0
- 238 0116 0122     		movs	r2, #1
- 239 0118 3B4B     		ldr	r3, .L20+4
- 240 011a 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
- 241              	.LVL35:
- 242 011c 9620     		movs	r0, #150
- 243 011e FFF7FEFF 		bl	motor_turn
- 244              	.LVL36:
- 245 0122 6DE0     		b	.L1
- 246              	.LVL37:
- 247              	.L11:
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 7
-
-
+ 371              		.loc 1 94 0 is_stmt 1
+ 372 022c 0022     		movs	r2, #0
+ 373              	.LVL55:
+ 374 022e 324B     		ldr	r3, .L22+48
+ 375 0230 1A60     		str	r2, [r3]
+  95:Drive.c       ****         motor_turn(max*0.60,max,1);
+ 376              		.loc 1 95 0
+ 377 0232 304B     		ldr	r3, .L22+44
+ 378 0234 1C68     		ldr	r4, [r3]
+ 379 0236 2046     		mov	r0, r4
+ 380 0238 FFF7FEFF 		bl	__aeabi_i2d
+ 381              	.LVL56:
+ 382 023c 28A3     		adr	r3, .L22+24
+ 383 023e D3E90023 		ldrd	r2, [r3]
+ 384 0242 FFF7FEFF 		bl	__aeabi_dmul
+ 385              	.LVL57:
+ 386 0246 E4B2     		uxtb	r4, r4
+ 387 0248 FFF7FEFF 		bl	__aeabi_d2uiz
+ 388              	.LVL58:
+ 389 024c 0122     		movs	r2, #1
+ 390 024e 2146     		mov	r1, r4
+ 391 0250 C0B2     		uxtb	r0, r0
+ 392 0252 FFF7FEFF 		bl	motor_turn
+ 393              	.LVL59:
+ 394 0256 D2E0     		b	.L1
+ 395              	.LVL60:
+ 396              	.L13:
   96:Drive.c       ****         }     
   97:Drive.c       **** //
   98:Drive.c       **** //    else if (( l1<threshold.l1-1000&&r1>threshold.r1)) //oikealle
@@ -378,190 +533,270 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 1
  110:Drive.c       **** //    }        
  111:Drive.c       ****     
  112:Drive.c       ****     
- 113:Drive.c       ****     else if (( l1<threshold.l1-1000&&r1>threshold.r1)) //oikealle
- 248              		.loc 1 113 0
- 249 0124 A0F57A74 		sub	r4, r0, #1000
- 250 0128 A142     		cmp	r1, r4
- 251 012a 0ADA     		bge	.L12
- 252              		.loc 1 113 0 is_stmt 0 discriminator 1
- 253 012c 9342     		cmp	r3, r2
- 254 012e 08DA     		bge	.L12
+ 113:Drive.c       ****     else if (( l1<threshold.l1-3000&&r1>threshold.r1)) //oikealle
+ 397              		.loc 1 113 0
+ 398 0258 A0F6B834 		subw	r4, r0, #3000
+ 399 025c A142     		cmp	r1, r4
+ 400 025e 16DA     		bge	.L14
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 10
+
+
+ 401              		.loc 1 113 0 is_stmt 0 discriminator 1
+ 402 0260 9342     		cmp	r3, r2
+ 403 0262 14DA     		bge	.L14
  114:Drive.c       ****     {
  115:Drive.c       ****         dir = 1;
- 255              		.loc 1 115 0 is_stmt 1
- 256 0130 0122     		movs	r2, #1
- 257              	.LVL38:
- 258 0132 364B     		ldr	r3, .L20+8
- 259 0134 1A60     		str	r2, [r3]
- 116:Drive.c       ****         motor_turn(max,180,1);
- 260              		.loc 1 116 0
- 261 0136 B421     		movs	r1, #180
- 262              	.LVL39:
- 263 0138 334B     		ldr	r3, .L20+4
- 264 013a 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 265 013c FFF7FEFF 		bl	motor_turn
- 266              	.LVL40:
- 267 0140 5EE0     		b	.L1
- 268              	.LVL41:
- 269              	.L12:
+ 404              		.loc 1 115 0 is_stmt 1
+ 405 0264 0125     		movs	r5, #1
+ 406 0266 244B     		ldr	r3, .L22+48
+ 407 0268 1D60     		str	r5, [r3]
+ 116:Drive.c       ****         motor_turn(max,max*0.70,1);
+ 408              		.loc 1 116 0
+ 409 026a 224B     		ldr	r3, .L22+44
+ 410 026c 1C68     		ldr	r4, [r3]
+ 411 026e 2046     		mov	r0, r4
+ 412 0270 FFF7FEFF 		bl	__aeabi_i2d
+ 413              	.LVL61:
+ 414 0274 1CA3     		adr	r3, .L22+32
+ 415 0276 D3E90023 		ldrd	r2, [r3]
+ 416 027a FFF7FEFF 		bl	__aeabi_dmul
+ 417              	.LVL62:
+ 418 027e FFF7FEFF 		bl	__aeabi_d2uiz
+ 419              	.LVL63:
+ 420 0282 2A46     		mov	r2, r5
+ 421 0284 C1B2     		uxtb	r1, r0
+ 422 0286 E0B2     		uxtb	r0, r4
+ 423 0288 FFF7FEFF 		bl	motor_turn
+ 424              	.LVL64:
+ 425 028c B7E0     		b	.L1
+ 426              	.LVL65:
+ 427              	.L14:
  117:Drive.c       ****         
  118:Drive.c       ****         
  119:Drive.c       ****     }
  120:Drive.c       **** 
- 121:Drive.c       ****     else if (( r1<threshold.r1-1000 && l1>threshold.l1)) //vasempaan
- 270              		.loc 1 121 0
- 271 0142 A3F57A74 		sub	r4, r3, #1000
- 272 0146 A242     		cmp	r2, r4
- 273 0148 0BDA     		bge	.L13
- 274              		.loc 1 121 0 is_stmt 0 discriminator 1
- 275 014a 8142     		cmp	r1, r0
- 276 014c 09DD     		ble	.L13
+ 121:Drive.c       ****     else if (( r1<threshold.r1-3000 && l1>threshold.l1)) //vasempaan
+ 428              		.loc 1 121 0
+ 429 028e A3F6B834 		subw	r4, r3, #3000
+ 430 0292 A242     		cmp	r2, r4
+ 431 0294 34DA     		bge	.L15
+ 432              		.loc 1 121 0 is_stmt 0 discriminator 1
+ 433 0296 8142     		cmp	r1, r0
+ 434 0298 32DD     		ble	.L15
  122:Drive.c       ****     {
  123:Drive.c       ****         dir = 0;
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 8
+ 435              		.loc 1 123 0 is_stmt 1
+ 436 029a 0022     		movs	r2, #0
+ 437              	.LVL66:
+ 438 029c 164B     		ldr	r3, .L22+48
+ 439 029e 1A60     		str	r2, [r3]
+ 124:Drive.c       ****         motor_turn(max*0.70,max,1);
+ 440              		.loc 1 124 0
+ 441 02a0 144B     		ldr	r3, .L22+44
+ 442 02a2 1C68     		ldr	r4, [r3]
+ 443 02a4 2046     		mov	r0, r4
+ 444 02a6 FFF7FEFF 		bl	__aeabi_i2d
+ 445              	.LVL67:
+ 446 02aa 0FA3     		adr	r3, .L22+32
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 11
 
 
- 277              		.loc 1 123 0 is_stmt 1
- 278 014e 0022     		movs	r2, #0
- 279              	.LVL42:
- 280 0150 2E4B     		ldr	r3, .L20+8
- 281 0152 1A60     		str	r2, [r3]
- 124:Drive.c       ****         motor_turn(180,max,1);
- 282              		.loc 1 124 0
- 283 0154 0122     		movs	r2, #1
- 284 0156 2C4B     		ldr	r3, .L20+4
- 285 0158 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
- 286              	.LVL43:
- 287 015a B420     		movs	r0, #180
- 288 015c FFF7FEFF 		bl	motor_turn
- 289              	.LVL44:
- 290 0160 4EE0     		b	.L1
- 291              	.LVL45:
- 292              	.L13:
+ 447 02ac D3E90023 		ldrd	r2, [r3]
+ 448 02b0 FFF7FEFF 		bl	__aeabi_dmul
+ 449              	.LVL68:
+ 450 02b4 E4B2     		uxtb	r4, r4
+ 451 02b6 FFF7FEFF 		bl	__aeabi_d2uiz
+ 452              	.LVL69:
+ 453 02ba 0122     		movs	r2, #1
+ 454 02bc 2146     		mov	r1, r4
+ 455 02be C0B2     		uxtb	r0, r0
+ 456 02c0 FFF7FEFF 		bl	motor_turn
+ 457              	.LVL70:
+ 458 02c4 9BE0     		b	.L1
+ 459              	.L23:
+ 460 02c6 00BF     		.align	3
+ 461              	.L22:
+ 462 02c8 9A999999 		.word	-1717986918
+ 463 02cc 9999B93F 		.word	1069128089
+ 464 02d0 33333333 		.word	858993459
+ 465 02d4 3333D33F 		.word	1070805811
+ 466 02d8 9A999999 		.word	-1717986918
+ 467 02dc 9999D93F 		.word	1071225241
+ 468 02e0 33333333 		.word	858993459
+ 469 02e4 3333E33F 		.word	1071854387
+ 470 02e8 66666666 		.word	1717986918
+ 471 02ec 6666E63F 		.word	1072064102
+ 472 02f0 00000000 		.word	threshold
+ 473 02f4 00000000 		.word	.LANCHOR0
+ 474 02f8 00000000 		.word	dir
+ 475 02fc 0000E03F 		.word	1071644672
+ 476              	.LVL71:
+ 477              	.L15:
  125:Drive.c       ****     }        
  126:Drive.c       ****   
- 127:Drive.c       ****     else if (( l1<threshold.l1-200&&r1>threshold.r1)) //oikealle
- 293              		.loc 1 127 0
- 294 0162 A0F1C804 		sub	r4, r0, #200
- 295 0166 A142     		cmp	r1, r4
- 296 0168 0ADA     		bge	.L14
- 297              		.loc 1 127 0 is_stmt 0 discriminator 1
- 298 016a 9342     		cmp	r3, r2
- 299 016c 08DA     		bge	.L14
+ 127:Drive.c       ****     else if (( l1<threshold.l1-2000&&r1>threshold.r1)) //oikealle
+ 478              		.loc 1 127 0
+ 479 0300 A0F5FA64 		sub	r4, r0, #2000
+ 480 0304 A142     		cmp	r1, r4
+ 481 0306 16DA     		bge	.L16
+ 482              		.loc 1 127 0 is_stmt 0 discriminator 1
+ 483 0308 9342     		cmp	r3, r2
+ 484 030a 14DA     		bge	.L16
  128:Drive.c       ****     {
  129:Drive.c       ****         dir = 1;
- 300              		.loc 1 129 0 is_stmt 1
- 301 016e 0122     		movs	r2, #1
- 302              	.LVL46:
- 303 0170 264B     		ldr	r3, .L20+8
- 304 0172 1A60     		str	r2, [r3]
- 130:Drive.c       ****         motor_turn(max,200,1);
- 305              		.loc 1 130 0
- 306 0174 C821     		movs	r1, #200
- 307              	.LVL47:
- 308 0176 244B     		ldr	r3, .L20+4
- 309 0178 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 310 017a FFF7FEFF 		bl	motor_turn
- 311              	.LVL48:
- 312 017e 3FE0     		b	.L1
- 313              	.LVL49:
- 314              	.L14:
+ 485              		.loc 1 129 0 is_stmt 1
+ 486 030c 0125     		movs	r5, #1
+ 487 030e 424B     		ldr	r3, .L24+16
+ 488 0310 1D60     		str	r5, [r3]
+ 130:Drive.c       ****         motor_turn(max,max*0.80,1);
+ 489              		.loc 1 130 0
+ 490 0312 424B     		ldr	r3, .L24+20
+ 491 0314 1C68     		ldr	r4, [r3]
+ 492 0316 2046     		mov	r0, r4
+ 493 0318 FFF7FEFF 		bl	__aeabi_i2d
+ 494              	.LVL72:
+ 495 031c 3AA3     		adr	r3, .L24
+ 496 031e D3E90023 		ldrd	r2, [r3]
+ 497 0322 FFF7FEFF 		bl	__aeabi_dmul
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 12
+
+
+ 498              	.LVL73:
+ 499 0326 FFF7FEFF 		bl	__aeabi_d2uiz
+ 500              	.LVL74:
+ 501 032a 2A46     		mov	r2, r5
+ 502 032c C1B2     		uxtb	r1, r0
+ 503 032e E0B2     		uxtb	r0, r4
+ 504 0330 FFF7FEFF 		bl	motor_turn
+ 505              	.LVL75:
+ 506 0334 63E0     		b	.L1
+ 507              	.LVL76:
+ 508              	.L16:
  131:Drive.c       ****         
  132:Drive.c       ****         
  133:Drive.c       ****     }
  134:Drive.c       **** 
- 135:Drive.c       ****     else if (( r1<threshold.r1-200 && l1>threshold.l1)) //vasempaan
- 315              		.loc 1 135 0
- 316 0180 A3F1C804 		sub	r4, r3, #200
- 317 0184 A242     		cmp	r2, r4
- 318 0186 0BDA     		bge	.L15
- 319              		.loc 1 135 0 is_stmt 0 discriminator 1
- 320 0188 8142     		cmp	r1, r0
- 321 018a 09DD     		ble	.L15
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 9
-
-
+ 135:Drive.c       ****     else if (( r1<threshold.r1-2000 && l1>threshold.l1)) //vasempaan
+ 509              		.loc 1 135 0
+ 510 0336 A3F5FA64 		sub	r4, r3, #2000
+ 511 033a A242     		cmp	r2, r4
+ 512 033c 17DA     		bge	.L17
+ 513              		.loc 1 135 0 is_stmt 0 discriminator 1
+ 514 033e 8142     		cmp	r1, r0
+ 515 0340 15DD     		ble	.L17
  136:Drive.c       ****     {
  137:Drive.c       ****         dir = 0;
- 322              		.loc 1 137 0 is_stmt 1
- 323 018c 0022     		movs	r2, #0
- 324              	.LVL50:
- 325 018e 1F4B     		ldr	r3, .L20+8
- 326 0190 1A60     		str	r2, [r3]
- 138:Drive.c       ****         motor_turn(200,max,1);
- 327              		.loc 1 138 0
- 328 0192 0122     		movs	r2, #1
- 329 0194 1C4B     		ldr	r3, .L20+4
- 330 0196 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
- 331              	.LVL51:
- 332 0198 C820     		movs	r0, #200
- 333 019a FFF7FEFF 		bl	motor_turn
- 334              	.LVL52:
- 335 019e 2FE0     		b	.L1
- 336              	.LVL53:
- 337              	.L15:
+ 516              		.loc 1 137 0 is_stmt 1
+ 517 0342 0022     		movs	r2, #0
+ 518              	.LVL77:
+ 519 0344 344B     		ldr	r3, .L24+16
+ 520 0346 1A60     		str	r2, [r3]
+ 138:Drive.c       ****         motor_turn(max*0.80,max,1);
+ 521              		.loc 1 138 0
+ 522 0348 344B     		ldr	r3, .L24+20
+ 523 034a 1C68     		ldr	r4, [r3]
+ 524 034c 2046     		mov	r0, r4
+ 525 034e FFF7FEFF 		bl	__aeabi_i2d
+ 526              	.LVL78:
+ 527 0352 2DA3     		adr	r3, .L24
+ 528 0354 D3E90023 		ldrd	r2, [r3]
+ 529 0358 FFF7FEFF 		bl	__aeabi_dmul
+ 530              	.LVL79:
+ 531 035c E4B2     		uxtb	r4, r4
+ 532 035e FFF7FEFF 		bl	__aeabi_d2uiz
+ 533              	.LVL80:
+ 534 0362 0122     		movs	r2, #1
+ 535 0364 2146     		mov	r1, r4
+ 536 0366 C0B2     		uxtb	r0, r0
+ 537 0368 FFF7FEFF 		bl	motor_turn
+ 538              	.LVL81:
+ 539 036c 47E0     		b	.L1
+ 540              	.LVL82:
+ 541              	.L17:
  139:Drive.c       ****     }        
  140:Drive.c       ****  
  141:Drive.c       ****     
  142:Drive.c       ****     
  143:Drive.c       ****     else if (( l1<threshold.l1&&r1>threshold.r1)) //oikealle
- 338              		.loc 1 143 0
- 339 01a0 8142     		cmp	r1, r0
- 340 01a2 0ADA     		bge	.L16
- 341              		.loc 1 143 0 is_stmt 0 discriminator 1
- 342 01a4 9342     		cmp	r3, r2
- 343 01a6 08DA     		bge	.L16
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 13
+
+
+ 542              		.loc 1 143 0
+ 543 036e 8142     		cmp	r1, r0
+ 544 0370 16DA     		bge	.L18
+ 545              		.loc 1 143 0 is_stmt 0 discriminator 1
+ 546 0372 9342     		cmp	r3, r2
+ 547 0374 14DA     		bge	.L18
  144:Drive.c       ****     {
  145:Drive.c       ****         dir = 1;
- 344              		.loc 1 145 0 is_stmt 1
- 345 01a8 0122     		movs	r2, #1
- 346              	.LVL54:
- 347 01aa 184B     		ldr	r3, .L20+8
- 348 01ac 1A60     		str	r2, [r3]
- 146:Drive.c       ****         motor_turn(max,225,1);
- 349              		.loc 1 146 0
- 350 01ae E121     		movs	r1, #225
- 351              	.LVL55:
- 352 01b0 154B     		ldr	r3, .L20+4
- 353 01b2 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
- 354 01b4 FFF7FEFF 		bl	motor_turn
- 355              	.LVL56:
- 356 01b8 22E0     		b	.L1
- 357              	.LVL57:
- 358              	.L16:
+ 548              		.loc 1 145 0 is_stmt 1
+ 549 0376 0125     		movs	r5, #1
+ 550 0378 274B     		ldr	r3, .L24+16
+ 551 037a 1D60     		str	r5, [r3]
+ 146:Drive.c       ****         motor_turn(max,max*0.90,1);
+ 552              		.loc 1 146 0
+ 553 037c 274B     		ldr	r3, .L24+20
+ 554 037e 1C68     		ldr	r4, [r3]
+ 555 0380 2046     		mov	r0, r4
+ 556 0382 FFF7FEFF 		bl	__aeabi_i2d
+ 557              	.LVL83:
+ 558 0386 22A3     		adr	r3, .L24+8
+ 559 0388 D3E90023 		ldrd	r2, [r3]
+ 560 038c FFF7FEFF 		bl	__aeabi_dmul
+ 561              	.LVL84:
+ 562 0390 FFF7FEFF 		bl	__aeabi_d2uiz
+ 563              	.LVL85:
+ 564 0394 2A46     		mov	r2, r5
+ 565 0396 C1B2     		uxtb	r1, r0
+ 566 0398 E0B2     		uxtb	r0, r4
+ 567 039a FFF7FEFF 		bl	motor_turn
+ 568              	.LVL86:
+ 569 039e 2EE0     		b	.L1
+ 570              	.LVL87:
+ 571              	.L18:
  147:Drive.c       ****         
  148:Drive.c       ****         
  149:Drive.c       ****     }
  150:Drive.c       **** 
  151:Drive.c       ****     else if (( r1<threshold.r1 && l1>threshold.l1)) //vasempaan
- 359              		.loc 1 151 0
- 360 01ba 9342     		cmp	r3, r2
- 361 01bc 0BDD     		ble	.L17
- 362              		.loc 1 151 0 is_stmt 0 discriminator 1
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 10
-
-
- 363 01be 8142     		cmp	r1, r0
- 364 01c0 09DD     		ble	.L17
+ 572              		.loc 1 151 0
+ 573 03a0 9342     		cmp	r3, r2
+ 574 03a2 17DD     		ble	.L19
+ 575              		.loc 1 151 0 is_stmt 0 discriminator 1
+ 576 03a4 8142     		cmp	r1, r0
+ 577 03a6 15DD     		ble	.L19
  152:Drive.c       ****     {
  153:Drive.c       ****         dir = 0;
- 365              		.loc 1 153 0 is_stmt 1
- 366 01c2 0022     		movs	r2, #0
- 367              	.LVL58:
- 368 01c4 114B     		ldr	r3, .L20+8
- 369 01c6 1A60     		str	r2, [r3]
- 154:Drive.c       ****         motor_turn(225,max,1);
- 370              		.loc 1 154 0
- 371 01c8 0122     		movs	r2, #1
- 372 01ca 0F4B     		ldr	r3, .L20+4
- 373 01cc 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
- 374              	.LVL59:
- 375 01ce E120     		movs	r0, #225
- 376 01d0 FFF7FEFF 		bl	motor_turn
- 377              	.LVL60:
- 378 01d4 14E0     		b	.L1
- 379              	.LVL61:
- 380              	.L17:
+ 578              		.loc 1 153 0 is_stmt 1
+ 579 03a8 0022     		movs	r2, #0
+ 580              	.LVL88:
+ 581 03aa 1B4B     		ldr	r3, .L24+16
+ 582 03ac 1A60     		str	r2, [r3]
+ 154:Drive.c       ****         motor_turn(max*0.90,max,1);
+ 583              		.loc 1 154 0
+ 584 03ae 1B4B     		ldr	r3, .L24+20
+ 585 03b0 1C68     		ldr	r4, [r3]
+ 586 03b2 2046     		mov	r0, r4
+ 587 03b4 FFF7FEFF 		bl	__aeabi_i2d
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 14
+
+
+ 588              	.LVL89:
+ 589 03b8 15A3     		adr	r3, .L24+8
+ 590 03ba D3E90023 		ldrd	r2, [r3]
+ 591 03be FFF7FEFF 		bl	__aeabi_dmul
+ 592              	.LVL90:
+ 593 03c2 E4B2     		uxtb	r4, r4
+ 594 03c4 FFF7FEFF 		bl	__aeabi_d2uiz
+ 595              	.LVL91:
+ 596 03c8 0122     		movs	r2, #1
+ 597 03ca 2146     		mov	r1, r4
+ 598 03cc C0B2     		uxtb	r0, r0
+ 599 03ce FFF7FEFF 		bl	motor_turn
+ 600              	.LVL92:
+ 601 03d2 14E0     		b	.L1
+ 602              	.LVL93:
+ 603              	.L19:
  155:Drive.c       ****     }    
  156:Drive.c       ****     
  157:Drive.c       ****    
@@ -569,1426 +804,1519 @@ ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 1
  159:Drive.c       ****     else 
  160:Drive.c       ****     {
  161:Drive.c       ****         if(dir==1)
- 381              		.loc 1 161 0
- 382 01d6 0D4B     		ldr	r3, .L20+8
- 383 01d8 1B68     		ldr	r3, [r3]
- 384 01da 012B     		cmp	r3, #1
- 385 01dc 06D1     		bne	.L18
+ 604              		.loc 1 161 0
+ 605 03d4 104B     		ldr	r3, .L24+16
+ 606 03d6 1B68     		ldr	r3, [r3]
+ 607 03d8 012B     		cmp	r3, #1
+ 608 03da 06D1     		bne	.L20
  162:Drive.c       ****         {
  163:Drive.c       ****             motor_sharp_turn(0,1,200,100,1);
- 386              		.loc 1 163 0
- 387 01de 0121     		movs	r1, #1
- 388              	.LVL62:
- 389 01e0 0091     		str	r1, [sp]
- 390 01e2 6423     		movs	r3, #100
- 391 01e4 C822     		movs	r2, #200
- 392              	.LVL63:
- 393 01e6 0020     		movs	r0, #0
- 394 01e8 FFF7FEFF 		bl	motor_sharp_turn
- 395              	.LVL64:
- 396              	.L18:
+ 609              		.loc 1 163 0
+ 610 03dc 0121     		movs	r1, #1
+ 611              	.LVL94:
+ 612 03de 0091     		str	r1, [sp]
+ 613 03e0 6423     		movs	r3, #100
+ 614 03e2 C822     		movs	r2, #200
+ 615              	.LVL95:
+ 616 03e4 0020     		movs	r0, #0
+ 617 03e6 FFF7FEFF 		bl	motor_sharp_turn
+ 618              	.LVL96:
+ 619              	.L20:
  164:Drive.c       ****         }
  165:Drive.c       ****         if(dir==0)
- 397              		.loc 1 165 0
- 398 01ec 074B     		ldr	r3, .L20+8
- 399 01ee 1B68     		ldr	r3, [r3]
- 400 01f0 33B9     		cbnz	r3, .L1
+ 620              		.loc 1 165 0
+ 621 03ea 0B4B     		ldr	r3, .L24+16
+ 622 03ec 1B68     		ldr	r3, [r3]
+ 623 03ee 33B9     		cbnz	r3, .L1
  166:Drive.c       ****         {
  167:Drive.c       ****             motor_sharp_turn(1,0,100,200,1);
- 401              		.loc 1 167 0
- 402 01f2 0120     		movs	r0, #1
- 403 01f4 0090     		str	r0, [sp]
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 11
+ 624              		.loc 1 167 0
+ 625 03f0 0120     		movs	r0, #1
+ 626 03f2 0090     		str	r0, [sp]
+ 627 03f4 C823     		movs	r3, #200
+ 628 03f6 6422     		movs	r2, #100
+ 629 03f8 0021     		movs	r1, #0
+ 630 03fa FFF7FEFF 		bl	motor_sharp_turn
+ 631              	.LVL97:
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 15
 
 
- 404 01f6 C823     		movs	r3, #200
- 405 01f8 6422     		movs	r2, #100
- 406 01fa 0021     		movs	r1, #0
- 407 01fc FFF7FEFF 		bl	motor_sharp_turn
- 408              	.LVL65:
- 409              	.L1:
+ 632              	.L1:
  168:Drive.c       ****         }
  169:Drive.c       ****     }
  170:Drive.c       ****     
  171:Drive.c       **** }...
- 410              		.loc 1 171 0
- 411 0200 02B0     		add	sp, sp, #8
- 412              		.cfi_def_cfa_offset 8
- 413              		@ sp needed
- 414 0202 10BD     		pop	{r4, pc}
- 415              	.L21:
- 416              		.align	2
- 417              	.L20:
- 418 0204 00000000 		.word	threshold
- 419 0208 00000000 		.word	.LANCHOR0
- 420 020c 00000000 		.word	dir
- 421              		.cfi_endproc
- 422              	.LFE63:
- 423              		.size	Drive, .-Drive
- 424              		.global	max
- 425              		.comm	dir,4,4
- 426              		.comm	threshold,8,4
- 427              		.data
- 428              		.align	2
- 429              		.set	.LANCHOR0,. + 0
- 430              		.type	max, %object
- 431              		.size	max, 4
- 432              	max:
- 433 0000 FF000000 		.word	255
- 434              		.text
- 435              	.Letext0:
- 436              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
- 437              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
- 438              		.file 4 ".\\ZumoLibrary/Reflectance.h"
- 439              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
- 440              		.file 6 ".\\ZumoLibrary/Motor.h"
- 441              		.section	.debug_info,"",%progbits
- 442              	.Ldebug_info0:
- 443 0000 62030000 		.4byte	0x362
- 444 0004 0400     		.2byte	0x4
- 445 0006 00000000 		.4byte	.Ldebug_abbrev0
- 446 000a 04       		.byte	0x4
- 447 000b 01       		.uleb128 0x1
- 448 000c 34000000 		.4byte	.LASF23
- 449 0010 0C       		.byte	0xc
- 450 0011 DC010000 		.4byte	.LASF24
- 451 0015 AF010000 		.4byte	.LASF25
- 452 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 453 001d 00000000 		.4byte	0
- 454 0021 00000000 		.4byte	.Ldebug_line0
- 455 0025 02       		.uleb128 0x2
- 456 0026 01       		.byte	0x1
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 12
+ 633              		.loc 1 171 0
+ 634 03fe 03B0     		add	sp, sp, #12
+ 635              		.cfi_def_cfa_offset 12
+ 636              		@ sp needed
+ 637 0400 30BD     		pop	{r4, r5, pc}
+ 638              	.L25:
+ 639 0402 00BFAFF3 		.align	3
+ 639      0080
+ 640              	.L24:
+ 641 0408 9A999999 		.word	-1717986918
+ 642 040c 9999E93F 		.word	1072273817
+ 643 0410 CDCCCCCC 		.word	-858993459
+ 644 0414 CCCCEC3F 		.word	1072483532
+ 645 0418 00000000 		.word	dir
+ 646 041c 00000000 		.word	.LANCHOR0
+ 647              		.cfi_endproc
+ 648              	.LFE63:
+ 649              		.size	Drive, .-Drive
+ 650              		.global	max
+ 651              		.comm	dir,4,4
+ 652              		.comm	threshold,8,4
+ 653              		.data
+ 654              		.align	2
+ 655              		.set	.LANCHOR0,. + 0
+ 656              		.type	max, %object
+ 657              		.size	max, 4
+ 658              	max:
+ 659 0000 FF000000 		.word	255
+ 660              		.text
+ 661              	.Letext0:
+ 662              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 663              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.
+ 664              		.file 4 ".\\ZumoLibrary/Reflectance.h"
+ 665              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 666              		.file 6 ".\\ZumoLibrary/Motor.h"
+ 667              		.section	.debug_info,"",%progbits
+ 668              	.Ldebug_info0:
+ 669 0000 9E030000 		.4byte	0x39e
+ 670 0004 0400     		.2byte	0x4
+ 671 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 672 000a 04       		.byte	0x4
+ 673 000b 01       		.uleb128 0x1
+ 674 000c 34000000 		.4byte	.LASF23
+ 675 0010 0C       		.byte	0xc
+ 676 0011 DC010000 		.4byte	.LASF24
+ 677 0015 AF010000 		.4byte	.LASF25
+ 678 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 679 001d 00000000 		.4byte	0
+ 680 0021 00000000 		.4byte	.Ldebug_line0
+ 681 0025 02       		.uleb128 0x2
+ 682 0026 01       		.byte	0x1
+ 683 0027 06       		.byte	0x6
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 16
 
 
- 457 0027 06       		.byte	0x6
- 458 0028 A3010000 		.4byte	.LASF0
- 459 002c 02       		.uleb128 0x2
- 460 002d 01       		.byte	0x1
- 461 002e 08       		.byte	0x8
- 462 002f 26000000 		.4byte	.LASF1
- 463 0033 02       		.uleb128 0x2
- 464 0034 02       		.byte	0x2
- 465 0035 05       		.byte	0x5
- 466 0036 7B010000 		.4byte	.LASF2
- 467 003a 03       		.uleb128 0x3
- 468 003b ED000000 		.4byte	.LASF4
- 469 003f 02       		.byte	0x2
- 470 0040 2B       		.byte	0x2b
- 471 0041 45000000 		.4byte	0x45
- 472 0045 02       		.uleb128 0x2
- 473 0046 02       		.byte	0x2
- 474 0047 07       		.byte	0x7
- 475 0048 CC000000 		.4byte	.LASF3
- 476 004c 03       		.uleb128 0x3
- 477 004d 09000000 		.4byte	.LASF5
- 478 0051 02       		.byte	0x2
- 479 0052 3F       		.byte	0x3f
- 480 0053 57000000 		.4byte	0x57
- 481 0057 02       		.uleb128 0x2
- 482 0058 04       		.byte	0x4
- 483 0059 05       		.byte	0x5
- 484 005a 8E010000 		.4byte	.LASF6
- 485 005e 02       		.uleb128 0x2
- 486 005f 04       		.byte	0x4
- 487 0060 07       		.byte	0x7
- 488 0061 F8000000 		.4byte	.LASF7
- 489 0065 02       		.uleb128 0x2
- 490 0066 08       		.byte	0x8
- 491 0067 05       		.byte	0x5
- 492 0068 68010000 		.4byte	.LASF8
- 493 006c 02       		.uleb128 0x2
- 494 006d 08       		.byte	0x8
- 495 006e 07       		.byte	0x7
- 496 006f 35010000 		.4byte	.LASF9
- 497 0073 04       		.uleb128 0x4
- 498 0074 04       		.byte	0x4
- 499 0075 05       		.byte	0x5
- 500 0076 696E7400 		.ascii	"int\000"
- 501 007a 02       		.uleb128 0x2
- 502 007b 04       		.byte	0x4
- 503 007c 07       		.byte	0x7
- 504 007d 28010000 		.4byte	.LASF10
- 505 0081 03       		.uleb128 0x3
- 506 0082 85010000 		.4byte	.LASF11
- 507 0086 03       		.byte	0x3
- 508 0087 24       		.byte	0x24
- 509 0088 3A000000 		.4byte	0x3a
- 510 008c 03       		.uleb128 0x3
- 511 008d 57010000 		.4byte	.LASF12
- 512 0091 03       		.byte	0x3
- 513 0092 2C       		.byte	0x2c
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 13
+ 684 0028 A3010000 		.4byte	.LASF0
+ 685 002c 02       		.uleb128 0x2
+ 686 002d 01       		.byte	0x1
+ 687 002e 08       		.byte	0x8
+ 688 002f 26000000 		.4byte	.LASF1
+ 689 0033 02       		.uleb128 0x2
+ 690 0034 02       		.byte	0x2
+ 691 0035 05       		.byte	0x5
+ 692 0036 7B010000 		.4byte	.LASF2
+ 693 003a 03       		.uleb128 0x3
+ 694 003b ED000000 		.4byte	.LASF4
+ 695 003f 02       		.byte	0x2
+ 696 0040 2B       		.byte	0x2b
+ 697 0041 45000000 		.4byte	0x45
+ 698 0045 02       		.uleb128 0x2
+ 699 0046 02       		.byte	0x2
+ 700 0047 07       		.byte	0x7
+ 701 0048 CC000000 		.4byte	.LASF3
+ 702 004c 03       		.uleb128 0x3
+ 703 004d 09000000 		.4byte	.LASF5
+ 704 0051 02       		.byte	0x2
+ 705 0052 3F       		.byte	0x3f
+ 706 0053 57000000 		.4byte	0x57
+ 707 0057 02       		.uleb128 0x2
+ 708 0058 04       		.byte	0x4
+ 709 0059 05       		.byte	0x5
+ 710 005a 8E010000 		.4byte	.LASF6
+ 711 005e 02       		.uleb128 0x2
+ 712 005f 04       		.byte	0x4
+ 713 0060 07       		.byte	0x7
+ 714 0061 F8000000 		.4byte	.LASF7
+ 715 0065 02       		.uleb128 0x2
+ 716 0066 08       		.byte	0x8
+ 717 0067 05       		.byte	0x5
+ 718 0068 68010000 		.4byte	.LASF8
+ 719 006c 02       		.uleb128 0x2
+ 720 006d 08       		.byte	0x8
+ 721 006e 07       		.byte	0x7
+ 722 006f 35010000 		.4byte	.LASF9
+ 723 0073 04       		.uleb128 0x4
+ 724 0074 04       		.byte	0x4
+ 725 0075 05       		.byte	0x5
+ 726 0076 696E7400 		.ascii	"int\000"
+ 727 007a 02       		.uleb128 0x2
+ 728 007b 04       		.byte	0x4
+ 729 007c 07       		.byte	0x7
+ 730 007d 28010000 		.4byte	.LASF10
+ 731 0081 03       		.uleb128 0x3
+ 732 0082 85010000 		.4byte	.LASF11
+ 733 0086 03       		.byte	0x3
+ 734 0087 24       		.byte	0x24
+ 735 0088 3A000000 		.4byte	0x3a
+ 736 008c 03       		.uleb128 0x3
+ 737 008d 57010000 		.4byte	.LASF12
+ 738 0091 03       		.byte	0x3
+ 739 0092 2C       		.byte	0x2c
+ 740 0093 4C000000 		.4byte	0x4c
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 17
 
 
- 514 0093 4C000000 		.4byte	0x4c
- 515 0097 02       		.uleb128 0x2
- 516 0098 04       		.byte	0x4
- 517 0099 04       		.byte	0x4
- 518 009a 20000000 		.4byte	.LASF13
- 519 009e 02       		.uleb128 0x2
- 520 009f 08       		.byte	0x8
- 521 00a0 04       		.byte	0x4
- 522 00a1 19000000 		.4byte	.LASF14
- 523 00a5 02       		.uleb128 0x2
- 524 00a6 01       		.byte	0x1
- 525 00a7 08       		.byte	0x8
- 526 00a8 76010000 		.4byte	.LASF15
- 527 00ac 02       		.uleb128 0x2
- 528 00ad 08       		.byte	0x8
- 529 00ae 04       		.byte	0x4
- 530 00af 97010000 		.4byte	.LASF16
- 531 00b3 02       		.uleb128 0x2
- 532 00b4 04       		.byte	0x4
- 533 00b5 07       		.byte	0x7
- 534 00b6 5F010000 		.4byte	.LASF17
- 535 00ba 05       		.uleb128 0x5
- 536 00bb 00000000 		.4byte	.LASF26
- 537 00bf 08       		.byte	0x8
- 538 00c0 04       		.byte	0x4
- 539 00c1 11       		.byte	0x11
- 540 00c2 F3000000 		.4byte	0xf3
- 541 00c6 06       		.uleb128 0x6
- 542 00c7 6C3300   		.ascii	"l3\000"
- 543 00ca 04       		.byte	0x4
- 544 00cb 12       		.byte	0x12
- 545 00cc 81000000 		.4byte	0x81
- 546 00d0 00       		.byte	0
- 547 00d1 06       		.uleb128 0x6
- 548 00d2 6C3100   		.ascii	"l1\000"
- 549 00d5 04       		.byte	0x4
- 550 00d6 14       		.byte	0x14
- 551 00d7 81000000 		.4byte	0x81
- 552 00db 02       		.byte	0x2
- 553 00dc 06       		.uleb128 0x6
- 554 00dd 723100   		.ascii	"r1\000"
- 555 00e0 04       		.byte	0x4
- 556 00e1 15       		.byte	0x15
- 557 00e2 81000000 		.4byte	0x81
- 558 00e6 04       		.byte	0x4
- 559 00e7 06       		.uleb128 0x6
- 560 00e8 723300   		.ascii	"r3\000"
- 561 00eb 04       		.byte	0x4
- 562 00ec 17       		.byte	0x17
- 563 00ed 81000000 		.4byte	0x81
- 564 00f1 06       		.byte	0x6
- 565 00f2 00       		.byte	0
- 566 00f3 07       		.uleb128 0x7
- 567 00f4 13000000 		.4byte	.LASF27
- 568 00f8 01       		.byte	0x1
- 569 00f9 0D       		.byte	0xd
- 570 00fa 00000000 		.4byte	.LFB63
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 14
+ 741 0097 02       		.uleb128 0x2
+ 742 0098 04       		.byte	0x4
+ 743 0099 04       		.byte	0x4
+ 744 009a 20000000 		.4byte	.LASF13
+ 745 009e 02       		.uleb128 0x2
+ 746 009f 08       		.byte	0x8
+ 747 00a0 04       		.byte	0x4
+ 748 00a1 19000000 		.4byte	.LASF14
+ 749 00a5 02       		.uleb128 0x2
+ 750 00a6 01       		.byte	0x1
+ 751 00a7 08       		.byte	0x8
+ 752 00a8 76010000 		.4byte	.LASF15
+ 753 00ac 02       		.uleb128 0x2
+ 754 00ad 08       		.byte	0x8
+ 755 00ae 04       		.byte	0x4
+ 756 00af 97010000 		.4byte	.LASF16
+ 757 00b3 02       		.uleb128 0x2
+ 758 00b4 04       		.byte	0x4
+ 759 00b5 07       		.byte	0x7
+ 760 00b6 5F010000 		.4byte	.LASF17
+ 761 00ba 05       		.uleb128 0x5
+ 762 00bb 00000000 		.4byte	.LASF26
+ 763 00bf 08       		.byte	0x8
+ 764 00c0 04       		.byte	0x4
+ 765 00c1 11       		.byte	0x11
+ 766 00c2 F3000000 		.4byte	0xf3
+ 767 00c6 06       		.uleb128 0x6
+ 768 00c7 6C3300   		.ascii	"l3\000"
+ 769 00ca 04       		.byte	0x4
+ 770 00cb 12       		.byte	0x12
+ 771 00cc 81000000 		.4byte	0x81
+ 772 00d0 00       		.byte	0
+ 773 00d1 06       		.uleb128 0x6
+ 774 00d2 6C3100   		.ascii	"l1\000"
+ 775 00d5 04       		.byte	0x4
+ 776 00d6 14       		.byte	0x14
+ 777 00d7 81000000 		.4byte	0x81
+ 778 00db 02       		.byte	0x2
+ 779 00dc 06       		.uleb128 0x6
+ 780 00dd 723100   		.ascii	"r1\000"
+ 781 00e0 04       		.byte	0x4
+ 782 00e1 15       		.byte	0x15
+ 783 00e2 81000000 		.4byte	0x81
+ 784 00e6 04       		.byte	0x4
+ 785 00e7 06       		.uleb128 0x6
+ 786 00e8 723300   		.ascii	"r3\000"
+ 787 00eb 04       		.byte	0x4
+ 788 00ec 17       		.byte	0x17
+ 789 00ed 81000000 		.4byte	0x81
+ 790 00f1 06       		.byte	0x6
+ 791 00f2 00       		.byte	0
+ 792 00f3 07       		.uleb128 0x7
+ 793 00f4 13000000 		.4byte	.LASF27
+ 794 00f8 01       		.byte	0x1
+ 795 00f9 0D       		.byte	0xd
+ 796 00fa 00000000 		.4byte	.LFB63
+ 797 00fe 20040000 		.4byte	.LFE63-.LFB63
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 18
 
 
- 571 00fe 10020000 		.4byte	.LFE63-.LFB63
- 572 0102 01       		.uleb128 0x1
- 573 0103 9C       		.byte	0x9c
- 574 0104 00030000 		.4byte	0x300
- 575 0108 08       		.uleb128 0x8
- 576 0109 6C3300   		.ascii	"l3\000"
- 577 010c 01       		.byte	0x1
- 578 010d 0D       		.byte	0xd
- 579 010e 73000000 		.4byte	0x73
- 580 0112 00000000 		.4byte	.LLST0
- 581 0116 08       		.uleb128 0x8
- 582 0117 6C3100   		.ascii	"l1\000"
- 583 011a 01       		.byte	0x1
- 584 011b 0D       		.byte	0xd
- 585 011c 73000000 		.4byte	0x73
- 586 0120 21000000 		.4byte	.LLST1
- 587 0124 08       		.uleb128 0x8
- 588 0125 723100   		.ascii	"r1\000"
- 589 0128 01       		.byte	0x1
- 590 0129 0D       		.byte	0xd
- 591 012a 73000000 		.4byte	0x73
- 592 012e B9010000 		.4byte	.LLST2
- 593 0132 08       		.uleb128 0x8
- 594 0133 723300   		.ascii	"r3\000"
- 595 0136 01       		.byte	0x1
- 596 0137 0D       		.byte	0xd
- 597 0138 73000000 		.4byte	0x73
- 598 013c 51030000 		.4byte	.LLST3
- 599 0140 09       		.uleb128 0x9
- 600 0141 1E000000 		.4byte	.LVL4
- 601 0145 44030000 		.4byte	0x344
- 602 0149 53010000 		.4byte	0x153
- 603 014d 0A       		.uleb128 0xa
- 604 014e 01       		.uleb128 0x1
- 605 014f 51       		.byte	0x51
- 606 0150 01       		.uleb128 0x1
- 607 0151 31       		.byte	0x31
- 608 0152 00       		.byte	0
- 609 0153 09       		.uleb128 0x9
- 610 0154 46000000 		.4byte	.LVL8
- 611 0158 4F030000 		.4byte	0x34f
- 612 015c 6B010000 		.4byte	0x16b
- 613 0160 0A       		.uleb128 0xa
- 614 0161 01       		.uleb128 0x1
- 615 0162 51       		.byte	0x51
- 616 0163 01       		.uleb128 0x1
- 617 0164 30       		.byte	0x30
- 618 0165 0A       		.uleb128 0xa
- 619 0166 01       		.uleb128 0x1
- 620 0167 52       		.byte	0x52
- 621 0168 01       		.uleb128 0x1
- 622 0169 31       		.byte	0x31
- 623 016a 00       		.byte	0
- 624 016b 09       		.uleb128 0x9
- 625 016c 64000000 		.4byte	.LVL12
- 626 0170 4F030000 		.4byte	0x34f
- 627 0174 83010000 		.4byte	0x183
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 15
+ 798 0102 01       		.uleb128 0x1
+ 799 0103 9C       		.byte	0x9c
+ 800 0104 3C030000 		.4byte	0x33c
+ 801 0108 08       		.uleb128 0x8
+ 802 0109 6C3300   		.ascii	"l3\000"
+ 803 010c 01       		.byte	0x1
+ 804 010d 0D       		.byte	0xd
+ 805 010e 73000000 		.4byte	0x73
+ 806 0112 00000000 		.4byte	.LLST0
+ 807 0116 08       		.uleb128 0x8
+ 808 0117 6C3100   		.ascii	"l1\000"
+ 809 011a 01       		.byte	0x1
+ 810 011b 0D       		.byte	0xd
+ 811 011c 73000000 		.4byte	0x73
+ 812 0120 21000000 		.4byte	.LLST1
+ 813 0124 08       		.uleb128 0x8
+ 814 0125 723100   		.ascii	"r1\000"
+ 815 0128 01       		.byte	0x1
+ 816 0129 0D       		.byte	0xd
+ 817 012a 73000000 		.4byte	0x73
+ 818 012e EB010000 		.4byte	.LLST2
+ 819 0132 08       		.uleb128 0x8
+ 820 0133 723300   		.ascii	"r3\000"
+ 821 0136 01       		.byte	0x1
+ 822 0137 0D       		.byte	0xd
+ 823 0138 73000000 		.4byte	0x73
+ 824 013c B5030000 		.4byte	.LLST3
+ 825 0140 09       		.uleb128 0x9
+ 826 0141 1E000000 		.4byte	.LVL4
+ 827 0145 80030000 		.4byte	0x380
+ 828 0149 53010000 		.4byte	0x153
+ 829 014d 0A       		.uleb128 0xa
+ 830 014e 01       		.uleb128 0x1
+ 831 014f 51       		.byte	0x51
+ 832 0150 01       		.uleb128 0x1
+ 833 0151 31       		.byte	0x31
+ 834 0152 00       		.byte	0
+ 835 0153 09       		.uleb128 0x9
+ 836 0154 5E000000 		.4byte	.LVL9
+ 837 0158 8B030000 		.4byte	0x38b
+ 838 015c 6D010000 		.4byte	0x16d
+ 839 0160 0A       		.uleb128 0xa
+ 840 0161 01       		.uleb128 0x1
+ 841 0162 50       		.byte	0x50
+ 842 0163 02       		.uleb128 0x2
+ 843 0164 74       		.byte	0x74
+ 844 0165 00       		.sleb128 0
+ 845 0166 0A       		.uleb128 0xa
+ 846 0167 01       		.uleb128 0x1
+ 847 0168 52       		.byte	0x52
+ 848 0169 02       		.uleb128 0x2
+ 849 016a 75       		.byte	0x75
+ 850 016b 00       		.sleb128 0
+ 851 016c 00       		.byte	0
+ 852 016d 09       		.uleb128 0x9
+ 853 016e 96000000 		.4byte	.LVL15
+ 854 0172 8B030000 		.4byte	0x38b
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 19
 
 
- 628 0178 0A       		.uleb128 0xa
- 629 0179 01       		.uleb128 0x1
- 630 017a 50       		.byte	0x50
- 631 017b 01       		.uleb128 0x1
- 632 017c 30       		.byte	0x30
- 633 017d 0A       		.uleb128 0xa
- 634 017e 01       		.uleb128 0x1
- 635 017f 52       		.byte	0x52
- 636 0180 01       		.uleb128 0x1
- 637 0181 31       		.byte	0x31
- 638 0182 00       		.byte	0
- 639 0183 09       		.uleb128 0x9
- 640 0184 84000000 		.4byte	.LVL16
- 641 0188 4F030000 		.4byte	0x34f
- 642 018c 9C010000 		.4byte	0x19c
- 643 0190 0A       		.uleb128 0xa
- 644 0191 01       		.uleb128 0x1
- 645 0192 51       		.byte	0x51
- 646 0193 02       		.uleb128 0x2
- 647 0194 08       		.byte	0x8
- 648 0195 32       		.byte	0x32
- 649 0196 0A       		.uleb128 0xa
- 650 0197 01       		.uleb128 0x1
- 651 0198 52       		.byte	0x52
- 652 0199 01       		.uleb128 0x1
- 653 019a 31       		.byte	0x31
- 654 019b 00       		.byte	0
- 655 019c 09       		.uleb128 0x9
- 656 019d A6000000 		.4byte	.LVL20
- 657 01a1 4F030000 		.4byte	0x34f
- 658 01a5 B5010000 		.4byte	0x1b5
- 659 01a9 0A       		.uleb128 0xa
- 660 01aa 01       		.uleb128 0x1
- 661 01ab 50       		.byte	0x50
- 662 01ac 02       		.uleb128 0x2
- 663 01ad 08       		.byte	0x8
- 664 01ae 32       		.byte	0x32
- 665 01af 0A       		.uleb128 0xa
- 666 01b0 01       		.uleb128 0x1
- 667 01b1 52       		.byte	0x52
- 668 01b2 01       		.uleb128 0x1
- 669 01b3 31       		.byte	0x31
- 670 01b4 00       		.byte	0
- 671 01b5 09       		.uleb128 0x9
- 672 01b6 C4000000 		.4byte	.LVL24
- 673 01ba 4F030000 		.4byte	0x34f
- 674 01be CE010000 		.4byte	0x1ce
- 675 01c2 0A       		.uleb128 0xa
- 676 01c3 01       		.uleb128 0x1
- 677 01c4 51       		.byte	0x51
- 678 01c5 02       		.uleb128 0x2
- 679 01c6 08       		.byte	0x8
- 680 01c7 64       		.byte	0x64
- 681 01c8 0A       		.uleb128 0xa
- 682 01c9 01       		.uleb128 0x1
- 683 01ca 52       		.byte	0x52
- 684 01cb 01       		.uleb128 0x1
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 16
+ 855 0176 86010000 		.4byte	0x186
+ 856 017a 0A       		.uleb128 0xa
+ 857 017b 01       		.uleb128 0x1
+ 858 017c 51       		.byte	0x51
+ 859 017d 02       		.uleb128 0x2
+ 860 017e 74       		.byte	0x74
+ 861 017f 00       		.sleb128 0
+ 862 0180 0A       		.uleb128 0xa
+ 863 0181 01       		.uleb128 0x1
+ 864 0182 52       		.byte	0x52
+ 865 0183 01       		.uleb128 0x1
+ 866 0184 31       		.byte	0x31
+ 867 0185 00       		.byte	0
+ 868 0186 09       		.uleb128 0x9
+ 869 0187 CE000000 		.4byte	.LVL20
+ 870 018b 8B030000 		.4byte	0x38b
+ 871 018f A0010000 		.4byte	0x1a0
+ 872 0193 0A       		.uleb128 0xa
+ 873 0194 01       		.uleb128 0x1
+ 874 0195 50       		.byte	0x50
+ 875 0196 02       		.uleb128 0x2
+ 876 0197 74       		.byte	0x74
+ 877 0198 00       		.sleb128 0
+ 878 0199 0A       		.uleb128 0xa
+ 879 019a 01       		.uleb128 0x1
+ 880 019b 52       		.byte	0x52
+ 881 019c 02       		.uleb128 0x2
+ 882 019d 75       		.byte	0x75
+ 883 019e 00       		.sleb128 0
+ 884 019f 00       		.byte	0
+ 885 01a0 09       		.uleb128 0x9
+ 886 01a1 08010000 		.4byte	.LVL26
+ 887 01a5 8B030000 		.4byte	0x38b
+ 888 01a9 B9010000 		.4byte	0x1b9
+ 889 01ad 0A       		.uleb128 0xa
+ 890 01ae 01       		.uleb128 0x1
+ 891 01af 51       		.byte	0x51
+ 892 01b0 02       		.uleb128 0x2
+ 893 01b1 74       		.byte	0x74
+ 894 01b2 00       		.sleb128 0
+ 895 01b3 0A       		.uleb128 0xa
+ 896 01b4 01       		.uleb128 0x1
+ 897 01b5 52       		.byte	0x52
+ 898 01b6 01       		.uleb128 0x1
+ 899 01b7 31       		.byte	0x31
+ 900 01b8 00       		.byte	0
+ 901 01b9 09       		.uleb128 0x9
+ 902 01ba 40010000 		.4byte	.LVL31
+ 903 01be 8B030000 		.4byte	0x38b
+ 904 01c2 D3010000 		.4byte	0x1d3
+ 905 01c6 0A       		.uleb128 0xa
+ 906 01c7 01       		.uleb128 0x1
+ 907 01c8 50       		.byte	0x50
+ 908 01c9 02       		.uleb128 0x2
+ 909 01ca 74       		.byte	0x74
+ 910 01cb 00       		.sleb128 0
+ 911 01cc 0A       		.uleb128 0xa
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 20
 
 
- 685 01cc 31       		.byte	0x31
- 686 01cd 00       		.byte	0
- 687 01ce 09       		.uleb128 0x9
- 688 01cf E4000000 		.4byte	.LVL28
- 689 01d3 4F030000 		.4byte	0x34f
- 690 01d7 E7010000 		.4byte	0x1e7
- 691 01db 0A       		.uleb128 0xa
- 692 01dc 01       		.uleb128 0x1
- 693 01dd 50       		.byte	0x50
- 694 01de 02       		.uleb128 0x2
- 695 01df 08       		.byte	0x8
- 696 01e0 64       		.byte	0x64
- 697 01e1 0A       		.uleb128 0xa
- 698 01e2 01       		.uleb128 0x1
- 699 01e3 52       		.byte	0x52
- 700 01e4 01       		.uleb128 0x1
- 701 01e5 31       		.byte	0x31
- 702 01e6 00       		.byte	0
- 703 01e7 09       		.uleb128 0x9
- 704 01e8 02010000 		.4byte	.LVL32
- 705 01ec 4F030000 		.4byte	0x34f
- 706 01f0 00020000 		.4byte	0x200
- 707 01f4 0A       		.uleb128 0xa
- 708 01f5 01       		.uleb128 0x1
- 709 01f6 51       		.byte	0x51
- 710 01f7 02       		.uleb128 0x2
- 711 01f8 09       		.byte	0x9
- 712 01f9 96       		.byte	0x96
- 713 01fa 0A       		.uleb128 0xa
- 714 01fb 01       		.uleb128 0x1
- 715 01fc 52       		.byte	0x52
- 716 01fd 01       		.uleb128 0x1
- 717 01fe 31       		.byte	0x31
- 718 01ff 00       		.byte	0
- 719 0200 09       		.uleb128 0x9
- 720 0201 22010000 		.4byte	.LVL36
- 721 0205 4F030000 		.4byte	0x34f
- 722 0209 19020000 		.4byte	0x219
- 723 020d 0A       		.uleb128 0xa
- 724 020e 01       		.uleb128 0x1
- 725 020f 50       		.byte	0x50
- 726 0210 02       		.uleb128 0x2
- 727 0211 09       		.byte	0x9
- 728 0212 96       		.byte	0x96
- 729 0213 0A       		.uleb128 0xa
- 730 0214 01       		.uleb128 0x1
- 731 0215 52       		.byte	0x52
- 732 0216 01       		.uleb128 0x1
- 733 0217 31       		.byte	0x31
- 734 0218 00       		.byte	0
- 735 0219 09       		.uleb128 0x9
- 736 021a 40010000 		.4byte	.LVL40
- 737 021e 4F030000 		.4byte	0x34f
- 738 0222 32020000 		.4byte	0x232
- 739 0226 0A       		.uleb128 0xa
- 740 0227 01       		.uleb128 0x1
- 741 0228 51       		.byte	0x51
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 17
+ 912 01cd 01       		.uleb128 0x1
+ 913 01ce 52       		.byte	0x52
+ 914 01cf 02       		.uleb128 0x2
+ 915 01d0 75       		.byte	0x75
+ 916 01d1 00       		.sleb128 0
+ 917 01d2 00       		.byte	0
+ 918 01d3 09       		.uleb128 0x9
+ 919 01d4 7A010000 		.4byte	.LVL37
+ 920 01d8 8B030000 		.4byte	0x38b
+ 921 01dc EC010000 		.4byte	0x1ec
+ 922 01e0 0A       		.uleb128 0xa
+ 923 01e1 01       		.uleb128 0x1
+ 924 01e2 51       		.byte	0x51
+ 925 01e3 02       		.uleb128 0x2
+ 926 01e4 74       		.byte	0x74
+ 927 01e5 00       		.sleb128 0
+ 928 01e6 0A       		.uleb128 0xa
+ 929 01e7 01       		.uleb128 0x1
+ 930 01e8 52       		.byte	0x52
+ 931 01e9 01       		.uleb128 0x1
+ 932 01ea 31       		.byte	0x31
+ 933 01eb 00       		.byte	0
+ 934 01ec 09       		.uleb128 0x9
+ 935 01ed B0010000 		.4byte	.LVL42
+ 936 01f1 8B030000 		.4byte	0x38b
+ 937 01f5 06020000 		.4byte	0x206
+ 938 01f9 0A       		.uleb128 0xa
+ 939 01fa 01       		.uleb128 0x1
+ 940 01fb 50       		.byte	0x50
+ 941 01fc 02       		.uleb128 0x2
+ 942 01fd 74       		.byte	0x74
+ 943 01fe 00       		.sleb128 0
+ 944 01ff 0A       		.uleb128 0xa
+ 945 0200 01       		.uleb128 0x1
+ 946 0201 52       		.byte	0x52
+ 947 0202 02       		.uleb128 0x2
+ 948 0203 75       		.byte	0x75
+ 949 0204 00       		.sleb128 0
+ 950 0205 00       		.byte	0
+ 951 0206 09       		.uleb128 0x9
+ 952 0207 E8010000 		.4byte	.LVL48
+ 953 020b 8B030000 		.4byte	0x38b
+ 954 020f 1F020000 		.4byte	0x21f
+ 955 0213 0A       		.uleb128 0xa
+ 956 0214 01       		.uleb128 0x1
+ 957 0215 51       		.byte	0x51
+ 958 0216 02       		.uleb128 0x2
+ 959 0217 74       		.byte	0x74
+ 960 0218 00       		.sleb128 0
+ 961 0219 0A       		.uleb128 0xa
+ 962 021a 01       		.uleb128 0x1
+ 963 021b 52       		.byte	0x52
+ 964 021c 01       		.uleb128 0x1
+ 965 021d 31       		.byte	0x31
+ 966 021e 00       		.byte	0
+ 967 021f 09       		.uleb128 0x9
+ 968 0220 1E020000 		.4byte	.LVL53
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 21
 
 
- 742 0229 02       		.uleb128 0x2
- 743 022a 09       		.byte	0x9
- 744 022b B4       		.byte	0xb4
- 745 022c 0A       		.uleb128 0xa
- 746 022d 01       		.uleb128 0x1
- 747 022e 52       		.byte	0x52
- 748 022f 01       		.uleb128 0x1
- 749 0230 31       		.byte	0x31
- 750 0231 00       		.byte	0
- 751 0232 09       		.uleb128 0x9
- 752 0233 60010000 		.4byte	.LVL44
- 753 0237 4F030000 		.4byte	0x34f
- 754 023b 4B020000 		.4byte	0x24b
- 755 023f 0A       		.uleb128 0xa
- 756 0240 01       		.uleb128 0x1
- 757 0241 50       		.byte	0x50
- 758 0242 02       		.uleb128 0x2
- 759 0243 09       		.byte	0x9
- 760 0244 B4       		.byte	0xb4
- 761 0245 0A       		.uleb128 0xa
- 762 0246 01       		.uleb128 0x1
- 763 0247 52       		.byte	0x52
- 764 0248 01       		.uleb128 0x1
- 765 0249 31       		.byte	0x31
- 766 024a 00       		.byte	0
- 767 024b 09       		.uleb128 0x9
- 768 024c 7E010000 		.4byte	.LVL48
- 769 0250 4F030000 		.4byte	0x34f
- 770 0254 64020000 		.4byte	0x264
- 771 0258 0A       		.uleb128 0xa
- 772 0259 01       		.uleb128 0x1
- 773 025a 51       		.byte	0x51
- 774 025b 02       		.uleb128 0x2
- 775 025c 09       		.byte	0x9
- 776 025d C8       		.byte	0xc8
- 777 025e 0A       		.uleb128 0xa
- 778 025f 01       		.uleb128 0x1
- 779 0260 52       		.byte	0x52
- 780 0261 01       		.uleb128 0x1
- 781 0262 31       		.byte	0x31
- 782 0263 00       		.byte	0
- 783 0264 09       		.uleb128 0x9
- 784 0265 9E010000 		.4byte	.LVL52
- 785 0269 4F030000 		.4byte	0x34f
- 786 026d 7D020000 		.4byte	0x27d
- 787 0271 0A       		.uleb128 0xa
- 788 0272 01       		.uleb128 0x1
- 789 0273 50       		.byte	0x50
- 790 0274 02       		.uleb128 0x2
- 791 0275 09       		.byte	0x9
- 792 0276 C8       		.byte	0xc8
- 793 0277 0A       		.uleb128 0xa
- 794 0278 01       		.uleb128 0x1
- 795 0279 52       		.byte	0x52
- 796 027a 01       		.uleb128 0x1
- 797 027b 31       		.byte	0x31
- 798 027c 00       		.byte	0
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 18
+ 969 0224 8B030000 		.4byte	0x38b
+ 970 0228 39020000 		.4byte	0x239
+ 971 022c 0A       		.uleb128 0xa
+ 972 022d 01       		.uleb128 0x1
+ 973 022e 50       		.byte	0x50
+ 974 022f 02       		.uleb128 0x2
+ 975 0230 74       		.byte	0x74
+ 976 0231 00       		.sleb128 0
+ 977 0232 0A       		.uleb128 0xa
+ 978 0233 01       		.uleb128 0x1
+ 979 0234 52       		.byte	0x52
+ 980 0235 02       		.uleb128 0x2
+ 981 0236 75       		.byte	0x75
+ 982 0237 00       		.sleb128 0
+ 983 0238 00       		.byte	0
+ 984 0239 09       		.uleb128 0x9
+ 985 023a 56020000 		.4byte	.LVL59
+ 986 023e 8B030000 		.4byte	0x38b
+ 987 0242 52020000 		.4byte	0x252
+ 988 0246 0A       		.uleb128 0xa
+ 989 0247 01       		.uleb128 0x1
+ 990 0248 51       		.byte	0x51
+ 991 0249 02       		.uleb128 0x2
+ 992 024a 74       		.byte	0x74
+ 993 024b 00       		.sleb128 0
+ 994 024c 0A       		.uleb128 0xa
+ 995 024d 01       		.uleb128 0x1
+ 996 024e 52       		.byte	0x52
+ 997 024f 01       		.uleb128 0x1
+ 998 0250 31       		.byte	0x31
+ 999 0251 00       		.byte	0
+ 1000 0252 09       		.uleb128 0x9
+ 1001 0253 8C020000 		.4byte	.LVL64
+ 1002 0257 8B030000 		.4byte	0x38b
+ 1003 025b 6C020000 		.4byte	0x26c
+ 1004 025f 0A       		.uleb128 0xa
+ 1005 0260 01       		.uleb128 0x1
+ 1006 0261 50       		.byte	0x50
+ 1007 0262 02       		.uleb128 0x2
+ 1008 0263 74       		.byte	0x74
+ 1009 0264 00       		.sleb128 0
+ 1010 0265 0A       		.uleb128 0xa
+ 1011 0266 01       		.uleb128 0x1
+ 1012 0267 52       		.byte	0x52
+ 1013 0268 02       		.uleb128 0x2
+ 1014 0269 75       		.byte	0x75
+ 1015 026a 00       		.sleb128 0
+ 1016 026b 00       		.byte	0
+ 1017 026c 09       		.uleb128 0x9
+ 1018 026d C4020000 		.4byte	.LVL70
+ 1019 0271 8B030000 		.4byte	0x38b
+ 1020 0275 85020000 		.4byte	0x285
+ 1021 0279 0A       		.uleb128 0xa
+ 1022 027a 01       		.uleb128 0x1
+ 1023 027b 51       		.byte	0x51
+ 1024 027c 02       		.uleb128 0x2
+ 1025 027d 74       		.byte	0x74
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 22
 
 
- 799 027d 09       		.uleb128 0x9
- 800 027e B8010000 		.4byte	.LVL56
- 801 0282 4F030000 		.4byte	0x34f
- 802 0286 96020000 		.4byte	0x296
- 803 028a 0A       		.uleb128 0xa
- 804 028b 01       		.uleb128 0x1
- 805 028c 51       		.byte	0x51
- 806 028d 02       		.uleb128 0x2
- 807 028e 09       		.byte	0x9
- 808 028f E1       		.byte	0xe1
- 809 0290 0A       		.uleb128 0xa
- 810 0291 01       		.uleb128 0x1
- 811 0292 52       		.byte	0x52
- 812 0293 01       		.uleb128 0x1
- 813 0294 31       		.byte	0x31
- 814 0295 00       		.byte	0
- 815 0296 09       		.uleb128 0x9
- 816 0297 D4010000 		.4byte	.LVL60
- 817 029b 4F030000 		.4byte	0x34f
- 818 029f AF020000 		.4byte	0x2af
- 819 02a3 0A       		.uleb128 0xa
- 820 02a4 01       		.uleb128 0x1
- 821 02a5 50       		.byte	0x50
- 822 02a6 02       		.uleb128 0x2
- 823 02a7 09       		.byte	0x9
- 824 02a8 E1       		.byte	0xe1
- 825 02a9 0A       		.uleb128 0xa
- 826 02aa 01       		.uleb128 0x1
- 827 02ab 52       		.byte	0x52
- 828 02ac 01       		.uleb128 0x1
- 829 02ad 31       		.byte	0x31
- 830 02ae 00       		.byte	0
- 831 02af 09       		.uleb128 0x9
- 832 02b0 EC010000 		.4byte	.LVL64
- 833 02b4 5A030000 		.4byte	0x35a
- 834 02b8 D9020000 		.4byte	0x2d9
- 835 02bc 0A       		.uleb128 0xa
- 836 02bd 01       		.uleb128 0x1
- 837 02be 50       		.byte	0x50
- 838 02bf 01       		.uleb128 0x1
- 839 02c0 30       		.byte	0x30
- 840 02c1 0A       		.uleb128 0xa
- 841 02c2 01       		.uleb128 0x1
- 842 02c3 51       		.byte	0x51
- 843 02c4 01       		.uleb128 0x1
- 844 02c5 31       		.byte	0x31
- 845 02c6 0A       		.uleb128 0xa
- 846 02c7 01       		.uleb128 0x1
- 847 02c8 52       		.byte	0x52
- 848 02c9 02       		.uleb128 0x2
- 849 02ca 09       		.byte	0x9
- 850 02cb C8       		.byte	0xc8
- 851 02cc 0A       		.uleb128 0xa
- 852 02cd 01       		.uleb128 0x1
- 853 02ce 53       		.byte	0x53
- 854 02cf 02       		.uleb128 0x2
- 855 02d0 08       		.byte	0x8
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 19
+ 1026 027e 00       		.sleb128 0
+ 1027 027f 0A       		.uleb128 0xa
+ 1028 0280 01       		.uleb128 0x1
+ 1029 0281 52       		.byte	0x52
+ 1030 0282 01       		.uleb128 0x1
+ 1031 0283 31       		.byte	0x31
+ 1032 0284 00       		.byte	0
+ 1033 0285 09       		.uleb128 0x9
+ 1034 0286 34030000 		.4byte	.LVL75
+ 1035 028a 8B030000 		.4byte	0x38b
+ 1036 028e 9F020000 		.4byte	0x29f
+ 1037 0292 0A       		.uleb128 0xa
+ 1038 0293 01       		.uleb128 0x1
+ 1039 0294 50       		.byte	0x50
+ 1040 0295 02       		.uleb128 0x2
+ 1041 0296 74       		.byte	0x74
+ 1042 0297 00       		.sleb128 0
+ 1043 0298 0A       		.uleb128 0xa
+ 1044 0299 01       		.uleb128 0x1
+ 1045 029a 52       		.byte	0x52
+ 1046 029b 02       		.uleb128 0x2
+ 1047 029c 75       		.byte	0x75
+ 1048 029d 00       		.sleb128 0
+ 1049 029e 00       		.byte	0
+ 1050 029f 09       		.uleb128 0x9
+ 1051 02a0 6C030000 		.4byte	.LVL81
+ 1052 02a4 8B030000 		.4byte	0x38b
+ 1053 02a8 B8020000 		.4byte	0x2b8
+ 1054 02ac 0A       		.uleb128 0xa
+ 1055 02ad 01       		.uleb128 0x1
+ 1056 02ae 51       		.byte	0x51
+ 1057 02af 02       		.uleb128 0x2
+ 1058 02b0 74       		.byte	0x74
+ 1059 02b1 00       		.sleb128 0
+ 1060 02b2 0A       		.uleb128 0xa
+ 1061 02b3 01       		.uleb128 0x1
+ 1062 02b4 52       		.byte	0x52
+ 1063 02b5 01       		.uleb128 0x1
+ 1064 02b6 31       		.byte	0x31
+ 1065 02b7 00       		.byte	0
+ 1066 02b8 09       		.uleb128 0x9
+ 1067 02b9 9E030000 		.4byte	.LVL86
+ 1068 02bd 8B030000 		.4byte	0x38b
+ 1069 02c1 D2020000 		.4byte	0x2d2
+ 1070 02c5 0A       		.uleb128 0xa
+ 1071 02c6 01       		.uleb128 0x1
+ 1072 02c7 50       		.byte	0x50
+ 1073 02c8 02       		.uleb128 0x2
+ 1074 02c9 74       		.byte	0x74
+ 1075 02ca 00       		.sleb128 0
+ 1076 02cb 0A       		.uleb128 0xa
+ 1077 02cc 01       		.uleb128 0x1
+ 1078 02cd 52       		.byte	0x52
+ 1079 02ce 02       		.uleb128 0x2
+ 1080 02cf 75       		.byte	0x75
+ 1081 02d0 00       		.sleb128 0
+ 1082 02d1 00       		.byte	0
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 23
 
 
- 856 02d1 64       		.byte	0x64
- 857 02d2 0A       		.uleb128 0xa
- 858 02d3 02       		.uleb128 0x2
- 859 02d4 7D       		.byte	0x7d
- 860 02d5 00       		.sleb128 0
- 861 02d6 01       		.uleb128 0x1
- 862 02d7 31       		.byte	0x31
- 863 02d8 00       		.byte	0
- 864 02d9 0B       		.uleb128 0xb
- 865 02da 00020000 		.4byte	.LVL65
- 866 02de 5A030000 		.4byte	0x35a
- 867 02e2 0A       		.uleb128 0xa
- 868 02e3 01       		.uleb128 0x1
- 869 02e4 50       		.byte	0x50
- 870 02e5 01       		.uleb128 0x1
- 871 02e6 31       		.byte	0x31
- 872 02e7 0A       		.uleb128 0xa
- 873 02e8 01       		.uleb128 0x1
- 874 02e9 51       		.byte	0x51
- 875 02ea 01       		.uleb128 0x1
- 876 02eb 30       		.byte	0x30
- 877 02ec 0A       		.uleb128 0xa
- 878 02ed 01       		.uleb128 0x1
- 879 02ee 52       		.byte	0x52
- 880 02ef 02       		.uleb128 0x2
- 881 02f0 08       		.byte	0x8
- 882 02f1 64       		.byte	0x64
- 883 02f2 0A       		.uleb128 0xa
- 884 02f3 01       		.uleb128 0x1
- 885 02f4 53       		.byte	0x53
- 886 02f5 02       		.uleb128 0x2
- 887 02f6 09       		.byte	0x9
- 888 02f7 C8       		.byte	0xc8
- 889 02f8 0A       		.uleb128 0xa
- 890 02f9 02       		.uleb128 0x2
- 891 02fa 7D       		.byte	0x7d
- 892 02fb 00       		.sleb128 0
- 893 02fc 01       		.uleb128 0x1
- 894 02fd 31       		.byte	0x31
- 895 02fe 00       		.byte	0
- 896 02ff 00       		.byte	0
- 897 0300 0C       		.uleb128 0xc
- 898 0301 0A010000 		.4byte	.LASF18
- 899 0305 05       		.byte	0x5
- 900 0306 9606     		.2byte	0x696
- 901 0308 0C030000 		.4byte	0x30c
- 902 030c 0D       		.uleb128 0xd
- 903 030d 8C000000 		.4byte	0x8c
- 904 0311 0E       		.uleb128 0xe
- 905 0312 C2000000 		.4byte	.LASF19
- 906 0316 04       		.byte	0x4
- 907 0317 1D       		.byte	0x1d
- 908 0318 BA000000 		.4byte	0xba
- 909 031c 05       		.uleb128 0x5
- 910 031d 03       		.byte	0x3
- 911 031e 00000000 		.4byte	threshold
- 912 0322 0F       		.uleb128 0xf
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 20
+ 1083 02d2 09       		.uleb128 0x9
+ 1084 02d3 D2030000 		.4byte	.LVL92
+ 1085 02d7 8B030000 		.4byte	0x38b
+ 1086 02db EB020000 		.4byte	0x2eb
+ 1087 02df 0A       		.uleb128 0xa
+ 1088 02e0 01       		.uleb128 0x1
+ 1089 02e1 51       		.byte	0x51
+ 1090 02e2 02       		.uleb128 0x2
+ 1091 02e3 74       		.byte	0x74
+ 1092 02e4 00       		.sleb128 0
+ 1093 02e5 0A       		.uleb128 0xa
+ 1094 02e6 01       		.uleb128 0x1
+ 1095 02e7 52       		.byte	0x52
+ 1096 02e8 01       		.uleb128 0x1
+ 1097 02e9 31       		.byte	0x31
+ 1098 02ea 00       		.byte	0
+ 1099 02eb 09       		.uleb128 0x9
+ 1100 02ec EA030000 		.4byte	.LVL96
+ 1101 02f0 96030000 		.4byte	0x396
+ 1102 02f4 15030000 		.4byte	0x315
+ 1103 02f8 0A       		.uleb128 0xa
+ 1104 02f9 01       		.uleb128 0x1
+ 1105 02fa 50       		.byte	0x50
+ 1106 02fb 01       		.uleb128 0x1
+ 1107 02fc 30       		.byte	0x30
+ 1108 02fd 0A       		.uleb128 0xa
+ 1109 02fe 01       		.uleb128 0x1
+ 1110 02ff 51       		.byte	0x51
+ 1111 0300 01       		.uleb128 0x1
+ 1112 0301 31       		.byte	0x31
+ 1113 0302 0A       		.uleb128 0xa
+ 1114 0303 01       		.uleb128 0x1
+ 1115 0304 52       		.byte	0x52
+ 1116 0305 02       		.uleb128 0x2
+ 1117 0306 09       		.byte	0x9
+ 1118 0307 C8       		.byte	0xc8
+ 1119 0308 0A       		.uleb128 0xa
+ 1120 0309 01       		.uleb128 0x1
+ 1121 030a 53       		.byte	0x53
+ 1122 030b 02       		.uleb128 0x2
+ 1123 030c 08       		.byte	0x8
+ 1124 030d 64       		.byte	0x64
+ 1125 030e 0A       		.uleb128 0xa
+ 1126 030f 02       		.uleb128 0x2
+ 1127 0310 7D       		.byte	0x7d
+ 1128 0311 00       		.sleb128 0
+ 1129 0312 01       		.uleb128 0x1
+ 1130 0313 31       		.byte	0x31
+ 1131 0314 00       		.byte	0
+ 1132 0315 0B       		.uleb128 0xb
+ 1133 0316 FE030000 		.4byte	.LVL97
+ 1134 031a 96030000 		.4byte	0x396
+ 1135 031e 0A       		.uleb128 0xa
+ 1136 031f 01       		.uleb128 0x1
+ 1137 0320 50       		.byte	0x50
+ 1138 0321 01       		.uleb128 0x1
+ 1139 0322 31       		.byte	0x31
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 24
 
 
- 913 0323 64697200 		.ascii	"dir\000"
- 914 0327 01       		.byte	0x1
- 915 0328 09       		.byte	0x9
- 916 0329 73000000 		.4byte	0x73
- 917 032d 05       		.uleb128 0x5
- 918 032e 03       		.byte	0x3
- 919 032f 00000000 		.4byte	dir
- 920 0333 0F       		.uleb128 0xf
- 921 0334 6D617800 		.ascii	"max\000"
- 922 0338 01       		.byte	0x1
- 923 0339 0A       		.byte	0xa
- 924 033a 73000000 		.4byte	0x73
- 925 033e 05       		.uleb128 0x5
- 926 033f 03       		.byte	0x3
- 927 0340 00000000 		.4byte	max
- 928 0344 10       		.uleb128 0x10
- 929 0345 DF000000 		.4byte	.LASF20
- 930 0349 DF000000 		.4byte	.LASF20
- 931 034d 06       		.byte	0x6
- 932 034e 0F       		.byte	0xf
- 933 034f 10       		.uleb128 0x10
- 934 0350 4C010000 		.4byte	.LASF21
- 935 0354 4C010000 		.4byte	.LASF21
- 936 0358 06       		.byte	0x6
- 937 0359 12       		.byte	0x12
- 938 035a 10       		.uleb128 0x10
- 939 035b 17010000 		.4byte	.LASF22
- 940 035f 17010000 		.4byte	.LASF22
- 941 0363 06       		.byte	0x6
- 942 0364 15       		.byte	0x15
- 943 0365 00       		.byte	0
- 944              		.section	.debug_abbrev,"",%progbits
- 945              	.Ldebug_abbrev0:
- 946 0000 01       		.uleb128 0x1
- 947 0001 11       		.uleb128 0x11
- 948 0002 01       		.byte	0x1
- 949 0003 25       		.uleb128 0x25
- 950 0004 0E       		.uleb128 0xe
- 951 0005 13       		.uleb128 0x13
- 952 0006 0B       		.uleb128 0xb
- 953 0007 03       		.uleb128 0x3
- 954 0008 0E       		.uleb128 0xe
- 955 0009 1B       		.uleb128 0x1b
- 956 000a 0E       		.uleb128 0xe
- 957 000b 55       		.uleb128 0x55
- 958 000c 17       		.uleb128 0x17
- 959 000d 11       		.uleb128 0x11
- 960 000e 01       		.uleb128 0x1
- 961 000f 10       		.uleb128 0x10
- 962 0010 17       		.uleb128 0x17
- 963 0011 00       		.byte	0
- 964 0012 00       		.byte	0
- 965 0013 02       		.uleb128 0x2
- 966 0014 24       		.uleb128 0x24
- 967 0015 00       		.byte	0
- 968 0016 0B       		.uleb128 0xb
- 969 0017 0B       		.uleb128 0xb
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 21
+ 1140 0323 0A       		.uleb128 0xa
+ 1141 0324 01       		.uleb128 0x1
+ 1142 0325 51       		.byte	0x51
+ 1143 0326 01       		.uleb128 0x1
+ 1144 0327 30       		.byte	0x30
+ 1145 0328 0A       		.uleb128 0xa
+ 1146 0329 01       		.uleb128 0x1
+ 1147 032a 52       		.byte	0x52
+ 1148 032b 02       		.uleb128 0x2
+ 1149 032c 08       		.byte	0x8
+ 1150 032d 64       		.byte	0x64
+ 1151 032e 0A       		.uleb128 0xa
+ 1152 032f 01       		.uleb128 0x1
+ 1153 0330 53       		.byte	0x53
+ 1154 0331 02       		.uleb128 0x2
+ 1155 0332 09       		.byte	0x9
+ 1156 0333 C8       		.byte	0xc8
+ 1157 0334 0A       		.uleb128 0xa
+ 1158 0335 02       		.uleb128 0x2
+ 1159 0336 7D       		.byte	0x7d
+ 1160 0337 00       		.sleb128 0
+ 1161 0338 01       		.uleb128 0x1
+ 1162 0339 31       		.byte	0x31
+ 1163 033a 00       		.byte	0
+ 1164 033b 00       		.byte	0
+ 1165 033c 0C       		.uleb128 0xc
+ 1166 033d 0A010000 		.4byte	.LASF18
+ 1167 0341 05       		.byte	0x5
+ 1168 0342 9606     		.2byte	0x696
+ 1169 0344 48030000 		.4byte	0x348
+ 1170 0348 0D       		.uleb128 0xd
+ 1171 0349 8C000000 		.4byte	0x8c
+ 1172 034d 0E       		.uleb128 0xe
+ 1173 034e C2000000 		.4byte	.LASF19
+ 1174 0352 04       		.byte	0x4
+ 1175 0353 1D       		.byte	0x1d
+ 1176 0354 BA000000 		.4byte	0xba
+ 1177 0358 05       		.uleb128 0x5
+ 1178 0359 03       		.byte	0x3
+ 1179 035a 00000000 		.4byte	threshold
+ 1180 035e 0F       		.uleb128 0xf
+ 1181 035f 64697200 		.ascii	"dir\000"
+ 1182 0363 01       		.byte	0x1
+ 1183 0364 09       		.byte	0x9
+ 1184 0365 73000000 		.4byte	0x73
+ 1185 0369 05       		.uleb128 0x5
+ 1186 036a 03       		.byte	0x3
+ 1187 036b 00000000 		.4byte	dir
+ 1188 036f 0F       		.uleb128 0xf
+ 1189 0370 6D617800 		.ascii	"max\000"
+ 1190 0374 01       		.byte	0x1
+ 1191 0375 0A       		.byte	0xa
+ 1192 0376 73000000 		.4byte	0x73
+ 1193 037a 05       		.uleb128 0x5
+ 1194 037b 03       		.byte	0x3
+ 1195 037c 00000000 		.4byte	max
+ 1196 0380 10       		.uleb128 0x10
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 25
 
 
- 970 0018 3E       		.uleb128 0x3e
- 971 0019 0B       		.uleb128 0xb
- 972 001a 03       		.uleb128 0x3
- 973 001b 0E       		.uleb128 0xe
- 974 001c 00       		.byte	0
- 975 001d 00       		.byte	0
- 976 001e 03       		.uleb128 0x3
- 977 001f 16       		.uleb128 0x16
- 978 0020 00       		.byte	0
- 979 0021 03       		.uleb128 0x3
- 980 0022 0E       		.uleb128 0xe
- 981 0023 3A       		.uleb128 0x3a
- 982 0024 0B       		.uleb128 0xb
- 983 0025 3B       		.uleb128 0x3b
- 984 0026 0B       		.uleb128 0xb
- 985 0027 49       		.uleb128 0x49
- 986 0028 13       		.uleb128 0x13
- 987 0029 00       		.byte	0
- 988 002a 00       		.byte	0
- 989 002b 04       		.uleb128 0x4
- 990 002c 24       		.uleb128 0x24
- 991 002d 00       		.byte	0
- 992 002e 0B       		.uleb128 0xb
- 993 002f 0B       		.uleb128 0xb
- 994 0030 3E       		.uleb128 0x3e
- 995 0031 0B       		.uleb128 0xb
- 996 0032 03       		.uleb128 0x3
- 997 0033 08       		.uleb128 0x8
- 998 0034 00       		.byte	0
- 999 0035 00       		.byte	0
- 1000 0036 05       		.uleb128 0x5
- 1001 0037 13       		.uleb128 0x13
- 1002 0038 01       		.byte	0x1
- 1003 0039 03       		.uleb128 0x3
- 1004 003a 0E       		.uleb128 0xe
- 1005 003b 0B       		.uleb128 0xb
- 1006 003c 0B       		.uleb128 0xb
- 1007 003d 3A       		.uleb128 0x3a
- 1008 003e 0B       		.uleb128 0xb
- 1009 003f 3B       		.uleb128 0x3b
- 1010 0040 0B       		.uleb128 0xb
- 1011 0041 01       		.uleb128 0x1
- 1012 0042 13       		.uleb128 0x13
- 1013 0043 00       		.byte	0
- 1014 0044 00       		.byte	0
- 1015 0045 06       		.uleb128 0x6
- 1016 0046 0D       		.uleb128 0xd
- 1017 0047 00       		.byte	0
- 1018 0048 03       		.uleb128 0x3
- 1019 0049 08       		.uleb128 0x8
- 1020 004a 3A       		.uleb128 0x3a
- 1021 004b 0B       		.uleb128 0xb
- 1022 004c 3B       		.uleb128 0x3b
- 1023 004d 0B       		.uleb128 0xb
- 1024 004e 49       		.uleb128 0x49
- 1025 004f 13       		.uleb128 0x13
- 1026 0050 38       		.uleb128 0x38
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 22
+ 1197 0381 DF000000 		.4byte	.LASF20
+ 1198 0385 DF000000 		.4byte	.LASF20
+ 1199 0389 06       		.byte	0x6
+ 1200 038a 0F       		.byte	0xf
+ 1201 038b 10       		.uleb128 0x10
+ 1202 038c 4C010000 		.4byte	.LASF21
+ 1203 0390 4C010000 		.4byte	.LASF21
+ 1204 0394 06       		.byte	0x6
+ 1205 0395 12       		.byte	0x12
+ 1206 0396 10       		.uleb128 0x10
+ 1207 0397 17010000 		.4byte	.LASF22
+ 1208 039b 17010000 		.4byte	.LASF22
+ 1209 039f 06       		.byte	0x6
+ 1210 03a0 15       		.byte	0x15
+ 1211 03a1 00       		.byte	0
+ 1212              		.section	.debug_abbrev,"",%progbits
+ 1213              	.Ldebug_abbrev0:
+ 1214 0000 01       		.uleb128 0x1
+ 1215 0001 11       		.uleb128 0x11
+ 1216 0002 01       		.byte	0x1
+ 1217 0003 25       		.uleb128 0x25
+ 1218 0004 0E       		.uleb128 0xe
+ 1219 0005 13       		.uleb128 0x13
+ 1220 0006 0B       		.uleb128 0xb
+ 1221 0007 03       		.uleb128 0x3
+ 1222 0008 0E       		.uleb128 0xe
+ 1223 0009 1B       		.uleb128 0x1b
+ 1224 000a 0E       		.uleb128 0xe
+ 1225 000b 55       		.uleb128 0x55
+ 1226 000c 17       		.uleb128 0x17
+ 1227 000d 11       		.uleb128 0x11
+ 1228 000e 01       		.uleb128 0x1
+ 1229 000f 10       		.uleb128 0x10
+ 1230 0010 17       		.uleb128 0x17
+ 1231 0011 00       		.byte	0
+ 1232 0012 00       		.byte	0
+ 1233 0013 02       		.uleb128 0x2
+ 1234 0014 24       		.uleb128 0x24
+ 1235 0015 00       		.byte	0
+ 1236 0016 0B       		.uleb128 0xb
+ 1237 0017 0B       		.uleb128 0xb
+ 1238 0018 3E       		.uleb128 0x3e
+ 1239 0019 0B       		.uleb128 0xb
+ 1240 001a 03       		.uleb128 0x3
+ 1241 001b 0E       		.uleb128 0xe
+ 1242 001c 00       		.byte	0
+ 1243 001d 00       		.byte	0
+ 1244 001e 03       		.uleb128 0x3
+ 1245 001f 16       		.uleb128 0x16
+ 1246 0020 00       		.byte	0
+ 1247 0021 03       		.uleb128 0x3
+ 1248 0022 0E       		.uleb128 0xe
+ 1249 0023 3A       		.uleb128 0x3a
+ 1250 0024 0B       		.uleb128 0xb
+ 1251 0025 3B       		.uleb128 0x3b
+ 1252 0026 0B       		.uleb128 0xb
+ 1253 0027 49       		.uleb128 0x49
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 26
 
 
- 1027 0051 0B       		.uleb128 0xb
- 1028 0052 00       		.byte	0
- 1029 0053 00       		.byte	0
- 1030 0054 07       		.uleb128 0x7
- 1031 0055 2E       		.uleb128 0x2e
- 1032 0056 01       		.byte	0x1
- 1033 0057 3F       		.uleb128 0x3f
- 1034 0058 19       		.uleb128 0x19
- 1035 0059 03       		.uleb128 0x3
- 1036 005a 0E       		.uleb128 0xe
- 1037 005b 3A       		.uleb128 0x3a
- 1038 005c 0B       		.uleb128 0xb
- 1039 005d 3B       		.uleb128 0x3b
- 1040 005e 0B       		.uleb128 0xb
- 1041 005f 27       		.uleb128 0x27
- 1042 0060 19       		.uleb128 0x19
- 1043 0061 11       		.uleb128 0x11
- 1044 0062 01       		.uleb128 0x1
- 1045 0063 12       		.uleb128 0x12
- 1046 0064 06       		.uleb128 0x6
- 1047 0065 40       		.uleb128 0x40
- 1048 0066 18       		.uleb128 0x18
- 1049 0067 9742     		.uleb128 0x2117
- 1050 0069 19       		.uleb128 0x19
- 1051 006a 01       		.uleb128 0x1
- 1052 006b 13       		.uleb128 0x13
- 1053 006c 00       		.byte	0
- 1054 006d 00       		.byte	0
- 1055 006e 08       		.uleb128 0x8
- 1056 006f 05       		.uleb128 0x5
- 1057 0070 00       		.byte	0
- 1058 0071 03       		.uleb128 0x3
- 1059 0072 08       		.uleb128 0x8
- 1060 0073 3A       		.uleb128 0x3a
- 1061 0074 0B       		.uleb128 0xb
- 1062 0075 3B       		.uleb128 0x3b
- 1063 0076 0B       		.uleb128 0xb
- 1064 0077 49       		.uleb128 0x49
- 1065 0078 13       		.uleb128 0x13
- 1066 0079 02       		.uleb128 0x2
- 1067 007a 17       		.uleb128 0x17
- 1068 007b 00       		.byte	0
- 1069 007c 00       		.byte	0
- 1070 007d 09       		.uleb128 0x9
- 1071 007e 898201   		.uleb128 0x4109
- 1072 0081 01       		.byte	0x1
- 1073 0082 11       		.uleb128 0x11
- 1074 0083 01       		.uleb128 0x1
- 1075 0084 31       		.uleb128 0x31
- 1076 0085 13       		.uleb128 0x13
- 1077 0086 01       		.uleb128 0x1
- 1078 0087 13       		.uleb128 0x13
- 1079 0088 00       		.byte	0
- 1080 0089 00       		.byte	0
- 1081 008a 0A       		.uleb128 0xa
- 1082 008b 8A8201   		.uleb128 0x410a
- 1083 008e 00       		.byte	0
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 23
+ 1254 0028 13       		.uleb128 0x13
+ 1255 0029 00       		.byte	0
+ 1256 002a 00       		.byte	0
+ 1257 002b 04       		.uleb128 0x4
+ 1258 002c 24       		.uleb128 0x24
+ 1259 002d 00       		.byte	0
+ 1260 002e 0B       		.uleb128 0xb
+ 1261 002f 0B       		.uleb128 0xb
+ 1262 0030 3E       		.uleb128 0x3e
+ 1263 0031 0B       		.uleb128 0xb
+ 1264 0032 03       		.uleb128 0x3
+ 1265 0033 08       		.uleb128 0x8
+ 1266 0034 00       		.byte	0
+ 1267 0035 00       		.byte	0
+ 1268 0036 05       		.uleb128 0x5
+ 1269 0037 13       		.uleb128 0x13
+ 1270 0038 01       		.byte	0x1
+ 1271 0039 03       		.uleb128 0x3
+ 1272 003a 0E       		.uleb128 0xe
+ 1273 003b 0B       		.uleb128 0xb
+ 1274 003c 0B       		.uleb128 0xb
+ 1275 003d 3A       		.uleb128 0x3a
+ 1276 003e 0B       		.uleb128 0xb
+ 1277 003f 3B       		.uleb128 0x3b
+ 1278 0040 0B       		.uleb128 0xb
+ 1279 0041 01       		.uleb128 0x1
+ 1280 0042 13       		.uleb128 0x13
+ 1281 0043 00       		.byte	0
+ 1282 0044 00       		.byte	0
+ 1283 0045 06       		.uleb128 0x6
+ 1284 0046 0D       		.uleb128 0xd
+ 1285 0047 00       		.byte	0
+ 1286 0048 03       		.uleb128 0x3
+ 1287 0049 08       		.uleb128 0x8
+ 1288 004a 3A       		.uleb128 0x3a
+ 1289 004b 0B       		.uleb128 0xb
+ 1290 004c 3B       		.uleb128 0x3b
+ 1291 004d 0B       		.uleb128 0xb
+ 1292 004e 49       		.uleb128 0x49
+ 1293 004f 13       		.uleb128 0x13
+ 1294 0050 38       		.uleb128 0x38
+ 1295 0051 0B       		.uleb128 0xb
+ 1296 0052 00       		.byte	0
+ 1297 0053 00       		.byte	0
+ 1298 0054 07       		.uleb128 0x7
+ 1299 0055 2E       		.uleb128 0x2e
+ 1300 0056 01       		.byte	0x1
+ 1301 0057 3F       		.uleb128 0x3f
+ 1302 0058 19       		.uleb128 0x19
+ 1303 0059 03       		.uleb128 0x3
+ 1304 005a 0E       		.uleb128 0xe
+ 1305 005b 3A       		.uleb128 0x3a
+ 1306 005c 0B       		.uleb128 0xb
+ 1307 005d 3B       		.uleb128 0x3b
+ 1308 005e 0B       		.uleb128 0xb
+ 1309 005f 27       		.uleb128 0x27
+ 1310 0060 19       		.uleb128 0x19
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 27
 
 
- 1084 008f 02       		.uleb128 0x2
- 1085 0090 18       		.uleb128 0x18
- 1086 0091 9142     		.uleb128 0x2111
- 1087 0093 18       		.uleb128 0x18
- 1088 0094 00       		.byte	0
- 1089 0095 00       		.byte	0
- 1090 0096 0B       		.uleb128 0xb
- 1091 0097 898201   		.uleb128 0x4109
- 1092 009a 01       		.byte	0x1
- 1093 009b 11       		.uleb128 0x11
- 1094 009c 01       		.uleb128 0x1
- 1095 009d 31       		.uleb128 0x31
- 1096 009e 13       		.uleb128 0x13
- 1097 009f 00       		.byte	0
- 1098 00a0 00       		.byte	0
- 1099 00a1 0C       		.uleb128 0xc
- 1100 00a2 34       		.uleb128 0x34
- 1101 00a3 00       		.byte	0
- 1102 00a4 03       		.uleb128 0x3
- 1103 00a5 0E       		.uleb128 0xe
- 1104 00a6 3A       		.uleb128 0x3a
- 1105 00a7 0B       		.uleb128 0xb
- 1106 00a8 3B       		.uleb128 0x3b
- 1107 00a9 05       		.uleb128 0x5
- 1108 00aa 49       		.uleb128 0x49
- 1109 00ab 13       		.uleb128 0x13
- 1110 00ac 3F       		.uleb128 0x3f
- 1111 00ad 19       		.uleb128 0x19
- 1112 00ae 3C       		.uleb128 0x3c
- 1113 00af 19       		.uleb128 0x19
- 1114 00b0 00       		.byte	0
- 1115 00b1 00       		.byte	0
- 1116 00b2 0D       		.uleb128 0xd
- 1117 00b3 35       		.uleb128 0x35
- 1118 00b4 00       		.byte	0
- 1119 00b5 49       		.uleb128 0x49
- 1120 00b6 13       		.uleb128 0x13
- 1121 00b7 00       		.byte	0
- 1122 00b8 00       		.byte	0
- 1123 00b9 0E       		.uleb128 0xe
- 1124 00ba 34       		.uleb128 0x34
- 1125 00bb 00       		.byte	0
- 1126 00bc 03       		.uleb128 0x3
- 1127 00bd 0E       		.uleb128 0xe
- 1128 00be 3A       		.uleb128 0x3a
- 1129 00bf 0B       		.uleb128 0xb
- 1130 00c0 3B       		.uleb128 0x3b
- 1131 00c1 0B       		.uleb128 0xb
- 1132 00c2 49       		.uleb128 0x49
- 1133 00c3 13       		.uleb128 0x13
- 1134 00c4 3F       		.uleb128 0x3f
- 1135 00c5 19       		.uleb128 0x19
- 1136 00c6 02       		.uleb128 0x2
- 1137 00c7 18       		.uleb128 0x18
- 1138 00c8 00       		.byte	0
- 1139 00c9 00       		.byte	0
- 1140 00ca 0F       		.uleb128 0xf
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 24
+ 1311 0061 11       		.uleb128 0x11
+ 1312 0062 01       		.uleb128 0x1
+ 1313 0063 12       		.uleb128 0x12
+ 1314 0064 06       		.uleb128 0x6
+ 1315 0065 40       		.uleb128 0x40
+ 1316 0066 18       		.uleb128 0x18
+ 1317 0067 9642     		.uleb128 0x2116
+ 1318 0069 19       		.uleb128 0x19
+ 1319 006a 01       		.uleb128 0x1
+ 1320 006b 13       		.uleb128 0x13
+ 1321 006c 00       		.byte	0
+ 1322 006d 00       		.byte	0
+ 1323 006e 08       		.uleb128 0x8
+ 1324 006f 05       		.uleb128 0x5
+ 1325 0070 00       		.byte	0
+ 1326 0071 03       		.uleb128 0x3
+ 1327 0072 08       		.uleb128 0x8
+ 1328 0073 3A       		.uleb128 0x3a
+ 1329 0074 0B       		.uleb128 0xb
+ 1330 0075 3B       		.uleb128 0x3b
+ 1331 0076 0B       		.uleb128 0xb
+ 1332 0077 49       		.uleb128 0x49
+ 1333 0078 13       		.uleb128 0x13
+ 1334 0079 02       		.uleb128 0x2
+ 1335 007a 17       		.uleb128 0x17
+ 1336 007b 00       		.byte	0
+ 1337 007c 00       		.byte	0
+ 1338 007d 09       		.uleb128 0x9
+ 1339 007e 898201   		.uleb128 0x4109
+ 1340 0081 01       		.byte	0x1
+ 1341 0082 11       		.uleb128 0x11
+ 1342 0083 01       		.uleb128 0x1
+ 1343 0084 31       		.uleb128 0x31
+ 1344 0085 13       		.uleb128 0x13
+ 1345 0086 01       		.uleb128 0x1
+ 1346 0087 13       		.uleb128 0x13
+ 1347 0088 00       		.byte	0
+ 1348 0089 00       		.byte	0
+ 1349 008a 0A       		.uleb128 0xa
+ 1350 008b 8A8201   		.uleb128 0x410a
+ 1351 008e 00       		.byte	0
+ 1352 008f 02       		.uleb128 0x2
+ 1353 0090 18       		.uleb128 0x18
+ 1354 0091 9142     		.uleb128 0x2111
+ 1355 0093 18       		.uleb128 0x18
+ 1356 0094 00       		.byte	0
+ 1357 0095 00       		.byte	0
+ 1358 0096 0B       		.uleb128 0xb
+ 1359 0097 898201   		.uleb128 0x4109
+ 1360 009a 01       		.byte	0x1
+ 1361 009b 11       		.uleb128 0x11
+ 1362 009c 01       		.uleb128 0x1
+ 1363 009d 31       		.uleb128 0x31
+ 1364 009e 13       		.uleb128 0x13
+ 1365 009f 00       		.byte	0
+ 1366 00a0 00       		.byte	0
+ 1367 00a1 0C       		.uleb128 0xc
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 28
 
 
- 1141 00cb 34       		.uleb128 0x34
- 1142 00cc 00       		.byte	0
- 1143 00cd 03       		.uleb128 0x3
- 1144 00ce 08       		.uleb128 0x8
- 1145 00cf 3A       		.uleb128 0x3a
- 1146 00d0 0B       		.uleb128 0xb
- 1147 00d1 3B       		.uleb128 0x3b
- 1148 00d2 0B       		.uleb128 0xb
- 1149 00d3 49       		.uleb128 0x49
- 1150 00d4 13       		.uleb128 0x13
- 1151 00d5 3F       		.uleb128 0x3f
- 1152 00d6 19       		.uleb128 0x19
- 1153 00d7 02       		.uleb128 0x2
- 1154 00d8 18       		.uleb128 0x18
- 1155 00d9 00       		.byte	0
- 1156 00da 00       		.byte	0
- 1157 00db 10       		.uleb128 0x10
- 1158 00dc 2E       		.uleb128 0x2e
- 1159 00dd 00       		.byte	0
- 1160 00de 3F       		.uleb128 0x3f
- 1161 00df 19       		.uleb128 0x19
- 1162 00e0 3C       		.uleb128 0x3c
- 1163 00e1 19       		.uleb128 0x19
- 1164 00e2 6E       		.uleb128 0x6e
- 1165 00e3 0E       		.uleb128 0xe
- 1166 00e4 03       		.uleb128 0x3
- 1167 00e5 0E       		.uleb128 0xe
- 1168 00e6 3A       		.uleb128 0x3a
- 1169 00e7 0B       		.uleb128 0xb
- 1170 00e8 3B       		.uleb128 0x3b
- 1171 00e9 0B       		.uleb128 0xb
- 1172 00ea 00       		.byte	0
- 1173 00eb 00       		.byte	0
- 1174 00ec 00       		.byte	0
- 1175              		.section	.debug_loc,"",%progbits
- 1176              	.Ldebug_loc0:
- 1177              	.LLST0:
- 1178 0000 00000000 		.4byte	.LVL0
- 1179 0004 0E000000 		.4byte	.LVL2
- 1180 0008 0100     		.2byte	0x1
- 1181 000a 50       		.byte	0x50
- 1182 000b 0E000000 		.4byte	.LVL2
- 1183 000f 10020000 		.4byte	.LFE63
- 1184 0013 0400     		.2byte	0x4
- 1185 0015 F3       		.byte	0xf3
- 1186 0016 01       		.uleb128 0x1
- 1187 0017 50       		.byte	0x50
- 1188 0018 9F       		.byte	0x9f
- 1189 0019 00000000 		.4byte	0
- 1190 001d 00000000 		.4byte	0
- 1191              	.LLST1:
- 1192 0021 00000000 		.4byte	.LVL0
- 1193 0025 16000000 		.4byte	.LVL3
- 1194 0029 0100     		.2byte	0x1
- 1195 002b 51       		.byte	0x51
- 1196 002c 16000000 		.4byte	.LVL3
- 1197 0030 26000000 		.4byte	.LVL5
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 25
+ 1368 00a2 34       		.uleb128 0x34
+ 1369 00a3 00       		.byte	0
+ 1370 00a4 03       		.uleb128 0x3
+ 1371 00a5 0E       		.uleb128 0xe
+ 1372 00a6 3A       		.uleb128 0x3a
+ 1373 00a7 0B       		.uleb128 0xb
+ 1374 00a8 3B       		.uleb128 0x3b
+ 1375 00a9 05       		.uleb128 0x5
+ 1376 00aa 49       		.uleb128 0x49
+ 1377 00ab 13       		.uleb128 0x13
+ 1378 00ac 3F       		.uleb128 0x3f
+ 1379 00ad 19       		.uleb128 0x19
+ 1380 00ae 3C       		.uleb128 0x3c
+ 1381 00af 19       		.uleb128 0x19
+ 1382 00b0 00       		.byte	0
+ 1383 00b1 00       		.byte	0
+ 1384 00b2 0D       		.uleb128 0xd
+ 1385 00b3 35       		.uleb128 0x35
+ 1386 00b4 00       		.byte	0
+ 1387 00b5 49       		.uleb128 0x49
+ 1388 00b6 13       		.uleb128 0x13
+ 1389 00b7 00       		.byte	0
+ 1390 00b8 00       		.byte	0
+ 1391 00b9 0E       		.uleb128 0xe
+ 1392 00ba 34       		.uleb128 0x34
+ 1393 00bb 00       		.byte	0
+ 1394 00bc 03       		.uleb128 0x3
+ 1395 00bd 0E       		.uleb128 0xe
+ 1396 00be 3A       		.uleb128 0x3a
+ 1397 00bf 0B       		.uleb128 0xb
+ 1398 00c0 3B       		.uleb128 0x3b
+ 1399 00c1 0B       		.uleb128 0xb
+ 1400 00c2 49       		.uleb128 0x49
+ 1401 00c3 13       		.uleb128 0x13
+ 1402 00c4 3F       		.uleb128 0x3f
+ 1403 00c5 19       		.uleb128 0x19
+ 1404 00c6 02       		.uleb128 0x2
+ 1405 00c7 18       		.uleb128 0x18
+ 1406 00c8 00       		.byte	0
+ 1407 00c9 00       		.byte	0
+ 1408 00ca 0F       		.uleb128 0xf
+ 1409 00cb 34       		.uleb128 0x34
+ 1410 00cc 00       		.byte	0
+ 1411 00cd 03       		.uleb128 0x3
+ 1412 00ce 08       		.uleb128 0x8
+ 1413 00cf 3A       		.uleb128 0x3a
+ 1414 00d0 0B       		.uleb128 0xb
+ 1415 00d1 3B       		.uleb128 0x3b
+ 1416 00d2 0B       		.uleb128 0xb
+ 1417 00d3 49       		.uleb128 0x49
+ 1418 00d4 13       		.uleb128 0x13
+ 1419 00d5 3F       		.uleb128 0x3f
+ 1420 00d6 19       		.uleb128 0x19
+ 1421 00d7 02       		.uleb128 0x2
+ 1422 00d8 18       		.uleb128 0x18
+ 1423 00d9 00       		.byte	0
+ 1424 00da 00       		.byte	0
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 29
 
 
- 1198 0034 0400     		.2byte	0x4
- 1199 0036 F3       		.byte	0xf3
- 1200 0037 01       		.uleb128 0x1
- 1201 0038 51       		.byte	0x51
- 1202 0039 9F       		.byte	0x9f
- 1203 003a 26000000 		.4byte	.LVL5
- 1204 003e 3E000000 		.4byte	.LVL7
- 1205 0042 0100     		.2byte	0x1
- 1206 0044 51       		.byte	0x51
- 1207 0045 3E000000 		.4byte	.LVL7
- 1208 0049 48000000 		.4byte	.LVL9
- 1209 004d 0400     		.2byte	0x4
- 1210 004f F3       		.byte	0xf3
- 1211 0050 01       		.uleb128 0x1
- 1212 0051 51       		.byte	0x51
- 1213 0052 9F       		.byte	0x9f
- 1214 0053 48000000 		.4byte	.LVL9
- 1215 0057 60000000 		.4byte	.LVL11
- 1216 005b 0100     		.2byte	0x1
- 1217 005d 51       		.byte	0x51
- 1218 005e 60000000 		.4byte	.LVL11
- 1219 0062 66000000 		.4byte	.LVL13
- 1220 0066 0400     		.2byte	0x4
- 1221 0068 F3       		.byte	0xf3
- 1222 0069 01       		.uleb128 0x1
- 1223 006a 51       		.byte	0x51
- 1224 006b 9F       		.byte	0x9f
- 1225 006c 66000000 		.4byte	.LVL13
- 1226 0070 7C000000 		.4byte	.LVL15
- 1227 0074 0100     		.2byte	0x1
- 1228 0076 51       		.byte	0x51
- 1229 0077 7C000000 		.4byte	.LVL15
- 1230 007b 86000000 		.4byte	.LVL17
- 1231 007f 0400     		.2byte	0x4
- 1232 0081 F3       		.byte	0xf3
- 1233 0082 01       		.uleb128 0x1
- 1234 0083 51       		.byte	0x51
- 1235 0084 9F       		.byte	0x9f
- 1236 0085 86000000 		.4byte	.LVL17
- 1237 0089 A0000000 		.4byte	.LVL19
- 1238 008d 0100     		.2byte	0x1
- 1239 008f 51       		.byte	0x51
- 1240 0090 A0000000 		.4byte	.LVL19
- 1241 0094 A8000000 		.4byte	.LVL21
- 1242 0098 0400     		.2byte	0x4
- 1243 009a F3       		.byte	0xf3
- 1244 009b 01       		.uleb128 0x1
- 1245 009c 51       		.byte	0x51
- 1246 009d 9F       		.byte	0x9f
- 1247 009e A8000000 		.4byte	.LVL21
- 1248 00a2 BC000000 		.4byte	.LVL23
- 1249 00a6 0100     		.2byte	0x1
- 1250 00a8 51       		.byte	0x51
- 1251 00a9 BC000000 		.4byte	.LVL23
- 1252 00ad C6000000 		.4byte	.LVL25
- 1253 00b1 0400     		.2byte	0x4
- 1254 00b3 F3       		.byte	0xf3
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 26
+ 1425 00db 10       		.uleb128 0x10
+ 1426 00dc 2E       		.uleb128 0x2e
+ 1427 00dd 00       		.byte	0
+ 1428 00de 3F       		.uleb128 0x3f
+ 1429 00df 19       		.uleb128 0x19
+ 1430 00e0 3C       		.uleb128 0x3c
+ 1431 00e1 19       		.uleb128 0x19
+ 1432 00e2 6E       		.uleb128 0x6e
+ 1433 00e3 0E       		.uleb128 0xe
+ 1434 00e4 03       		.uleb128 0x3
+ 1435 00e5 0E       		.uleb128 0xe
+ 1436 00e6 3A       		.uleb128 0x3a
+ 1437 00e7 0B       		.uleb128 0xb
+ 1438 00e8 3B       		.uleb128 0x3b
+ 1439 00e9 0B       		.uleb128 0xb
+ 1440 00ea 00       		.byte	0
+ 1441 00eb 00       		.byte	0
+ 1442 00ec 00       		.byte	0
+ 1443              		.section	.debug_loc,"",%progbits
+ 1444              	.Ldebug_loc0:
+ 1445              	.LLST0:
+ 1446 0000 00000000 		.4byte	.LVL0
+ 1447 0004 0E000000 		.4byte	.LVL2
+ 1448 0008 0100     		.2byte	0x1
+ 1449 000a 50       		.byte	0x50
+ 1450 000b 0E000000 		.4byte	.LVL2
+ 1451 000f 20040000 		.4byte	.LFE63
+ 1452 0013 0400     		.2byte	0x4
+ 1453 0015 F3       		.byte	0xf3
+ 1454 0016 01       		.uleb128 0x1
+ 1455 0017 50       		.byte	0x50
+ 1456 0018 9F       		.byte	0x9f
+ 1457 0019 00000000 		.4byte	0
+ 1458 001d 00000000 		.4byte	0
+ 1459              	.LLST1:
+ 1460 0021 00000000 		.4byte	.LVL0
+ 1461 0025 16000000 		.4byte	.LVL3
+ 1462 0029 0100     		.2byte	0x1
+ 1463 002b 51       		.byte	0x51
+ 1464 002c 16000000 		.4byte	.LVL3
+ 1465 0030 26000000 		.4byte	.LVL5
+ 1466 0034 0400     		.2byte	0x4
+ 1467 0036 F3       		.byte	0xf3
+ 1468 0037 01       		.uleb128 0x1
+ 1469 0038 51       		.byte	0x51
+ 1470 0039 9F       		.byte	0x9f
+ 1471 003a 26000000 		.4byte	.LVL5
+ 1472 003e 45000000 		.4byte	.LVL6-1
+ 1473 0042 0100     		.2byte	0x1
+ 1474 0044 51       		.byte	0x51
+ 1475 0045 45000000 		.4byte	.LVL6-1
+ 1476 0049 60000000 		.4byte	.LVL10
+ 1477 004d 0400     		.2byte	0x4
+ 1478 004f F3       		.byte	0xf3
+ 1479 0050 01       		.uleb128 0x1
+ 1480 0051 51       		.byte	0x51
+ 1481 0052 9F       		.byte	0x9f
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 30
 
 
- 1255 00b4 01       		.uleb128 0x1
- 1256 00b5 51       		.byte	0x51
- 1257 00b6 9F       		.byte	0x9f
- 1258 00b7 C6000000 		.4byte	.LVL25
- 1259 00bb DE000000 		.4byte	.LVL27
- 1260 00bf 0100     		.2byte	0x1
- 1261 00c1 51       		.byte	0x51
- 1262 00c2 DE000000 		.4byte	.LVL27
- 1263 00c6 E6000000 		.4byte	.LVL29
- 1264 00ca 0400     		.2byte	0x4
- 1265 00cc F3       		.byte	0xf3
- 1266 00cd 01       		.uleb128 0x1
- 1267 00ce 51       		.byte	0x51
- 1268 00cf 9F       		.byte	0x9f
- 1269 00d0 E6000000 		.4byte	.LVL29
- 1270 00d4 FA000000 		.4byte	.LVL31
- 1271 00d8 0100     		.2byte	0x1
- 1272 00da 51       		.byte	0x51
- 1273 00db FA000000 		.4byte	.LVL31
- 1274 00df 04010000 		.4byte	.LVL33
- 1275 00e3 0400     		.2byte	0x4
- 1276 00e5 F3       		.byte	0xf3
- 1277 00e6 01       		.uleb128 0x1
- 1278 00e7 51       		.byte	0x51
- 1279 00e8 9F       		.byte	0x9f
- 1280 00e9 04010000 		.4byte	.LVL33
- 1281 00ed 1C010000 		.4byte	.LVL35
- 1282 00f1 0100     		.2byte	0x1
- 1283 00f3 51       		.byte	0x51
- 1284 00f4 1C010000 		.4byte	.LVL35
- 1285 00f8 24010000 		.4byte	.LVL37
- 1286 00fc 0400     		.2byte	0x4
- 1287 00fe F3       		.byte	0xf3
- 1288 00ff 01       		.uleb128 0x1
- 1289 0100 51       		.byte	0x51
- 1290 0101 9F       		.byte	0x9f
- 1291 0102 24010000 		.4byte	.LVL37
- 1292 0106 38010000 		.4byte	.LVL39
- 1293 010a 0100     		.2byte	0x1
- 1294 010c 51       		.byte	0x51
- 1295 010d 38010000 		.4byte	.LVL39
- 1296 0111 42010000 		.4byte	.LVL41
- 1297 0115 0400     		.2byte	0x4
- 1298 0117 F3       		.byte	0xf3
- 1299 0118 01       		.uleb128 0x1
- 1300 0119 51       		.byte	0x51
- 1301 011a 9F       		.byte	0x9f
- 1302 011b 42010000 		.4byte	.LVL41
- 1303 011f 5A010000 		.4byte	.LVL43
- 1304 0123 0100     		.2byte	0x1
- 1305 0125 51       		.byte	0x51
- 1306 0126 5A010000 		.4byte	.LVL43
- 1307 012a 62010000 		.4byte	.LVL45
- 1308 012e 0400     		.2byte	0x4
- 1309 0130 F3       		.byte	0xf3
- 1310 0131 01       		.uleb128 0x1
- 1311 0132 51       		.byte	0x51
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 27
+ 1482 0053 60000000 		.4byte	.LVL10
+ 1483 0057 7B000000 		.4byte	.LVL12-1
+ 1484 005b 0100     		.2byte	0x1
+ 1485 005d 51       		.byte	0x51
+ 1486 005e 7B000000 		.4byte	.LVL12-1
+ 1487 0062 98000000 		.4byte	.LVL16
+ 1488 0066 0400     		.2byte	0x4
+ 1489 0068 F3       		.byte	0xf3
+ 1490 0069 01       		.uleb128 0x1
+ 1491 006a 51       		.byte	0x51
+ 1492 006b 9F       		.byte	0x9f
+ 1493 006c 98000000 		.4byte	.LVL16
+ 1494 0070 B5000000 		.4byte	.LVL17-1
+ 1495 0074 0100     		.2byte	0x1
+ 1496 0076 51       		.byte	0x51
+ 1497 0077 B5000000 		.4byte	.LVL17-1
+ 1498 007b D0000000 		.4byte	.LVL21
+ 1499 007f 0400     		.2byte	0x4
+ 1500 0081 F3       		.byte	0xf3
+ 1501 0082 01       		.uleb128 0x1
+ 1502 0083 51       		.byte	0x51
+ 1503 0084 9F       		.byte	0x9f
+ 1504 0085 D0000000 		.4byte	.LVL21
+ 1505 0089 ED000000 		.4byte	.LVL23-1
+ 1506 008d 0100     		.2byte	0x1
+ 1507 008f 51       		.byte	0x51
+ 1508 0090 ED000000 		.4byte	.LVL23-1
+ 1509 0094 0A010000 		.4byte	.LVL27
+ 1510 0098 0400     		.2byte	0x4
+ 1511 009a F3       		.byte	0xf3
+ 1512 009b 01       		.uleb128 0x1
+ 1513 009c 51       		.byte	0x51
+ 1514 009d 9F       		.byte	0x9f
+ 1515 009e 0A010000 		.4byte	.LVL27
+ 1516 00a2 27010000 		.4byte	.LVL28-1
+ 1517 00a6 0100     		.2byte	0x1
+ 1518 00a8 51       		.byte	0x51
+ 1519 00a9 27010000 		.4byte	.LVL28-1
+ 1520 00ad 42010000 		.4byte	.LVL32
+ 1521 00b1 0400     		.2byte	0x4
+ 1522 00b3 F3       		.byte	0xf3
+ 1523 00b4 01       		.uleb128 0x1
+ 1524 00b5 51       		.byte	0x51
+ 1525 00b6 9F       		.byte	0x9f
+ 1526 00b7 42010000 		.4byte	.LVL32
+ 1527 00bb 5F010000 		.4byte	.LVL34-1
+ 1528 00bf 0100     		.2byte	0x1
+ 1529 00c1 51       		.byte	0x51
+ 1530 00c2 5F010000 		.4byte	.LVL34-1
+ 1531 00c6 7C010000 		.4byte	.LVL38
+ 1532 00ca 0400     		.2byte	0x4
+ 1533 00cc F3       		.byte	0xf3
+ 1534 00cd 01       		.uleb128 0x1
+ 1535 00ce 51       		.byte	0x51
+ 1536 00cf 9F       		.byte	0x9f
+ 1537 00d0 7C010000 		.4byte	.LVL38
+ 1538 00d4 99010000 		.4byte	.LVL39-1
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 31
 
 
- 1312 0133 9F       		.byte	0x9f
- 1313 0134 62010000 		.4byte	.LVL45
- 1314 0138 76010000 		.4byte	.LVL47
- 1315 013c 0100     		.2byte	0x1
- 1316 013e 51       		.byte	0x51
- 1317 013f 76010000 		.4byte	.LVL47
- 1318 0143 80010000 		.4byte	.LVL49
- 1319 0147 0400     		.2byte	0x4
- 1320 0149 F3       		.byte	0xf3
- 1321 014a 01       		.uleb128 0x1
- 1322 014b 51       		.byte	0x51
- 1323 014c 9F       		.byte	0x9f
- 1324 014d 80010000 		.4byte	.LVL49
- 1325 0151 98010000 		.4byte	.LVL51
- 1326 0155 0100     		.2byte	0x1
- 1327 0157 51       		.byte	0x51
- 1328 0158 98010000 		.4byte	.LVL51
- 1329 015c A0010000 		.4byte	.LVL53
- 1330 0160 0400     		.2byte	0x4
- 1331 0162 F3       		.byte	0xf3
- 1332 0163 01       		.uleb128 0x1
- 1333 0164 51       		.byte	0x51
- 1334 0165 9F       		.byte	0x9f
- 1335 0166 A0010000 		.4byte	.LVL53
- 1336 016a B0010000 		.4byte	.LVL55
- 1337 016e 0100     		.2byte	0x1
- 1338 0170 51       		.byte	0x51
- 1339 0171 B0010000 		.4byte	.LVL55
- 1340 0175 BA010000 		.4byte	.LVL57
- 1341 0179 0400     		.2byte	0x4
- 1342 017b F3       		.byte	0xf3
- 1343 017c 01       		.uleb128 0x1
- 1344 017d 51       		.byte	0x51
- 1345 017e 9F       		.byte	0x9f
- 1346 017f BA010000 		.4byte	.LVL57
- 1347 0183 CE010000 		.4byte	.LVL59
- 1348 0187 0100     		.2byte	0x1
- 1349 0189 51       		.byte	0x51
- 1350 018a CE010000 		.4byte	.LVL59
- 1351 018e D6010000 		.4byte	.LVL61
- 1352 0192 0400     		.2byte	0x4
- 1353 0194 F3       		.byte	0xf3
- 1354 0195 01       		.uleb128 0x1
- 1355 0196 51       		.byte	0x51
- 1356 0197 9F       		.byte	0x9f
- 1357 0198 D6010000 		.4byte	.LVL61
- 1358 019c E0010000 		.4byte	.LVL62
- 1359 01a0 0100     		.2byte	0x1
- 1360 01a2 51       		.byte	0x51
- 1361 01a3 E0010000 		.4byte	.LVL62
- 1362 01a7 10020000 		.4byte	.LFE63
- 1363 01ab 0400     		.2byte	0x4
- 1364 01ad F3       		.byte	0xf3
- 1365 01ae 01       		.uleb128 0x1
- 1366 01af 51       		.byte	0x51
- 1367 01b0 9F       		.byte	0x9f
- 1368 01b1 00000000 		.4byte	0
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 28
+ 1539 00d8 0100     		.2byte	0x1
+ 1540 00da 51       		.byte	0x51
+ 1541 00db 99010000 		.4byte	.LVL39-1
+ 1542 00df B2010000 		.4byte	.LVL43
+ 1543 00e3 0400     		.2byte	0x4
+ 1544 00e5 F3       		.byte	0xf3
+ 1545 00e6 01       		.uleb128 0x1
+ 1546 00e7 51       		.byte	0x51
+ 1547 00e8 9F       		.byte	0x9f
+ 1548 00e9 B2010000 		.4byte	.LVL43
+ 1549 00ed CF010000 		.4byte	.LVL45-1
+ 1550 00f1 0100     		.2byte	0x1
+ 1551 00f3 51       		.byte	0x51
+ 1552 00f4 CF010000 		.4byte	.LVL45-1
+ 1553 00f8 EA010000 		.4byte	.LVL49
+ 1554 00fc 0400     		.2byte	0x4
+ 1555 00fe F3       		.byte	0xf3
+ 1556 00ff 01       		.uleb128 0x1
+ 1557 0100 51       		.byte	0x51
+ 1558 0101 9F       		.byte	0x9f
+ 1559 0102 EA010000 		.4byte	.LVL49
+ 1560 0106 05020000 		.4byte	.LVL50-1
+ 1561 010a 0100     		.2byte	0x1
+ 1562 010c 51       		.byte	0x51
+ 1563 010d 05020000 		.4byte	.LVL50-1
+ 1564 0111 20020000 		.4byte	.LVL54
+ 1565 0115 0400     		.2byte	0x4
+ 1566 0117 F3       		.byte	0xf3
+ 1567 0118 01       		.uleb128 0x1
+ 1568 0119 51       		.byte	0x51
+ 1569 011a 9F       		.byte	0x9f
+ 1570 011b 20020000 		.4byte	.LVL54
+ 1571 011f 3B020000 		.4byte	.LVL56-1
+ 1572 0123 0100     		.2byte	0x1
+ 1573 0125 51       		.byte	0x51
+ 1574 0126 3B020000 		.4byte	.LVL56-1
+ 1575 012a 58020000 		.4byte	.LVL60
+ 1576 012e 0400     		.2byte	0x4
+ 1577 0130 F3       		.byte	0xf3
+ 1578 0131 01       		.uleb128 0x1
+ 1579 0132 51       		.byte	0x51
+ 1580 0133 9F       		.byte	0x9f
+ 1581 0134 58020000 		.4byte	.LVL60
+ 1582 0138 73020000 		.4byte	.LVL61-1
+ 1583 013c 0100     		.2byte	0x1
+ 1584 013e 51       		.byte	0x51
+ 1585 013f 73020000 		.4byte	.LVL61-1
+ 1586 0143 8E020000 		.4byte	.LVL65
+ 1587 0147 0400     		.2byte	0x4
+ 1588 0149 F3       		.byte	0xf3
+ 1589 014a 01       		.uleb128 0x1
+ 1590 014b 51       		.byte	0x51
+ 1591 014c 9F       		.byte	0x9f
+ 1592 014d 8E020000 		.4byte	.LVL65
+ 1593 0151 A9020000 		.4byte	.LVL67-1
+ 1594 0155 0100     		.2byte	0x1
+ 1595 0157 51       		.byte	0x51
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 32
 
 
- 1369 01b5 00000000 		.4byte	0
- 1370              	.LLST2:
- 1371 01b9 00000000 		.4byte	.LVL0
- 1372 01bd 1D000000 		.4byte	.LVL4-1
- 1373 01c1 0100     		.2byte	0x1
- 1374 01c3 52       		.byte	0x52
- 1375 01c4 1D000000 		.4byte	.LVL4-1
- 1376 01c8 26000000 		.4byte	.LVL5
- 1377 01cc 0400     		.2byte	0x4
- 1378 01ce F3       		.byte	0xf3
- 1379 01cf 01       		.uleb128 0x1
- 1380 01d0 52       		.byte	0x52
- 1381 01d1 9F       		.byte	0x9f
- 1382 01d2 26000000 		.4byte	.LVL5
- 1383 01d6 38000000 		.4byte	.LVL6
- 1384 01da 0100     		.2byte	0x1
- 1385 01dc 52       		.byte	0x52
- 1386 01dd 38000000 		.4byte	.LVL6
- 1387 01e1 48000000 		.4byte	.LVL9
- 1388 01e5 0400     		.2byte	0x4
- 1389 01e7 F3       		.byte	0xf3
- 1390 01e8 01       		.uleb128 0x1
- 1391 01e9 52       		.byte	0x52
- 1392 01ea 9F       		.byte	0x9f
- 1393 01eb 48000000 		.4byte	.LVL9
- 1394 01ef 5C000000 		.4byte	.LVL10
- 1395 01f3 0100     		.2byte	0x1
- 1396 01f5 52       		.byte	0x52
- 1397 01f6 5C000000 		.4byte	.LVL10
- 1398 01fa 66000000 		.4byte	.LVL13
- 1399 01fe 0400     		.2byte	0x4
- 1400 0200 F3       		.byte	0xf3
- 1401 0201 01       		.uleb128 0x1
- 1402 0202 52       		.byte	0x52
- 1403 0203 9F       		.byte	0x9f
- 1404 0204 66000000 		.4byte	.LVL13
- 1405 0208 76000000 		.4byte	.LVL14
- 1406 020c 0100     		.2byte	0x1
- 1407 020e 52       		.byte	0x52
- 1408 020f 76000000 		.4byte	.LVL14
- 1409 0213 86000000 		.4byte	.LVL17
- 1410 0217 0400     		.2byte	0x4
- 1411 0219 F3       		.byte	0xf3
- 1412 021a 01       		.uleb128 0x1
- 1413 021b 52       		.byte	0x52
- 1414 021c 9F       		.byte	0x9f
- 1415 021d 86000000 		.4byte	.LVL17
- 1416 0221 96000000 		.4byte	.LVL18
- 1417 0225 0100     		.2byte	0x1
- 1418 0227 52       		.byte	0x52
- 1419 0228 96000000 		.4byte	.LVL18
- 1420 022c A8000000 		.4byte	.LVL21
- 1421 0230 0400     		.2byte	0x4
- 1422 0232 F3       		.byte	0xf3
- 1423 0233 01       		.uleb128 0x1
- 1424 0234 52       		.byte	0x52
- 1425 0235 9F       		.byte	0x9f
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 29
+ 1596 0158 A9020000 		.4byte	.LVL67-1
+ 1597 015c 00030000 		.4byte	.LVL71
+ 1598 0160 0400     		.2byte	0x4
+ 1599 0162 F3       		.byte	0xf3
+ 1600 0163 01       		.uleb128 0x1
+ 1601 0164 51       		.byte	0x51
+ 1602 0165 9F       		.byte	0x9f
+ 1603 0166 00030000 		.4byte	.LVL71
+ 1604 016a 1B030000 		.4byte	.LVL72-1
+ 1605 016e 0100     		.2byte	0x1
+ 1606 0170 51       		.byte	0x51
+ 1607 0171 1B030000 		.4byte	.LVL72-1
+ 1608 0175 36030000 		.4byte	.LVL76
+ 1609 0179 0400     		.2byte	0x4
+ 1610 017b F3       		.byte	0xf3
+ 1611 017c 01       		.uleb128 0x1
+ 1612 017d 51       		.byte	0x51
+ 1613 017e 9F       		.byte	0x9f
+ 1614 017f 36030000 		.4byte	.LVL76
+ 1615 0183 51030000 		.4byte	.LVL78-1
+ 1616 0187 0100     		.2byte	0x1
+ 1617 0189 51       		.byte	0x51
+ 1618 018a 51030000 		.4byte	.LVL78-1
+ 1619 018e 6E030000 		.4byte	.LVL82
+ 1620 0192 0400     		.2byte	0x4
+ 1621 0194 F3       		.byte	0xf3
+ 1622 0195 01       		.uleb128 0x1
+ 1623 0196 51       		.byte	0x51
+ 1624 0197 9F       		.byte	0x9f
+ 1625 0198 6E030000 		.4byte	.LVL82
+ 1626 019c 85030000 		.4byte	.LVL83-1
+ 1627 01a0 0100     		.2byte	0x1
+ 1628 01a2 51       		.byte	0x51
+ 1629 01a3 85030000 		.4byte	.LVL83-1
+ 1630 01a7 A0030000 		.4byte	.LVL87
+ 1631 01ab 0400     		.2byte	0x4
+ 1632 01ad F3       		.byte	0xf3
+ 1633 01ae 01       		.uleb128 0x1
+ 1634 01af 51       		.byte	0x51
+ 1635 01b0 9F       		.byte	0x9f
+ 1636 01b1 A0030000 		.4byte	.LVL87
+ 1637 01b5 B7030000 		.4byte	.LVL89-1
+ 1638 01b9 0100     		.2byte	0x1
+ 1639 01bb 51       		.byte	0x51
+ 1640 01bc B7030000 		.4byte	.LVL89-1
+ 1641 01c0 D4030000 		.4byte	.LVL93
+ 1642 01c4 0400     		.2byte	0x4
+ 1643 01c6 F3       		.byte	0xf3
+ 1644 01c7 01       		.uleb128 0x1
+ 1645 01c8 51       		.byte	0x51
+ 1646 01c9 9F       		.byte	0x9f
+ 1647 01ca D4030000 		.4byte	.LVL93
+ 1648 01ce DE030000 		.4byte	.LVL94
+ 1649 01d2 0100     		.2byte	0x1
+ 1650 01d4 51       		.byte	0x51
+ 1651 01d5 DE030000 		.4byte	.LVL94
+ 1652 01d9 20040000 		.4byte	.LFE63
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 33
 
 
- 1426 0236 A8000000 		.4byte	.LVL21
- 1427 023a B6000000 		.4byte	.LVL22
- 1428 023e 0100     		.2byte	0x1
- 1429 0240 52       		.byte	0x52
- 1430 0241 B6000000 		.4byte	.LVL22
- 1431 0245 C6000000 		.4byte	.LVL25
- 1432 0249 0400     		.2byte	0x4
- 1433 024b F3       		.byte	0xf3
- 1434 024c 01       		.uleb128 0x1
- 1435 024d 52       		.byte	0x52
- 1436 024e 9F       		.byte	0x9f
- 1437 024f C6000000 		.4byte	.LVL25
- 1438 0253 D4000000 		.4byte	.LVL26
- 1439 0257 0100     		.2byte	0x1
- 1440 0259 52       		.byte	0x52
- 1441 025a D4000000 		.4byte	.LVL26
- 1442 025e E6000000 		.4byte	.LVL29
- 1443 0262 0400     		.2byte	0x4
- 1444 0264 F3       		.byte	0xf3
- 1445 0265 01       		.uleb128 0x1
- 1446 0266 52       		.byte	0x52
- 1447 0267 9F       		.byte	0x9f
- 1448 0268 E6000000 		.4byte	.LVL29
- 1449 026c F4000000 		.4byte	.LVL30
- 1450 0270 0100     		.2byte	0x1
- 1451 0272 52       		.byte	0x52
- 1452 0273 F4000000 		.4byte	.LVL30
- 1453 0277 04010000 		.4byte	.LVL33
- 1454 027b 0400     		.2byte	0x4
- 1455 027d F3       		.byte	0xf3
- 1456 027e 01       		.uleb128 0x1
- 1457 027f 52       		.byte	0x52
- 1458 0280 9F       		.byte	0x9f
- 1459 0281 04010000 		.4byte	.LVL33
- 1460 0285 12010000 		.4byte	.LVL34
- 1461 0289 0100     		.2byte	0x1
- 1462 028b 52       		.byte	0x52
- 1463 028c 12010000 		.4byte	.LVL34
- 1464 0290 24010000 		.4byte	.LVL37
- 1465 0294 0400     		.2byte	0x4
- 1466 0296 F3       		.byte	0xf3
- 1467 0297 01       		.uleb128 0x1
- 1468 0298 52       		.byte	0x52
- 1469 0299 9F       		.byte	0x9f
- 1470 029a 24010000 		.4byte	.LVL37
- 1471 029e 32010000 		.4byte	.LVL38
- 1472 02a2 0100     		.2byte	0x1
- 1473 02a4 52       		.byte	0x52
- 1474 02a5 32010000 		.4byte	.LVL38
- 1475 02a9 42010000 		.4byte	.LVL41
- 1476 02ad 0400     		.2byte	0x4
- 1477 02af F3       		.byte	0xf3
- 1478 02b0 01       		.uleb128 0x1
- 1479 02b1 52       		.byte	0x52
- 1480 02b2 9F       		.byte	0x9f
- 1481 02b3 42010000 		.4byte	.LVL41
- 1482 02b7 50010000 		.4byte	.LVL42
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 30
+ 1653 01dd 0400     		.2byte	0x4
+ 1654 01df F3       		.byte	0xf3
+ 1655 01e0 01       		.uleb128 0x1
+ 1656 01e1 51       		.byte	0x51
+ 1657 01e2 9F       		.byte	0x9f
+ 1658 01e3 00000000 		.4byte	0
+ 1659 01e7 00000000 		.4byte	0
+ 1660              	.LLST2:
+ 1661 01eb 00000000 		.4byte	.LVL0
+ 1662 01ef 1D000000 		.4byte	.LVL4-1
+ 1663 01f3 0100     		.2byte	0x1
+ 1664 01f5 52       		.byte	0x52
+ 1665 01f6 1D000000 		.4byte	.LVL4-1
+ 1666 01fa 26000000 		.4byte	.LVL5
+ 1667 01fe 0400     		.2byte	0x4
+ 1668 0200 F3       		.byte	0xf3
+ 1669 0201 01       		.uleb128 0x1
+ 1670 0202 52       		.byte	0x52
+ 1671 0203 9F       		.byte	0x9f
+ 1672 0204 26000000 		.4byte	.LVL5
+ 1673 0208 45000000 		.4byte	.LVL6-1
+ 1674 020c 0100     		.2byte	0x1
+ 1675 020e 52       		.byte	0x52
+ 1676 020f 45000000 		.4byte	.LVL6-1
+ 1677 0213 60000000 		.4byte	.LVL10
+ 1678 0217 0400     		.2byte	0x4
+ 1679 0219 F3       		.byte	0xf3
+ 1680 021a 01       		.uleb128 0x1
+ 1681 021b 52       		.byte	0x52
+ 1682 021c 9F       		.byte	0x9f
+ 1683 021d 60000000 		.4byte	.LVL10
+ 1684 0221 6E000000 		.4byte	.LVL11
+ 1685 0225 0100     		.2byte	0x1
+ 1686 0227 52       		.byte	0x52
+ 1687 0228 6E000000 		.4byte	.LVL11
+ 1688 022c 98000000 		.4byte	.LVL16
+ 1689 0230 0400     		.2byte	0x4
+ 1690 0232 F3       		.byte	0xf3
+ 1691 0233 01       		.uleb128 0x1
+ 1692 0234 52       		.byte	0x52
+ 1693 0235 9F       		.byte	0x9f
+ 1694 0236 98000000 		.4byte	.LVL16
+ 1695 023a B5000000 		.4byte	.LVL17-1
+ 1696 023e 0100     		.2byte	0x1
+ 1697 0240 52       		.byte	0x52
+ 1698 0241 B5000000 		.4byte	.LVL17-1
+ 1699 0245 D0000000 		.4byte	.LVL21
+ 1700 0249 0400     		.2byte	0x4
+ 1701 024b F3       		.byte	0xf3
+ 1702 024c 01       		.uleb128 0x1
+ 1703 024d 52       		.byte	0x52
+ 1704 024e 9F       		.byte	0x9f
+ 1705 024f D0000000 		.4byte	.LVL21
+ 1706 0253 E0000000 		.4byte	.LVL22
+ 1707 0257 0100     		.2byte	0x1
+ 1708 0259 52       		.byte	0x52
+ 1709 025a E0000000 		.4byte	.LVL22
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 34
 
 
- 1483 02bb 0100     		.2byte	0x1
- 1484 02bd 52       		.byte	0x52
- 1485 02be 50010000 		.4byte	.LVL42
- 1486 02c2 62010000 		.4byte	.LVL45
- 1487 02c6 0400     		.2byte	0x4
- 1488 02c8 F3       		.byte	0xf3
- 1489 02c9 01       		.uleb128 0x1
- 1490 02ca 52       		.byte	0x52
- 1491 02cb 9F       		.byte	0x9f
- 1492 02cc 62010000 		.4byte	.LVL45
- 1493 02d0 70010000 		.4byte	.LVL46
- 1494 02d4 0100     		.2byte	0x1
- 1495 02d6 52       		.byte	0x52
- 1496 02d7 70010000 		.4byte	.LVL46
- 1497 02db 80010000 		.4byte	.LVL49
- 1498 02df 0400     		.2byte	0x4
- 1499 02e1 F3       		.byte	0xf3
- 1500 02e2 01       		.uleb128 0x1
- 1501 02e3 52       		.byte	0x52
- 1502 02e4 9F       		.byte	0x9f
- 1503 02e5 80010000 		.4byte	.LVL49
- 1504 02e9 8E010000 		.4byte	.LVL50
- 1505 02ed 0100     		.2byte	0x1
- 1506 02ef 52       		.byte	0x52
- 1507 02f0 8E010000 		.4byte	.LVL50
- 1508 02f4 A0010000 		.4byte	.LVL53
- 1509 02f8 0400     		.2byte	0x4
- 1510 02fa F3       		.byte	0xf3
- 1511 02fb 01       		.uleb128 0x1
- 1512 02fc 52       		.byte	0x52
- 1513 02fd 9F       		.byte	0x9f
- 1514 02fe A0010000 		.4byte	.LVL53
- 1515 0302 AA010000 		.4byte	.LVL54
- 1516 0306 0100     		.2byte	0x1
- 1517 0308 52       		.byte	0x52
- 1518 0309 AA010000 		.4byte	.LVL54
- 1519 030d BA010000 		.4byte	.LVL57
- 1520 0311 0400     		.2byte	0x4
- 1521 0313 F3       		.byte	0xf3
- 1522 0314 01       		.uleb128 0x1
- 1523 0315 52       		.byte	0x52
- 1524 0316 9F       		.byte	0x9f
- 1525 0317 BA010000 		.4byte	.LVL57
- 1526 031b C4010000 		.4byte	.LVL58
- 1527 031f 0100     		.2byte	0x1
- 1528 0321 52       		.byte	0x52
- 1529 0322 C4010000 		.4byte	.LVL58
- 1530 0326 D6010000 		.4byte	.LVL61
- 1531 032a 0400     		.2byte	0x4
- 1532 032c F3       		.byte	0xf3
- 1533 032d 01       		.uleb128 0x1
- 1534 032e 52       		.byte	0x52
- 1535 032f 9F       		.byte	0x9f
- 1536 0330 D6010000 		.4byte	.LVL61
- 1537 0334 E6010000 		.4byte	.LVL63
- 1538 0338 0100     		.2byte	0x1
- 1539 033a 52       		.byte	0x52
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 31
+ 1710 025e 0A010000 		.4byte	.LVL27
+ 1711 0262 0400     		.2byte	0x4
+ 1712 0264 F3       		.byte	0xf3
+ 1713 0265 01       		.uleb128 0x1
+ 1714 0266 52       		.byte	0x52
+ 1715 0267 9F       		.byte	0x9f
+ 1716 0268 0A010000 		.4byte	.LVL27
+ 1717 026c 27010000 		.4byte	.LVL28-1
+ 1718 0270 0100     		.2byte	0x1
+ 1719 0272 52       		.byte	0x52
+ 1720 0273 27010000 		.4byte	.LVL28-1
+ 1721 0277 42010000 		.4byte	.LVL32
+ 1722 027b 0400     		.2byte	0x4
+ 1723 027d F3       		.byte	0xf3
+ 1724 027e 01       		.uleb128 0x1
+ 1725 027f 52       		.byte	0x52
+ 1726 0280 9F       		.byte	0x9f
+ 1727 0281 42010000 		.4byte	.LVL32
+ 1728 0285 52010000 		.4byte	.LVL33
+ 1729 0289 0100     		.2byte	0x1
+ 1730 028b 52       		.byte	0x52
+ 1731 028c 52010000 		.4byte	.LVL33
+ 1732 0290 7C010000 		.4byte	.LVL38
+ 1733 0294 0400     		.2byte	0x4
+ 1734 0296 F3       		.byte	0xf3
+ 1735 0297 01       		.uleb128 0x1
+ 1736 0298 52       		.byte	0x52
+ 1737 0299 9F       		.byte	0x9f
+ 1738 029a 7C010000 		.4byte	.LVL38
+ 1739 029e 99010000 		.4byte	.LVL39-1
+ 1740 02a2 0100     		.2byte	0x1
+ 1741 02a4 52       		.byte	0x52
+ 1742 02a5 99010000 		.4byte	.LVL39-1
+ 1743 02a9 B2010000 		.4byte	.LVL43
+ 1744 02ad 0400     		.2byte	0x4
+ 1745 02af F3       		.byte	0xf3
+ 1746 02b0 01       		.uleb128 0x1
+ 1747 02b1 52       		.byte	0x52
+ 1748 02b2 9F       		.byte	0x9f
+ 1749 02b3 B2010000 		.4byte	.LVL43
+ 1750 02b7 C2010000 		.4byte	.LVL44
+ 1751 02bb 0100     		.2byte	0x1
+ 1752 02bd 52       		.byte	0x52
+ 1753 02be C2010000 		.4byte	.LVL44
+ 1754 02c2 EA010000 		.4byte	.LVL49
+ 1755 02c6 0400     		.2byte	0x4
+ 1756 02c8 F3       		.byte	0xf3
+ 1757 02c9 01       		.uleb128 0x1
+ 1758 02ca 52       		.byte	0x52
+ 1759 02cb 9F       		.byte	0x9f
+ 1760 02cc EA010000 		.4byte	.LVL49
+ 1761 02d0 05020000 		.4byte	.LVL50-1
+ 1762 02d4 0100     		.2byte	0x1
+ 1763 02d6 52       		.byte	0x52
+ 1764 02d7 05020000 		.4byte	.LVL50-1
+ 1765 02db 20020000 		.4byte	.LVL54
+ 1766 02df 0400     		.2byte	0x4
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 35
 
 
- 1540 033b E6010000 		.4byte	.LVL63
- 1541 033f 10020000 		.4byte	.LFE63
- 1542 0343 0400     		.2byte	0x4
- 1543 0345 F3       		.byte	0xf3
- 1544 0346 01       		.uleb128 0x1
- 1545 0347 52       		.byte	0x52
- 1546 0348 9F       		.byte	0x9f
- 1547 0349 00000000 		.4byte	0
- 1548 034d 00000000 		.4byte	0
- 1549              	.LLST3:
- 1550 0351 00000000 		.4byte	.LVL0
- 1551 0355 06000000 		.4byte	.LVL1
- 1552 0359 0100     		.2byte	0x1
- 1553 035b 53       		.byte	0x53
- 1554 035c 06000000 		.4byte	.LVL1
- 1555 0360 10020000 		.4byte	.LFE63
- 1556 0364 0400     		.2byte	0x4
- 1557 0366 F3       		.byte	0xf3
- 1558 0367 01       		.uleb128 0x1
- 1559 0368 53       		.byte	0x53
- 1560 0369 9F       		.byte	0x9f
- 1561 036a 00000000 		.4byte	0
- 1562 036e 00000000 		.4byte	0
- 1563              		.section	.debug_aranges,"",%progbits
- 1564 0000 1C000000 		.4byte	0x1c
- 1565 0004 0200     		.2byte	0x2
- 1566 0006 00000000 		.4byte	.Ldebug_info0
- 1567 000a 04       		.byte	0x4
- 1568 000b 00       		.byte	0
- 1569 000c 0000     		.2byte	0
- 1570 000e 0000     		.2byte	0
- 1571 0010 00000000 		.4byte	.LFB63
- 1572 0014 10020000 		.4byte	.LFE63-.LFB63
- 1573 0018 00000000 		.4byte	0
- 1574 001c 00000000 		.4byte	0
- 1575              		.section	.debug_ranges,"",%progbits
- 1576              	.Ldebug_ranges0:
- 1577 0000 00000000 		.4byte	.LFB63
- 1578 0004 10020000 		.4byte	.LFE63
- 1579 0008 00000000 		.4byte	0
- 1580 000c 00000000 		.4byte	0
- 1581              		.section	.debug_line,"",%progbits
- 1582              	.Ldebug_line0:
- 1583 0000 1E020000 		.section	.debug_str,"MS",%progbits,1
- 1583      02006A01 
- 1583      00000201 
- 1583      FB0E0D00 
- 1583      01010101 
- 1584              	.LASF26:
- 1585 0000 73656E73 		.ascii	"sensors_\000"
- 1585      6F72735F 
- 1585      00
- 1586              	.LASF5:
- 1587 0009 5F5F696E 		.ascii	"__int32_t\000"
- 1587      7433325F 
- 1587      7400
- 1588              	.LASF27:
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 32
+ 1767 02e1 F3       		.byte	0xf3
+ 1768 02e2 01       		.uleb128 0x1
+ 1769 02e3 52       		.byte	0x52
+ 1770 02e4 9F       		.byte	0x9f
+ 1771 02e5 20020000 		.4byte	.LVL54
+ 1772 02e9 2E020000 		.4byte	.LVL55
+ 1773 02ed 0100     		.2byte	0x1
+ 1774 02ef 52       		.byte	0x52
+ 1775 02f0 2E020000 		.4byte	.LVL55
+ 1776 02f4 58020000 		.4byte	.LVL60
+ 1777 02f8 0400     		.2byte	0x4
+ 1778 02fa F3       		.byte	0xf3
+ 1779 02fb 01       		.uleb128 0x1
+ 1780 02fc 52       		.byte	0x52
+ 1781 02fd 9F       		.byte	0x9f
+ 1782 02fe 58020000 		.4byte	.LVL60
+ 1783 0302 73020000 		.4byte	.LVL61-1
+ 1784 0306 0100     		.2byte	0x1
+ 1785 0308 52       		.byte	0x52
+ 1786 0309 73020000 		.4byte	.LVL61-1
+ 1787 030d 8E020000 		.4byte	.LVL65
+ 1788 0311 0400     		.2byte	0x4
+ 1789 0313 F3       		.byte	0xf3
+ 1790 0314 01       		.uleb128 0x1
+ 1791 0315 52       		.byte	0x52
+ 1792 0316 9F       		.byte	0x9f
+ 1793 0317 8E020000 		.4byte	.LVL65
+ 1794 031b 9C020000 		.4byte	.LVL66
+ 1795 031f 0100     		.2byte	0x1
+ 1796 0321 52       		.byte	0x52
+ 1797 0322 9C020000 		.4byte	.LVL66
+ 1798 0326 00030000 		.4byte	.LVL71
+ 1799 032a 0400     		.2byte	0x4
+ 1800 032c F3       		.byte	0xf3
+ 1801 032d 01       		.uleb128 0x1
+ 1802 032e 52       		.byte	0x52
+ 1803 032f 9F       		.byte	0x9f
+ 1804 0330 00030000 		.4byte	.LVL71
+ 1805 0334 1B030000 		.4byte	.LVL72-1
+ 1806 0338 0100     		.2byte	0x1
+ 1807 033a 52       		.byte	0x52
+ 1808 033b 1B030000 		.4byte	.LVL72-1
+ 1809 033f 36030000 		.4byte	.LVL76
+ 1810 0343 0400     		.2byte	0x4
+ 1811 0345 F3       		.byte	0xf3
+ 1812 0346 01       		.uleb128 0x1
+ 1813 0347 52       		.byte	0x52
+ 1814 0348 9F       		.byte	0x9f
+ 1815 0349 36030000 		.4byte	.LVL76
+ 1816 034d 44030000 		.4byte	.LVL77
+ 1817 0351 0100     		.2byte	0x1
+ 1818 0353 52       		.byte	0x52
+ 1819 0354 44030000 		.4byte	.LVL77
+ 1820 0358 6E030000 		.4byte	.LVL82
+ 1821 035c 0400     		.2byte	0x4
+ 1822 035e F3       		.byte	0xf3
+ 1823 035f 01       		.uleb128 0x1
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 36
 
 
- 1589 0013 44726976 		.ascii	"Drive\000"
- 1589      6500
- 1590              	.LASF14:
- 1591 0019 646F7562 		.ascii	"double\000"
- 1591      6C6500
- 1592              	.LASF13:
- 1593 0020 666C6F61 		.ascii	"float\000"
- 1593      7400
- 1594              	.LASF1:
- 1595 0026 756E7369 		.ascii	"unsigned char\000"
- 1595      676E6564 
- 1595      20636861 
- 1595      7200
- 1596              	.LASF23:
- 1597 0034 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1597      43313120 
- 1597      352E342E 
- 1597      31203230 
- 1597      31363036 
- 1598 0067 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 1598      20726576 
- 1598      6973696F 
- 1598      6E203233 
- 1598      37373135 
- 1599 009a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1599      66756E63 
- 1599      74696F6E 
- 1599      2D736563 
- 1599      74696F6E 
- 1600              	.LASF19:
- 1601 00c2 74687265 		.ascii	"threshold\000"
- 1601      73686F6C 
- 1601      6400
- 1602              	.LASF3:
- 1603 00cc 73686F72 		.ascii	"short unsigned int\000"
- 1603      7420756E 
- 1603      7369676E 
- 1603      65642069 
- 1603      6E7400
- 1604              	.LASF20:
- 1605 00df 6D6F746F 		.ascii	"motor_forward\000"
- 1605      725F666F 
- 1605      72776172 
- 1605      6400
- 1606              	.LASF4:
- 1607 00ed 5F5F7569 		.ascii	"__uint16_t\000"
- 1607      6E743136 
- 1607      5F7400
- 1608              	.LASF7:
- 1609 00f8 6C6F6E67 		.ascii	"long unsigned int\000"
- 1609      20756E73 
- 1609      69676E65 
- 1609      6420696E 
- 1609      7400
- 1610              	.LASF18:
- 1611 010a 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1611      52784275 
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 33
+ 1824 0360 52       		.byte	0x52
+ 1825 0361 9F       		.byte	0x9f
+ 1826 0362 6E030000 		.4byte	.LVL82
+ 1827 0366 85030000 		.4byte	.LVL83-1
+ 1828 036a 0100     		.2byte	0x1
+ 1829 036c 52       		.byte	0x52
+ 1830 036d 85030000 		.4byte	.LVL83-1
+ 1831 0371 A0030000 		.4byte	.LVL87
+ 1832 0375 0400     		.2byte	0x4
+ 1833 0377 F3       		.byte	0xf3
+ 1834 0378 01       		.uleb128 0x1
+ 1835 0379 52       		.byte	0x52
+ 1836 037a 9F       		.byte	0x9f
+ 1837 037b A0030000 		.4byte	.LVL87
+ 1838 037f AA030000 		.4byte	.LVL88
+ 1839 0383 0100     		.2byte	0x1
+ 1840 0385 52       		.byte	0x52
+ 1841 0386 AA030000 		.4byte	.LVL88
+ 1842 038a D4030000 		.4byte	.LVL93
+ 1843 038e 0400     		.2byte	0x4
+ 1844 0390 F3       		.byte	0xf3
+ 1845 0391 01       		.uleb128 0x1
+ 1846 0392 52       		.byte	0x52
+ 1847 0393 9F       		.byte	0x9f
+ 1848 0394 D4030000 		.4byte	.LVL93
+ 1849 0398 E4030000 		.4byte	.LVL95
+ 1850 039c 0100     		.2byte	0x1
+ 1851 039e 52       		.byte	0x52
+ 1852 039f E4030000 		.4byte	.LVL95
+ 1853 03a3 20040000 		.4byte	.LFE63
+ 1854 03a7 0400     		.2byte	0x4
+ 1855 03a9 F3       		.byte	0xf3
+ 1856 03aa 01       		.uleb128 0x1
+ 1857 03ab 52       		.byte	0x52
+ 1858 03ac 9F       		.byte	0x9f
+ 1859 03ad 00000000 		.4byte	0
+ 1860 03b1 00000000 		.4byte	0
+ 1861              	.LLST3:
+ 1862 03b5 00000000 		.4byte	.LVL0
+ 1863 03b9 06000000 		.4byte	.LVL1
+ 1864 03bd 0100     		.2byte	0x1
+ 1865 03bf 53       		.byte	0x53
+ 1866 03c0 06000000 		.4byte	.LVL1
+ 1867 03c4 20040000 		.4byte	.LFE63
+ 1868 03c8 0400     		.2byte	0x4
+ 1869 03ca F3       		.byte	0xf3
+ 1870 03cb 01       		.uleb128 0x1
+ 1871 03cc 53       		.byte	0x53
+ 1872 03cd 9F       		.byte	0x9f
+ 1873 03ce 00000000 		.4byte	0
+ 1874 03d2 00000000 		.4byte	0
+ 1875              		.section	.debug_aranges,"",%progbits
+ 1876 0000 1C000000 		.4byte	0x1c
+ 1877 0004 0200     		.2byte	0x2
+ 1878 0006 00000000 		.4byte	.Ldebug_info0
+ 1879 000a 04       		.byte	0x4
+ 1880 000b 00       		.byte	0
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 37
 
 
- 1611      66666572 
- 1611      00
- 1612              	.LASF22:
- 1613 0117 6D6F746F 		.ascii	"motor_sharp_turn\000"
- 1613      725F7368 
- 1613      6172705F 
- 1613      7475726E 
- 1613      00
- 1614              	.LASF10:
- 1615 0128 756E7369 		.ascii	"unsigned int\000"
- 1615      676E6564 
- 1615      20696E74 
- 1615      00
- 1616              	.LASF9:
- 1617 0135 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1617      206C6F6E 
- 1617      6720756E 
- 1617      7369676E 
- 1617      65642069 
- 1618              	.LASF21:
- 1619 014c 6D6F746F 		.ascii	"motor_turn\000"
- 1619      725F7475 
- 1619      726E00
- 1620              	.LASF12:
- 1621 0157 696E7433 		.ascii	"int32_t\000"
- 1621      325F7400 
- 1622              	.LASF17:
- 1623 015f 73697A65 		.ascii	"sizetype\000"
- 1623      74797065 
- 1623      00
- 1624              	.LASF8:
- 1625 0168 6C6F6E67 		.ascii	"long long int\000"
- 1625      206C6F6E 
- 1625      6720696E 
- 1625      7400
- 1626              	.LASF15:
- 1627 0176 63686172 		.ascii	"char\000"
- 1627      00
- 1628              	.LASF2:
- 1629 017b 73686F72 		.ascii	"short int\000"
- 1629      7420696E 
- 1629      7400
- 1630              	.LASF11:
- 1631 0185 75696E74 		.ascii	"uint16_t\000"
- 1631      31365F74 
- 1631      00
- 1632              	.LASF6:
- 1633 018e 6C6F6E67 		.ascii	"long int\000"
- 1633      20696E74 
- 1633      00
- 1634              	.LASF16:
- 1635 0197 6C6F6E67 		.ascii	"long double\000"
- 1635      20646F75 
- 1635      626C6500 
- 1636              	.LASF0:
- 1637 01a3 7369676E 		.ascii	"signed char\000"
- 1637      65642063 
-ARM GAS  C:\Users\allu9\AppData\Local\Temp\cc2ZRrpT.s 			page 34
+ 1881 000c 0000     		.2byte	0
+ 1882 000e 0000     		.2byte	0
+ 1883 0010 00000000 		.4byte	.LFB63
+ 1884 0014 20040000 		.4byte	.LFE63-.LFB63
+ 1885 0018 00000000 		.4byte	0
+ 1886 001c 00000000 		.4byte	0
+ 1887              		.section	.debug_ranges,"",%progbits
+ 1888              	.Ldebug_ranges0:
+ 1889 0000 00000000 		.4byte	.LFB63
+ 1890 0004 20040000 		.4byte	.LFE63
+ 1891 0008 00000000 		.4byte	0
+ 1892 000c 00000000 		.4byte	0
+ 1893              		.section	.debug_line,"",%progbits
+ 1894              	.Ldebug_line0:
+ 1895 0000 40020000 		.section	.debug_str,"MS",%progbits,1
+ 1895      02006A01 
+ 1895      00000201 
+ 1895      FB0E0D00 
+ 1895      01010101 
+ 1896              	.LASF26:
+ 1897 0000 73656E73 		.ascii	"sensors_\000"
+ 1897      6F72735F 
+ 1897      00
+ 1898              	.LASF5:
+ 1899 0009 5F5F696E 		.ascii	"__int32_t\000"
+ 1899      7433325F 
+ 1899      7400
+ 1900              	.LASF27:
+ 1901 0013 44726976 		.ascii	"Drive\000"
+ 1901      6500
+ 1902              	.LASF14:
+ 1903 0019 646F7562 		.ascii	"double\000"
+ 1903      6C6500
+ 1904              	.LASF13:
+ 1905 0020 666C6F61 		.ascii	"float\000"
+ 1905      7400
+ 1906              	.LASF1:
+ 1907 0026 756E7369 		.ascii	"unsigned char\000"
+ 1907      676E6564 
+ 1907      20636861 
+ 1907      7200
+ 1908              	.LASF23:
+ 1909 0034 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1909      43313120 
+ 1909      352E342E 
+ 1909      31203230 
+ 1909      31363036 
+ 1910 0067 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1910      20726576 
+ 1910      6973696F 
+ 1910      6E203233 
+ 1910      37373135 
+ 1911 009a 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1911      66756E63 
+ 1911      74696F6E 
+ 1911      2D736563 
+ 1911      74696F6E 
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 38
 
 
- 1637      68617200 
- 1638              	.LASF25:
- 1639 01af 433A5C55 		.ascii	"C:\\Users\\allu9\\Tuomo\\ZumoTUOMO\\ZumoBot.cydsn\000"
- 1639      73657273 
- 1639      5C616C6C 
- 1639      75395C54 
- 1639      756F6D6F 
- 1640              	.LASF24:
- 1641 01dc 44726976 		.ascii	"Drive.c\000"
- 1641      652E6300 
- 1642              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1912              	.LASF19:
+ 1913 00c2 74687265 		.ascii	"threshold\000"
+ 1913      73686F6C 
+ 1913      6400
+ 1914              	.LASF3:
+ 1915 00cc 73686F72 		.ascii	"short unsigned int\000"
+ 1915      7420756E 
+ 1915      7369676E 
+ 1915      65642069 
+ 1915      6E7400
+ 1916              	.LASF20:
+ 1917 00df 6D6F746F 		.ascii	"motor_forward\000"
+ 1917      725F666F 
+ 1917      72776172 
+ 1917      6400
+ 1918              	.LASF4:
+ 1919 00ed 5F5F7569 		.ascii	"__uint16_t\000"
+ 1919      6E743136 
+ 1919      5F7400
+ 1920              	.LASF7:
+ 1921 00f8 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1921      20756E73 
+ 1921      69676E65 
+ 1921      6420696E 
+ 1921      7400
+ 1922              	.LASF18:
+ 1923 010a 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1923      52784275 
+ 1923      66666572 
+ 1923      00
+ 1924              	.LASF22:
+ 1925 0117 6D6F746F 		.ascii	"motor_sharp_turn\000"
+ 1925      725F7368 
+ 1925      6172705F 
+ 1925      7475726E 
+ 1925      00
+ 1926              	.LASF10:
+ 1927 0128 756E7369 		.ascii	"unsigned int\000"
+ 1927      676E6564 
+ 1927      20696E74 
+ 1927      00
+ 1928              	.LASF9:
+ 1929 0135 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1929      206C6F6E 
+ 1929      6720756E 
+ 1929      7369676E 
+ 1929      65642069 
+ 1930              	.LASF21:
+ 1931 014c 6D6F746F 		.ascii	"motor_turn\000"
+ 1931      725F7475 
+ 1931      726E00
+ 1932              	.LASF12:
+ 1933 0157 696E7433 		.ascii	"int32_t\000"
+ 1933      325F7400 
+ 1934              	.LASF17:
+ 1935 015f 73697A65 		.ascii	"sizetype\000"
+ 1935      74797065 
+ARM GAS  C:\Users\allu9\AppData\Local\Temp\ccdXzKS0.s 			page 39
+
+
+ 1935      00
+ 1936              	.LASF8:
+ 1937 0168 6C6F6E67 		.ascii	"long long int\000"
+ 1937      206C6F6E 
+ 1937      6720696E 
+ 1937      7400
+ 1938              	.LASF15:
+ 1939 0176 63686172 		.ascii	"char\000"
+ 1939      00
+ 1940              	.LASF2:
+ 1941 017b 73686F72 		.ascii	"short int\000"
+ 1941      7420696E 
+ 1941      7400
+ 1942              	.LASF11:
+ 1943 0185 75696E74 		.ascii	"uint16_t\000"
+ 1943      31365F74 
+ 1943      00
+ 1944              	.LASF6:
+ 1945 018e 6C6F6E67 		.ascii	"long int\000"
+ 1945      20696E74 
+ 1945      00
+ 1946              	.LASF16:
+ 1947 0197 6C6F6E67 		.ascii	"long double\000"
+ 1947      20646F75 
+ 1947      626C6500 
+ 1948              	.LASF0:
+ 1949 01a3 7369676E 		.ascii	"signed char\000"
+ 1949      65642063 
+ 1949      68617200 
+ 1950              	.LASF25:
+ 1951 01af 433A5C55 		.ascii	"C:\\Users\\allu9\\Tuomo\\ZumoTUOMO\\ZumoBot.cydsn\000"
+ 1951      73657273 
+ 1951      5C616C6C 
+ 1951      75395C54 
+ 1951      756F6D6F 
+ 1952              	.LASF24:
+ 1953 01dc 44726976 		.ascii	"Drive.c\000"
+ 1953      652E6300 
+ 1954              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
