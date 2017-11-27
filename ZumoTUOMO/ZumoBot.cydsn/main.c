@@ -170,11 +170,29 @@ for(;;)
         
         CyDelay(1000);
         motor_start();
+        reflectance_digital(&dig);
+        while(dig.l3==1&&dig.r3==1)
+        {
+            reflectance_read(&ref);
+            reflectance_digital(&dig);
+            int leftM=((float)(ref.r1-w[3])/(23999-w[3]))*100;
+            int righhM=((float)(ref.l1-w[2])/(23999-w[2]))*100;
+            motor_turn(leftM,righhM,1);
+        }
+        motor_stop();
         
-//        motor_forward(150,300);
+        while(SW1_Read()==1)
+        {
+            
+        }
+        Beep(1000,100);
+        motor_start();
+        
+        motor_forward(150,200);
+        
         int finish=0;
         
-        while(finish==1)
+        while(finish==0)
         {
             reflectance_read(&ref);
             reflectance_digital(&dig);      //print out 0 or 1 according to results of reflectance period
@@ -182,10 +200,20 @@ for(;;)
             
             if(dig.l3==0&&dig.l1==0&&dig.r1==0&&dig.r3==0)
             {
-                         finish=1; 
-                motor_forward(150,50);
-                while(dig.l3==1&&dig.r3==1){
-                motor_forward(150,1);
+                finish=1; 
+                while(dig.l3==0&&dig.r3==0)
+                {
+                    reflectance_digital(&dig);
+                    motor_forward(150,1);
+                    BatteryLed_Write(1);
+                }
+                
+                motor_forward(200,50);
+                reflectance_digital(&dig);
+                while(dig.l3==1&&dig.r3==1)
+                {
+                    motor_forward(150,1);
+                    reflectance_digital(&dig);
                 }
                 motor_stop();
             }
@@ -210,7 +238,7 @@ for(;;)
         
         
         }   
-        motor_forward(200,170);
+//        motor_forward(200,170);
         motor_stop();
     }
         //CyDelay(1000);

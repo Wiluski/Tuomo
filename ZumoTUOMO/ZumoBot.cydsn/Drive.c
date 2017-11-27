@@ -8,12 +8,20 @@
 #include "Reflectance.h"
 int dir;
 int max=255;
-double korjaus=1.0f;
+double korjaus=1.3f;
 
 void Drive (int l3, int l1, int r1, int r3, int lVal, int rVal)
 {
 
-    
+    if(l1<1000)
+    {
+        l1=lVal;
+    }
+    if(r1<1000)
+    {
+        r1=rVal;   
+    }
+        
     int leftM=((float)(r1-rVal)/(23999-rVal))*max*korjaus;
     int righhM=((float)(l1-lVal)/(23999-lVal))*max*korjaus;
     
@@ -28,19 +36,20 @@ void Drive (int l3, int l1, int r1, int r3, int lVal, int rVal)
 //        motor_forward(0,1);
 //        dir= 2;
 //    }
-//
     if (l1>threshold.l1||r1>threshold.r1)
     {
+        BatteryLed_Write(0);
 //        motor_turn(leftM,righhM,1);
-        if(leftM<righhM)
+        if(leftM>righhM)
         {
-            motor_turn(leftM,max,1);
-            dir=0;
+            motor_turn(max,righhM,1);
+            dir=1;            
+
         }
         else
         {
-            motor_turn(max,righhM,1);
-            dir=1;
+            motor_turn(leftM,max,1);
+            dir=0;
         }
     }
     
@@ -179,13 +188,14 @@ void Drive (int l3, int l1, int r1, int r3, int lVal, int rVal)
     
     else 
     {
+    BatteryLed_Write(1);
         if(dir==1)
         {
-            motor_sharp_turn(0,1,max,100,1);
+            motor_sharp_turn(0,1,max,50,1);
         }
         if(dir==0)
         {
-            motor_sharp_turn(1,0,100,max,1);
+            motor_sharp_turn(1,0,50,max,1);
         }
     }
     
