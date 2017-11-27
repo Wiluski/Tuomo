@@ -8,6 +8,6 @@
 
 #include <project.h>
 
-void Drive (int l3, int l1, int r1, int r3);
+void Drive (int l3, int l1, int r1, int r3, int lVal, int rVal);
 
 #endif

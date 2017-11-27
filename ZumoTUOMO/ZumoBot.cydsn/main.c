@@ -67,9 +67,9 @@ int main()
     struct sensors_ dig;
     
     int i,delay = 0;
-    int wCalib = 1, bCalib = 1;
+    int wCalib = 1; //bCalib = 1;
     
-    int rajaArvo[4],b[4],w[4];
+    int rajaArvo[4],/*b[4],*/w[4];
     
     CyGlobalIntEnable; 
     UART_1_Start();
@@ -115,26 +115,26 @@ int main()
     CyDelay(1000);
     BatteryLed_Write(0);
     
-    while(bCalib){
-        if(SW1_Read()==0){
-            
-            reflectance_read(&ref);
-            b[0] = ref.l3;
-            b[1] = ref.l1;
-            b[2] = ref.r1;
-            b[3] = ref.r3;
-            
-            bCalib = 0;
-        }
-        
-    }
-    
-    BatteryLed_Write(1);
-    CyDelay(1000);
-    BatteryLed_Write(0);
+//    while(bCalib){
+//        if(SW1_Read()==0){
+//            
+//            reflectance_read(&ref);
+//            b[0] = ref.l3;
+//            b[1] = ref.l1;
+//            b[2] = ref.r1;
+//            b[3] = ref.r3;
+//            
+//            bCalib = 0;
+//        }
+//        
+//    }
+//    
+//    BatteryLed_Write(1);
+//    CyDelay(1000);
+//    BatteryLed_Write(0);
     
     for(i=0; i<4; i++){
-        rajaArvo[i] = (b[i] + w[i]) / 2;
+        rajaArvo[i] = (23999 + w[i]) / 2;
         printf("%d ", rajaArvo[i]);
     }
     printf("\n");
@@ -186,7 +186,7 @@ for(;;)
 //                
 //            }
             
-            Drive(ref.l3, ref.l1,ref.r1,ref.r3);
+            Drive(ref.l3, ref.l1,ref.r1,ref.r3,w[2],w[3]);
             
             if(delay==5000)
             {
