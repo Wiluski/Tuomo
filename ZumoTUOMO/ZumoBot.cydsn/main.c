@@ -174,17 +174,21 @@ for(;;)
 //        motor_forward(150,300);
         int finish=0;
         
-        while(finish<1)
+        while(finish==1)
         {
             reflectance_read(&ref);
             reflectance_digital(&dig);      //print out 0 or 1 according to results of reflectance period
             printf("%d %d %d %d \r\n", ref.l3, ref.l1, ref.r1, ref.r3);        //print out 0 or 1 according to results of reflectance period
             
-//            if(dig.l3==0&&dig.l1==0&&dig.r1==0&&dig.r3==0)
-//            {
-//                finish++;
-//                
-//            }
+            if(dig.l3==0&&dig.l1==0&&dig.r1==0&&dig.r3==0)
+            {
+                         finish=1; 
+                motor_forward(150,50);
+                while(dig.l3==1&&dig.r3==1){
+                motor_forward(150,1);
+                }
+                motor_stop();
+            }
             
             Drive(ref.l3, ref.l1,ref.r1,ref.r3,w[2],w[3]);
             
