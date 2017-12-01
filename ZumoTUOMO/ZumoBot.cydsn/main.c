@@ -100,7 +100,7 @@ int main()
     reflectance_start();
     
     while(wCalib){
-        if(SW1_Read()==0){
+        if(SW1_Read()==0||IR_receiver_Read()!=1){
             
             reflectance_read(&ref);
             w[0] = ref.l3;
@@ -143,19 +143,17 @@ int main()
     reflectance_set_threshold(rajaArvo[0], rajaArvo[1], rajaArvo[2], rajaArvo[3]);
     int ral1=threshold.l1;
     printf("%d\n",ral1);
-    Beep(100,50);
-    while(SW1_Read()){
-        
+//    Beep(100,50);
+    while(SW1_Read()&&IR_receiver_Read()){
     }
-
 for(;;)
 {
     
-    if(SW1_Read()==0)
+    if(SW1_Read()==0||IR_receiver_Read()!=1)
     {
-        Beep(100,20);
-        CyDelay(50);
-        Beep(100,20);
+//        Beep(100,20);
+//        CyDelay(50);
+//        Beep(100,20);
           
         while(checkBat()<4)
             {
@@ -181,11 +179,11 @@ for(;;)
         }
         motor_stop();
         
-        while(SW1_Read()==1)
+        while(SW1_Read()&&IR_receiver_Read())
         {
             
         }
-        Beep(1000,100);
+//        Beep(1000,100);
         motor_start();
         
         motor_forward(150,200);
