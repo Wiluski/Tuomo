@@ -214,6 +214,7 @@ for(;;)
                     reflectance_digital(&dig);
                 }
                 motor_stop();
+				finish=1;
             }
             
             Drive(ref.l3, ref.l1,ref.r1,ref.r3,w[2],w[3]);
